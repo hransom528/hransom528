@@ -1,4 +1,4 @@
-package commanderHR1.httpsgithub.AndroidApp1;
+package commanderhr1.github.androidapp1;
 
 import org.junit.Test;
 
