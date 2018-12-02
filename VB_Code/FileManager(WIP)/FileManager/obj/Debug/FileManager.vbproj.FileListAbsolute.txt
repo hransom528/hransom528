@@ -1,0 +1,12 @@
+C:\Users\hrans\Documents\FileManager\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\hrans\Documents\FileManager\FileManager\bin\Debug\FileManager.exe
+C:\Users\hrans\Documents\FileManager\FileManager\bin\Debug\FileManager.pdb
+C:\Users\hrans\Documents\FileManager\FileManager\bin\Debug\FileManager.xml
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.vbprojAssemblyReference.cache
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.Resources.resources
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.vbproj.GenerateResource.cache
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.vbproj.CoreCompileInputs.cache
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.exe
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.xml
+C:\Users\hrans\Documents\FileManager\FileManager\obj\Debug\FileManager.pdb
