@@ -1,0 +1,12 @@
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\bin\Debug\FactorCalculator.exe.config
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\bin\Debug\FactorCalculator.exe
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\bin\Debug\FactorCalculator.pdb
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\bin\Debug\FactorCalculator.xml
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.vbprojAssemblyReference.cache
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.Form1.resources
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.Resources.resources
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.vbproj.GenerateResource.cache
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.vbproj.CoreCompileInputs.cache
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.exe
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.xml
+C:\Users\146322\Documents\FactorCalculator\FactorCalculator\obj\Debug\FactorCalculator.pdb
