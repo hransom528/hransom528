@@ -41,6 +41,7 @@ Partial Class Form1
         Me.lblNumber2 = New System.Windows.Forms.Label()
         Me.btnSquareRoot = New System.Windows.Forms.Button()
         Me.lblInstructions = New System.Windows.Forms.Label()
+        Me.btnForm2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnDivision
@@ -164,9 +165,9 @@ Partial Class Form1
         Me.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnClear.Location = New System.Drawing.Point(171, 373)
+        Me.btnClear.Location = New System.Drawing.Point(164, 371)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(59, 37)
+        Me.btnClear.Size = New System.Drawing.Size(74, 38)
         Me.btnClear.TabIndex = 24
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = False
@@ -176,9 +177,9 @@ Partial Class Form1
         Me.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(236, 373)
+        Me.btnExit.Location = New System.Drawing.Point(242, 371)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(59, 37)
+        Me.btnExit.Size = New System.Drawing.Size(74, 38)
         Me.btnExit.TabIndex = 25
         Me.btnExit.Text = "EXIT"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -255,12 +256,24 @@ Partial Class Form1
     "prator. If the operator is the square root function, put the number being rooted" &
     " into the second operand box."
         '
+        'btnForm2
+        '
+        Me.btnForm2.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.btnForm2.ForeColor = System.Drawing.Color.White
+        Me.btnForm2.Location = New System.Drawing.Point(322, 371)
+        Me.btnForm2.Name = "btnForm2"
+        Me.btnForm2.Size = New System.Drawing.Size(74, 38)
+        Me.btnForm2.TabIndex = 32
+        Me.btnForm2.Text = "Advanced Functions"
+        Me.btnForm2.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(420, 445)
+        Me.ClientSize = New System.Drawing.Size(439, 445)
+        Me.Controls.Add(Me.btnForm2)
         Me.Controls.Add(Me.lblInstructions)
         Me.Controls.Add(Me.btnSquareRoot)
         Me.Controls.Add(Me.lblNumber2)
@@ -305,4 +318,5 @@ Partial Class Form1
     Friend WithEvents lblNumber2 As Label
     Friend WithEvents btnSquareRoot As Button
     Friend WithEvents lblInstructions As Label
+    Friend WithEvents btnForm2 As Button
 End Class

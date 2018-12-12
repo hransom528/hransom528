@@ -79,6 +79,12 @@ Public Class Form1
         lblResult.Text = "Result: " + FormatNumber(totalNumber, 3)
     End Sub
 
+    'Goes to the advanced functions form
+    Private Sub btnForm2_Click(sender As Object, e As EventArgs) Handles btnForm2.Click
+        Form2.Show()
+        Me.Hide()
+    End Sub
+
     'Clears the program
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         totalNumber = 0
