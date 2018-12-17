@@ -1,0 +1,32 @@
+
+Some Important Commands For The Terminal:
+*The RPI uses the Bash shell/scripting language for the terminal
+**IP for the Pi is 10.0.0.192
+
+Check Temp:
+/opt/vc/bin/vcgencmd measure_temp
+
+Shutdown:
+sudo shutdown -h now
+
+Acess Settings:
+sudo raspi-config
+
+Exit Terminal:
+exit
+
+List All LAN Networks:
+sudo iwlist wlan0 scan
+
+
+Update Pi Software:
+sudo apt-get update 
+sudo apt-get dist-upgrade 
+
+Show Directory Tree:
+TREE
+
+Get File From Web:
+wget 
+
+
