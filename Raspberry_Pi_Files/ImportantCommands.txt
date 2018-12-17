@@ -18,10 +18,15 @@ exit
 List All LAN Networks:
 sudo iwlist wlan0 scan
 
-
 Update Pi Software:
 sudo apt-get update 
 sudo apt-get dist-upgrade 
+
+Install Packages:
+sudo apt install
+
+Set Up Shell From bash_profile:
+source ~/.bash_profile
 
 Show Directory Tree:
 TREE
