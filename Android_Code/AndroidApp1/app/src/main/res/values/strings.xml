@@ -2,4 +2,5 @@
     <string name="app_name">AndroidApp1</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="edit_message">Length of Password</string>
 </resources>
