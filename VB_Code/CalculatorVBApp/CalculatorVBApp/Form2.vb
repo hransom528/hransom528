@@ -96,7 +96,7 @@ Public Class Form2
         totalNumber = 0
         txt1.Text = ""
         txt2.Text = ""
-
+        lblOperator.Text = "Operator: "
     End Sub
 
     'Takes user back to basic calculator
