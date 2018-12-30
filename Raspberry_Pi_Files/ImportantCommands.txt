@@ -40,4 +40,6 @@ TREE
 Get File From Web:
 wget 
 
+Kill Suspended Processes:
+kill %process_number
 
