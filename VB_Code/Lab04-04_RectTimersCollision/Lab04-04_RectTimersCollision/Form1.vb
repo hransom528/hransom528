@@ -1,6 +1,7 @@
 ﻿'Harris Ransom
 'Class 8
 'Lab04-04_RectTimersCollision
+
 Imports System 'For RNG 
 
 Public Class Form1

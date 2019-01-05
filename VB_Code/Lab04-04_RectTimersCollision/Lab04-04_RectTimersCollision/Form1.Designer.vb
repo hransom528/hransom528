@@ -28,8 +28,6 @@ Partial Class Form1
         Me.lblScore2 = New System.Windows.Forms.Label()
         Me.tmrTimer = New System.Windows.Forms.Timer(Me.components)
         Me.lblPause = New System.Windows.Forms.Label()
-        Me.btnPause = New System.Windows.Forms.Button()
-        Me.btnReset = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -84,32 +82,12 @@ Partial Class Form1
         Me.lblPause.Text = "PAUSED"
         Me.lblPause.Visible = False
         '
-        'btnPause
-        '
-        Me.btnPause.Location = New System.Drawing.Point(121, 13)
-        Me.btnPause.Name = "btnPause"
-        Me.btnPause.Size = New System.Drawing.Size(75, 23)
-        Me.btnPause.TabIndex = 4
-        Me.btnPause.Text = "Button1"
-        Me.btnPause.UseVisualStyleBackColor = True
-        '
-        'btnReset
-        '
-        Me.btnReset.Location = New System.Drawing.Point(563, 22)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 23)
-        Me.btnReset.TabIndex = 5
-        Me.btnReset.Text = "Button2"
-        Me.btnReset.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(784, 461)
-        Me.Controls.Add(Me.btnReset)
-        Me.Controls.Add(Me.btnPause)
         Me.Controls.Add(Me.lblPause)
         Me.Controls.Add(Me.lblScore2)
         Me.Controls.Add(Me.lblScore1)
@@ -126,6 +104,4 @@ Partial Class Form1
     Friend WithEvents lblScore2 As Label
     Friend WithEvents tmrTimer As Timer
     Friend WithEvents lblPause As Label
-    Friend WithEvents btnPause As Button
-    Friend WithEvents btnReset As Button
 End Class
