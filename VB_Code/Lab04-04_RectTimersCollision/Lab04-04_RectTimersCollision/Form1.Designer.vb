@@ -68,14 +68,14 @@ Partial Class Form1
         'tmrTimer
         '
         Me.tmrTimer.Enabled = True
-        Me.tmrTimer.Interval = 75
+        Me.tmrTimer.Interval = 25
         '
         'lblPause
         '
         Me.lblPause.AutoSize = True
         Me.lblPause.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPause.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblPause.Location = New System.Drawing.Point(315, 220)
+        Me.lblPause.Location = New System.Drawing.Point(318, 51)
         Me.lblPause.Name = "lblPause"
         Me.lblPause.Size = New System.Drawing.Size(165, 39)
         Me.lblPause.TabIndex = 3
