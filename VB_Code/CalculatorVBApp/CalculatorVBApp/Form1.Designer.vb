@@ -42,6 +42,9 @@ Partial Class Form1
         Me.btnSquareRoot = New System.Windows.Forms.Button()
         Me.lblInstructions = New System.Windows.Forms.Label()
         Me.btnForm2 = New System.Windows.Forms.Button()
+        Me.btnFactorCalculator = New System.Windows.Forms.Button()
+        Me.btnBillSplitter = New System.Windows.Forms.Button()
+        Me.btnQuadForm = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnDivision
@@ -267,12 +270,51 @@ Partial Class Form1
         Me.btnForm2.Text = "Advanced Functions"
         Me.btnForm2.UseVisualStyleBackColor = False
         '
+        'btnFactorCalculator
+        '
+        Me.btnFactorCalculator.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnFactorCalculator.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFactorCalculator.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnFactorCalculator.Location = New System.Drawing.Point(164, 415)
+        Me.btnFactorCalculator.Name = "btnFactorCalculator"
+        Me.btnFactorCalculator.Size = New System.Drawing.Size(74, 38)
+        Me.btnFactorCalculator.TabIndex = 33
+        Me.btnFactorCalculator.Text = "Factor Calculator"
+        Me.btnFactorCalculator.UseVisualStyleBackColor = False
+        '
+        'btnBillSplitter
+        '
+        Me.btnBillSplitter.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnBillSplitter.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBillSplitter.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnBillSplitter.Location = New System.Drawing.Point(244, 415)
+        Me.btnBillSplitter.Name = "btnBillSplitter"
+        Me.btnBillSplitter.Size = New System.Drawing.Size(74, 38)
+        Me.btnBillSplitter.TabIndex = 34
+        Me.btnBillSplitter.Text = "Bill Splitter"
+        Me.btnBillSplitter.UseVisualStyleBackColor = False
+        '
+        'btnQuadForm
+        '
+        Me.btnQuadForm.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnQuadForm.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuadForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnQuadForm.Location = New System.Drawing.Point(322, 416)
+        Me.btnQuadForm.Name = "btnQuadForm"
+        Me.btnQuadForm.Size = New System.Drawing.Size(74, 38)
+        Me.btnQuadForm.TabIndex = 35
+        Me.btnQuadForm.Text = "Quadratic Formula"
+        Me.btnQuadForm.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(439, 445)
+        Me.ClientSize = New System.Drawing.Size(439, 463)
+        Me.Controls.Add(Me.btnQuadForm)
+        Me.Controls.Add(Me.btnBillSplitter)
+        Me.Controls.Add(Me.btnFactorCalculator)
         Me.Controls.Add(Me.btnForm2)
         Me.Controls.Add(Me.lblInstructions)
         Me.Controls.Add(Me.btnSquareRoot)
@@ -319,4 +361,7 @@ Partial Class Form1
     Friend WithEvents btnSquareRoot As Button
     Friend WithEvents lblInstructions As Label
     Friend WithEvents btnForm2 As Button
+    Friend WithEvents btnFactorCalculator As Button
+    Friend WithEvents btnBillSplitter As Button
+    Friend WithEvents btnQuadForm As Button
 End Class
