@@ -1,0 +1,16 @@
+/*Stylesheet*/
+.title {
+  font: "Times New Roman";
+  font-size: "30px";
+  color: #ffffff;
+}
+
+#date {
+  font: "Arial";
+  font-size: "14px";
+  color: #ffffff;
+}
+
+.light_blue {
+  background-color: navy;
+}
