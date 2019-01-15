@@ -8,10 +8,11 @@ import time
 led = digitalio.DigitalInOut(board.D13)
 output = digitalio.DigitalInOut(board.D4)
 led.direction = digitalio.Direction.OUTPUT
+output.direction = digitalio.Direction.OUTPUT
 
 #Connects to serial console in Mu
 print ("Connecting to the serial console...")
-time.sleep(0.775)
+time.sleep(1.5)
 print ("Connected!")
 
 #While loop runs forever
