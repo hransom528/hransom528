@@ -6,6 +6,7 @@ Directories:
 -ArduinoTrinket_Code: My microcontroller and circuitry code.
 -Atom_Code: Any code I have for the Atom text editor
 -AutoHotkey Scripts: Any keyboard shortcut scripts I write using AutoHotKey
+-C/C++ Code: Code made in C/C++ (not including the Arduino code)
 -Misc_Files: Miscellaneous files that don't belong anywhere else
 -personal_site: A personal website I'm working on
 -python_password_generator: Another one of my projects, which also has it's
