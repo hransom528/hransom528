@@ -72,6 +72,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedFunctions.designer.vb">
+      <DependentUpon>AdvancedFunctions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedFunctions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator.designer.vb">
+      <DependentUpon>Calculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FactorCalc.designer.vb">
+      <DependentUpon>FactorCalc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FactorCalc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factorial.designer.vb">
+      <DependentUpon>Factorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Factorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +118,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PasswordGen.Designer.vb">
+      <DependentUpon>PasswordGen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuadForm.designer.vb">
+      <DependentUpon>QuadForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuadForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VB_Pong.designer.vb">
+      <DependentUpon>VB_Pong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VB_Pong.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdvancedFunctions.resx">
+      <DependentUpon>AdvancedFunctions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculator.resx">
+      <DependentUpon>Calculator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactorCalc.resx">
+      <DependentUpon>FactorCalc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factorial.resx">
+      <DependentUpon>Factorial.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +158,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordGen.resx">
+      <DependentUpon>PasswordGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuadForm.resx">
+      <DependentUpon>QuadForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VB_Pong.resx">
+      <DependentUpon>VB_Pong.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

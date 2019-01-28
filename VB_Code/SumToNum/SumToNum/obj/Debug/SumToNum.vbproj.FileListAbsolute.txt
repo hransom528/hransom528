@@ -1,0 +1,12 @@
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\bin\Debug\SumToNum.exe.config
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\bin\Debug\SumToNum.exe
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\bin\Debug\SumToNum.pdb
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\bin\Debug\SumToNum.xml
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.vbprojAssemblyReference.cache
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.Form1.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.Resources.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.vbproj.GenerateResource.cache
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.vbproj.CoreCompileInputs.cache
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.exe
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.xml
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\SumToNum\SumToNum\obj\Debug\SumToNum.pdb
