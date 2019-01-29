@@ -31,9 +31,11 @@ Partial Class Form1
         Me.lblMath = New System.Windows.Forms.Label()
         Me.lblGames = New System.Windows.Forms.Label()
         Me.btnFactorCalc = New System.Windows.Forms.Button()
-        Me.lblCentipede = New System.Windows.Forms.Button()
         Me.lblMisc = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPasswordGen = New System.Windows.Forms.Button()
+        Me.btnLander = New System.Windows.Forms.Button()
+        Me.btnTextAdventure = New System.Windows.Forms.Button()
+        Me.btnSpaceInvaders = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -53,7 +55,7 @@ Partial Class Form1
         Me.btnPong.CausesValidation = False
         Me.btnPong.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPong.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPong.Location = New System.Drawing.Point(282, 148)
+        Me.btnPong.Location = New System.Drawing.Point(282, 146)
         Me.btnPong.Name = "btnPong"
         Me.btnPong.Size = New System.Drawing.Size(99, 50)
         Me.btnPong.TabIndex = 1
@@ -66,7 +68,7 @@ Partial Class Form1
         Me.btnCalc.CausesValidation = False
         Me.btnCalc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCalc.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCalc.Location = New System.Drawing.Point(69, 148)
+        Me.btnCalc.Location = New System.Drawing.Point(69, 146)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(99, 50)
         Me.btnCalc.TabIndex = 3
@@ -79,7 +81,7 @@ Partial Class Form1
         Me.btnQuadForm.CausesValidation = False
         Me.btnQuadForm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuadForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnQuadForm.Location = New System.Drawing.Point(69, 204)
+        Me.btnQuadForm.Location = New System.Drawing.Point(69, 202)
         Me.btnQuadForm.Name = "btnQuadForm"
         Me.btnQuadForm.Size = New System.Drawing.Size(99, 50)
         Me.btnQuadForm.TabIndex = 8
@@ -92,7 +94,7 @@ Partial Class Form1
         Me.btnFactorial.CausesValidation = False
         Me.btnFactorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFactorial.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnFactorial.Location = New System.Drawing.Point(69, 260)
+        Me.btnFactorial.Location = New System.Drawing.Point(69, 258)
         Me.btnFactorial.Name = "btnFactorial"
         Me.btnFactorial.Size = New System.Drawing.Size(99, 50)
         Me.btnFactorial.TabIndex = 9
@@ -113,11 +115,11 @@ Partial Class Form1
         'lblMath
         '
         Me.lblMath.AutoSize = True
-        Me.lblMath.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMath.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMath.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblMath.Location = New System.Drawing.Point(76, 95)
+        Me.lblMath.Location = New System.Drawing.Point(78, 95)
         Me.lblMath.Name = "lblMath"
-        Me.lblMath.Size = New System.Drawing.Size(76, 50)
+        Me.lblMath.Size = New System.Drawing.Size(69, 48)
         Me.lblMath.TabIndex = 10
         Me.lblMath.Text = "MATH" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -145,19 +147,6 @@ Partial Class Form1
         Me.btnFactorCalc.Text = "Factor Calculator"
         Me.btnFactorCalc.UseVisualStyleBackColor = False
         '
-        'lblCentipede
-        '
-        Me.lblCentipede.BackColor = System.Drawing.SystemColors.Desktop
-        Me.lblCentipede.CausesValidation = False
-        Me.lblCentipede.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCentipede.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCentipede.Location = New System.Drawing.Point(282, 204)
-        Me.lblCentipede.Name = "lblCentipede"
-        Me.lblCentipede.Size = New System.Drawing.Size(99, 50)
-        Me.lblCentipede.TabIndex = 13
-        Me.lblCentipede.Text = "Snake"
-        Me.lblCentipede.UseVisualStyleBackColor = False
-        '
         'lblMisc
         '
         Me.lblMisc.AutoSize = True
@@ -169,28 +158,69 @@ Partial Class Form1
         Me.lblMisc.TabIndex = 14
         Me.lblMisc.Text = "MISC."
         '
-        'Button1
+        'btnPasswordGen
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Desktop
-        Me.Button1.CausesValidation = False
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(478, 148)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 50)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Password Generator"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnPasswordGen.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnPasswordGen.CausesValidation = False
+        Me.btnPasswordGen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPasswordGen.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPasswordGen.Location = New System.Drawing.Point(478, 148)
+        Me.btnPasswordGen.Name = "btnPasswordGen"
+        Me.btnPasswordGen.Size = New System.Drawing.Size(99, 50)
+        Me.btnPasswordGen.TabIndex = 15
+        Me.btnPasswordGen.Text = "Password Generator"
+        Me.btnPasswordGen.UseVisualStyleBackColor = False
+        '
+        'btnLander
+        '
+        Me.btnLander.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnLander.CausesValidation = False
+        Me.btnLander.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLander.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLander.Location = New System.Drawing.Point(282, 258)
+        Me.btnLander.Name = "btnLander"
+        Me.btnLander.Size = New System.Drawing.Size(99, 50)
+        Me.btnLander.TabIndex = 16
+        Me.btnLander.Text = "Lunar Lander"
+        Me.btnLander.UseVisualStyleBackColor = False
+        '
+        'btnTextAdventure
+        '
+        Me.btnTextAdventure.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnTextAdventure.CausesValidation = False
+        Me.btnTextAdventure.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTextAdventure.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnTextAdventure.Location = New System.Drawing.Point(282, 314)
+        Me.btnTextAdventure.Name = "btnTextAdventure"
+        Me.btnTextAdventure.Size = New System.Drawing.Size(99, 50)
+        Me.btnTextAdventure.TabIndex = 17
+        Me.btnTextAdventure.Text = "Text Adventure"
+        Me.btnTextAdventure.UseVisualStyleBackColor = False
+        '
+        'btnSpaceInvaders
+        '
+        Me.btnSpaceInvaders.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnSpaceInvaders.CausesValidation = False
+        Me.btnSpaceInvaders.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSpaceInvaders.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSpaceInvaders.Location = New System.Drawing.Point(282, 202)
+        Me.btnSpaceInvaders.Name = "btnSpaceInvaders"
+        Me.btnSpaceInvaders.Size = New System.Drawing.Size(99, 50)
+        Me.btnSpaceInvaders.TabIndex = 18
+        Me.btnSpaceInvaders.Text = "Space Invaders"
+        Me.btnSpaceInvaders.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(784, 411)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(784, 434)
+        Me.Controls.Add(Me.btnSpaceInvaders)
+        Me.Controls.Add(Me.btnTextAdventure)
+        Me.Controls.Add(Me.btnLander)
+        Me.Controls.Add(Me.btnPasswordGen)
         Me.Controls.Add(Me.lblMisc)
-        Me.Controls.Add(Me.lblCentipede)
         Me.Controls.Add(Me.btnFactorCalc)
         Me.Controls.Add(Me.lblGames)
         Me.Controls.Add(Me.lblMath)
@@ -218,7 +248,9 @@ Partial Class Form1
     Friend WithEvents lblMath As Label
     Friend WithEvents lblGames As Label
     Friend WithEvents btnFactorCalc As Button
-    Friend WithEvents lblCentipede As Button
     Friend WithEvents lblMisc As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPasswordGen As Button
+    Friend WithEvents btnLander As Button
+    Friend WithEvents btnTextAdventure As Button
+    Friend WithEvents btnSpaceInvaders As Button
 End Class

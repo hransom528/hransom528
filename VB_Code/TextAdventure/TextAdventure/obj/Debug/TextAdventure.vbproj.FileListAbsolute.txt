@@ -1,0 +1,12 @@
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe.config
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\bin\Debug\TextAdventure.pdb
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\bin\Debug\TextAdventure.xml
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.vbprojAssemblyReference.cache
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.Form1.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.Resources.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.vbproj.GenerateResource.cache
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.vbproj.CoreCompileInputs.cache
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.exe
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.xml
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\TextAdventure\TextAdventure\obj\Debug\TextAdventure.pdb

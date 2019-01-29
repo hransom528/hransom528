@@ -16,3 +16,4 @@ H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.FactorCalc.resources
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.Factorial.resources
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.QuadForm.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.PasswordGen.resources

@@ -18,8 +18,8 @@ Public Class QuadForm
         cValue = Val(txtC.Text)
 
         'Computes the two solutions and stores them to variables x1 and x2
-        x1 = (-bValue + Math.Sqrt(Math.Pow(bValue, 2) - 4 * (aValue * cValue))) / (2 * aValue)
-        x2 = (-bValue - Math.Sqrt(Math.Pow(bValue, 2) - 4 * (aValue * cValue))) / (2 * aValue)
+        x1 = -(-(bValue) + Math.Sqrt(Math.Pow(bValue, 2) - (4 * (aValue * cValue)))) / (2 * aValue)
+        x2 = -(-(bValue) - Math.Sqrt(Math.Pow(bValue, 2) - (4 * (aValue * cValue)))) / (2 * aValue)
 
         'Displays the solutions
         lblSolutions.Text = "Solutions: " + Str(FormatNumber(x1, 1)) + ", " + Str(FormatNumber(x2, 1))

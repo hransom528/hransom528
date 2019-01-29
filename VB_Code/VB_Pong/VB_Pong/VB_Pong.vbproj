@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{318BE6A4-15B3-405F-BC6C-9255111031B9}</ProjectGuid>
+    <ProjectGuid>{42AB6688-09F2-4773-8CFA-FCF47EAEC575}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>VB_Pong.My.MyApplication</StartupObject>
     <RootNamespace>VB_Pong</RootNamespace>
@@ -46,9 +46,6 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>pong_icon.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -75,19 +72,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PongMainMenu.Designer.vb">
-      <DependentUpon>PongMainMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PongMainMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VB_Pong.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VB_Pong.Designer.vb">
-      <DependentUpon>VB_Pong.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,19 +87,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PongMainMenu.designer.vb">
+      <DependentUpon>PongMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PongMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VB_Pong.designer.vb">
+      <DependentUpon>VB_Pong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VB_Pong.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PongMainMenu.resx">
-      <DependentUpon>PongMainMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VB_Pong.resx">
-      <DependentUpon>VB_Pong.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PongMainMenu.resx">
+      <DependentUpon>PongMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VB_Pong.resx">
+      <DependentUpon>VB_Pong.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -129,9 +125,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="pong_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
