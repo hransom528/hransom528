@@ -26,6 +26,13 @@ Partial Class Form1
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblScore = New System.Windows.Forms.Label()
         Me.tmrTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.picLife1 = New System.Windows.Forms.PictureBox()
+        Me.picLife2 = New System.Windows.Forms.PictureBox()
+        Me.picLife3 = New System.Windows.Forms.PictureBox()
+        Me.tmrAliens = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.picLife1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLife2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLife3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -34,7 +41,7 @@ Partial Class Form1
         Me.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.Lime
-        Me.lblTitle.Location = New System.Drawing.Point(238, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(254, 8)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(267, 31)
         Me.lblTitle.TabIndex = 0
@@ -55,17 +62,57 @@ Partial Class Form1
         '
         Me.tmrTimer.Interval = 25
         '
+        'picLife1
+        '
+        Me.picLife1.Image = Global.VB_SpaceInvaders.My.Resources.Resources.ship
+        Me.picLife1.Location = New System.Drawing.Point(580, 8)
+        Me.picLife1.Name = "picLife1"
+        Me.picLife1.Size = New System.Drawing.Size(50, 38)
+        Me.picLife1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picLife1.TabIndex = 2
+        Me.picLife1.TabStop = False
+        '
+        'picLife2
+        '
+        Me.picLife2.Image = Global.VB_SpaceInvaders.My.Resources.Resources.ship
+        Me.picLife2.Location = New System.Drawing.Point(636, 8)
+        Me.picLife2.Name = "picLife2"
+        Me.picLife2.Size = New System.Drawing.Size(50, 38)
+        Me.picLife2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picLife2.TabIndex = 3
+        Me.picLife2.TabStop = False
+        '
+        'picLife3
+        '
+        Me.picLife3.Image = Global.VB_SpaceInvaders.My.Resources.Resources.ship
+        Me.picLife3.Location = New System.Drawing.Point(692, 8)
+        Me.picLife3.Name = "picLife3"
+        Me.picLife3.Size = New System.Drawing.Size(50, 38)
+        Me.picLife3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picLife3.TabIndex = 4
+        Me.picLife3.TabStop = False
+        '
+        'tmrAliens
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(784, 461)
+        Me.Controls.Add(Me.picLife3)
+        Me.Controls.Add(Me.picLife2)
+        Me.Controls.Add(Me.picLife1)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.lblTitle)
+        Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.picLife1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLife2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLife3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -74,4 +121,8 @@ Partial Class Form1
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblScore As Label
     Friend WithEvents tmrTimer As Timer
+    Friend WithEvents picLife1 As PictureBox
+    Friend WithEvents picLife2 As PictureBox
+    Friend WithEvents picLife3 As PictureBox
+    Friend WithEvents tmrAliens As Timer
 End Class

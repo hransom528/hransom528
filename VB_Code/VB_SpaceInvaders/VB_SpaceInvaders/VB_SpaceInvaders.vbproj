@@ -118,5 +118,20 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\middle_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus_alien.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
