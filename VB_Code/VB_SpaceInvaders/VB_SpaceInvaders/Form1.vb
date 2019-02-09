@@ -148,6 +148,9 @@ Public Class Form1
 
         End If
 
+        'If aliens hit right wall
+
+        'If aliens hit left wall
     End Sub
 
     'If a game over occurs
