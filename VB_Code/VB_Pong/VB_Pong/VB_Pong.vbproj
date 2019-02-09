@@ -126,5 +126,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Blip.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Score.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
