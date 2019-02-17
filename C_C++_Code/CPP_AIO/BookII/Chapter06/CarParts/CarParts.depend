@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1219269102 source:d:\0246 - source code\bookii\chapter06\carparts\main.cpp
+	"mediator.h"
+	"carparts.h"
+	<iostream>
+
+1219269102 d:\0246 - source code\bookii\chapter06\carparts\mediator.h
+
+1219269286 d:\0246 - source code\bookii\chapter06\carparts\carparts.h
+	"mediator.h"
+
+1219269102 source:d:\0246 - source code\bookii\chapter06\carparts\carparts.cpp
+	"carparts.h"
+	<iostream>
+	<stdlib.h>
+
+1242239793 source:c:\0246 - source code\bookii\chapter06\carparts\main.cpp
+	<iostream>
+	"mediator.h"
+	"carparts.h"
+
+1242241318 c:\0246 - source code\bookii\chapter06\carparts\mediator.h
+
+1242237147 c:\0246 - source code\bookii\chapter06\carparts\carparts.h
+	"mediator.h"
+
+1242241461 source:c:\0246 - source code\bookii\chapter06\carparts\carparts.cpp
+	<iostream>
+	"carparts.h"
+

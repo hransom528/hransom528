@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1238970857 source:c:\0246 - source code\booki\chapter06\penclass\main.cpp
+	<iostream>
+	"Pen.h"
+
+1238971864 c:\0246 - source code\booki\chapter06\penclass\pen.h
+
+1386973006 source:c:\cpp_aio\booki\chapter08\penclass\main.cpp
+	<iostream>
+	"Pen.h"
+
+1386972834 c:\cpp_aio\booki\chapter08\penclass\pen.h
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1238168399 source:c:\0246 - source code\booki\chapter05\multiplesourcefiles\mystuff.cpp
+	<iostream>
+
+1238173567 source:c:\0246 - source code\booki\chapter05\multiplesourcefiles\main.cpp
+	<iostream>
+
+1238151968 source:c:\cpp_aio\booki\chapter06\multiplesourcefiles\main.cpp
+	<iostream>
+
+1238152028 source:c:\cpp_aio\booki\chapter06\multiplesourcefiles\mystuff.cpp
+	<iostream>
+

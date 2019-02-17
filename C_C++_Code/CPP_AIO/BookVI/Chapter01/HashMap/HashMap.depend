@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1313677819 source:c:\cpp_aio\bookvi\chapter01\hashmap\main.cpp
+	<iostream>
+	<ext/hash_map>
+	<string.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1313680337 source:c:\cpp_aio\bookvi\chapter01\functor_ptr_fun\main.cpp
+	<iostream>
+	<math.h>
+	<ext/functional>
+	<algorithm>
+

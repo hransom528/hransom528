@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1313681729 source:c:\cpp_aio\bookvi\chapter01\randomnumbergenerator\main.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+

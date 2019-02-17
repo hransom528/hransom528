@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1394394420 source:c:\cpp_aio\bookv\chapter04\renamefile\main.cpp
+	<iostream>
+	<stdio.h>
+

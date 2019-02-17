@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1223940701 source:d:\0246 - source code\bookiii\chapter04\nestedcalls\main.cpp
+	<iostream>
+
+1389971459 source:c:\cpp_aio\bookiii\chapter04\nestedcalls\main.cpp
+	<iostream>
+	<cstdlib>
+

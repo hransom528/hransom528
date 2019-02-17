@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1217949486 source:c:\author\bookiv\chapter02\signedandunsigned\main.cpp
+	<iostream>
+
+1217945886 source:c:\cpp_aio\bookiv\chapter02\signedandunsigned\main.cpp
+	<iostream>
+

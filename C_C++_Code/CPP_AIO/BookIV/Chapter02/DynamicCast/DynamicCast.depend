@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1217949312 source:c:\cpp_aio\bookiv\chapter02\dynamiccast\main.cpp
+	<iostream>
+	<string>
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1241132377 source:c:\0246 - source code\bookvi\chapter02\mathlibrarytest\main.cpp
+	<iostream>
+	"..\MathLibrary\MathLibrary.h"
+
+1241132273 c:\0246 - source code\bookvi\chapter02\mathlibrary\mathlibrary.h
+
+1395864333 source:c:\cpp_aio\bookvi\chapter03\mathlibrarytest\main.cpp
+	<iostream>
+	"..\MathLibrary\MathLibrary.h"
+
+1241114788 c:\cpp_aio\bookvi\chapter03\mathlibrary\mathlibrary.h
+	<iostream>
+	<cmath>
+

@@ -1,0 +1,5 @@
+Name                Salary    
+------------------- ----------
+Hank Williams       28422.82  
+Buddy Holly         39292.22  
+Otis Redding        43838.55  

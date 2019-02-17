@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1239061734 source:c:\0246 - source code\booki\chapter08\typeconvert\main.cpp
+	<iostream>
+	<sstream>
+
+1387322210 source:c:\cpp_aio\booki\chapter09\typeconvert\main.cpp
+	<iostream>
+	<sstream>
+

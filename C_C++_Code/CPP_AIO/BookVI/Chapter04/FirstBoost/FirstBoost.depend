@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1326834534 source:c:\author\bookvi\chapter03\firstboost\main.cpp
+	<iostream>
+	"boost/date_time/posix_time/posix_time.hpp"
+

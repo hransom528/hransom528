@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1240500587 source:c:\0246 - source code\bookvi\chapter01\hashingstrings\main.cpp
+	<iostream>
+	<ext/hash_set>
+
+1394496885 source:c:\cpp_aio\bookvi\chapter01\hashingstrings\main.cpp
+	<iostream>
+	<unordered_map>
+

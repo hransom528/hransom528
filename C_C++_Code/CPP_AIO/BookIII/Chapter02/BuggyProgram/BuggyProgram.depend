@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1221860934 source:d:\0246 - source code\bookiii\chapter02\buggyprogram\main.cpp
+	<iostream>
+
+1308172561 source:c:\cpp_aio\bookiii\chapter02\buggyprogram\main.cpp
+	<iostream>
+	<cstdlib>
+

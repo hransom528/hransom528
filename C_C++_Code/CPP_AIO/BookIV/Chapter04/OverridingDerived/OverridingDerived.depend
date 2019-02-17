@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1220457244 source:d:\0246 - source code\bookiv\chapter04\overridingderived\main.cpp
+	<iostream>
+	<string>
+	<map>
+
+1220439244 source:c:\author\bookiv\chapter04\overridingderived\main.cpp
+	<iostream>
+	<string>
+	<map>
+
+1311111716 source:c:\cpp_aio\bookiv\chapter04\overridingderived\main.cpp
+	<iostream>
+	<string>
+	<map>
+

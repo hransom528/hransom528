@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1308605238 source:c:\author\booki\chapter05\globalvariable\sharealike.cpp
+	<iostream>
+	<string>
+	"sharealike.h"
+
+1308606427 c:\author\booki\chapter05\globalvariable\sharealike.h
+
+1308605338 source:c:\author\booki\chapter05\globalvariable\main.cpp
+	<iostream>
+	<string>
+	"sharealike.h"
+
+1308602961 source:c:\cpp_aio\booki\chapter06\globalvariable\main.cpp
+	<iostream>
+	<string>
+	"sharealike.h"
+
+1308602961 c:\cpp_aio\booki\chapter06\globalvariable\sharealike.h
+
+1308602975 source:c:\cpp_aio\booki\chapter06\globalvariable\sharealike.cpp
+	<iostream>
+	<string>
+	"sharealike.h"
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1239289690 source:c:\0246 - source code\bookiii\chapter03\breakpoints2\main.cpp
+	<iostream>
+
+1308172684 source:c:\cpp_aio\bookiii\chapter03\breakpoints2\main.cpp
+	<iostream>
+	<cstdlib>
+

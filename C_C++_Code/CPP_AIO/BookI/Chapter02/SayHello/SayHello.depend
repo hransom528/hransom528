@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1332012428 source:c:\author\booki\chapter01\firstproject\sayhello\main.cpp
+	<iostream>
+
+1385591907 source:c:\cpp_aio\booki\chapter02\sayhello\main.cpp
+	<iostream>
+

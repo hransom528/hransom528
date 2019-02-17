@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1238096180 source:c:\author\booki\chapter04\commandlineparameters\main.cpp
+	<iostream>
+
+1238092580 source:c:\cpp_aio\booki\chapter05\commandlineparameters\main.cpp
+	<iostream>
+

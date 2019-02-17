@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1218209028 source:c:\cpp_aio\bookiv\chapter03\exception01\main.cpp
+	<iostream>
+	<string>
+

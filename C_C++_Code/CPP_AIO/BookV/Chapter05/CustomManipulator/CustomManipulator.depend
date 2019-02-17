@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1220358832 source:c:\cpp_aio\bookv\chapter05\custommanipulator\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<map>
+

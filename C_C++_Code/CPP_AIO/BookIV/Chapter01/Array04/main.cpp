@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int MemorizeThis[10][20];
+
+int main(int argc, char *argv[])
+{
+    int x,y;
+    for (x = 0; x < 10; x++) {
+        for (y = 0; y < 20; y++ ) {
+            MemorizeThis[x][y] = x * y;
+        }
+    }
+    cout << MemorizeThis[9][13] << endl;
+    cout << sizeof(MemorizeThis) / sizeof(int) << endl;
+    return 0;
+}

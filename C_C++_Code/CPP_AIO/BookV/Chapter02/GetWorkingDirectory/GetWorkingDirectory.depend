@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1312465302 source:c:\cpp_aio\bookv\chapter02\getworkingdirectory\main.cpp
+	<iostream>
+	<direct.h>
+	<stdlib.h>
+
