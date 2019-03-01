@@ -9,7 +9,6 @@ Public Class PasswordGen
     Dim uppercaseChars As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     Dim nums As String = "1234567890"
     Dim specialChars As String = "`~!@#$%^&*()-_=+;:{}[]\|,.<>?/'"
-
     'Password requirements
     Dim length As Integer = 0 'Length requirement
     Dim capitalReq As Integer = 0 'Uppercase requirement
@@ -18,11 +17,16 @@ Public Class PasswordGen
 
     'Misc.
     Dim password As String = ""
-    Dim count As Integer = 0
+
     Dim lengthError As Boolean = False
     Dim capitalError As Boolean = False
     Dim numError As Boolean = False
     Dim specialError As Boolean = False
+
+    Dim randomLowerIndex As Integer = Math.Floor(Rnd() * 25)
+    Dim randomUpperIndex As Integer = Math.Floor(Rnd() * 25)
+    Dim randomNumIndex As Integer = Math.Floor(Rnd() * 9)
+    Dim randomSpecialIndex As Integer = Math.Floor(Rnd() * 29)
 
 #Region "Methods"
     'Method to determine if there was an error
@@ -46,12 +50,48 @@ Public Class PasswordGen
     End Sub
 
     'Method to generate actual password
-    Public Sub makePassword(requiredCount, characterSet)
-        'While the count is less than the requirement specified, add the characters from the character set specified 
-        'to the password
-        While (count < requiredCount)
+    Public Sub makePassword(requiredCount As Integer, characterSet As String)
+        Dim localCount As Integer = 0
 
-        End While
+        'If the characterset is lowercase
+        If (characterSet = "lower") And (Len(password) <= length) Then
+            While (localCount < requiredCount)
+                password += lowercaseChars.Chars(randomLowerIndex)
+                localCount += 1
+                randomLowerIndex = Math.Floor(Rnd() * 25)
+            End While
+            localCount = 0
+        End If
+
+        'If the characterset is uppercase
+        If (characterSet = "upper") And (Len(password) <= length) Then
+            While (localCount < requiredCount)
+                password += uppercaseChars.Chars(randomUpperIndex)
+                localCount += 1
+                randomUpperIndex = Math.Floor(Rnd() * 9)
+            End While
+            localCount = 0
+        End If
+
+        'If the characterset is numbers
+        If (characterSet = "nums") And (Len(password) <= length) Then
+            While (localCount < requiredCount)
+                password += nums.Chars(randomNumIndex)
+                localCount += 1
+                Math.Floor(Rnd() * 9)
+            End While
+            localCount = 0
+        End If
+
+        'If the characterset is special
+        If (characterSet = "special") And (Len(password) <= length) Then
+            While (localCount < requiredCount)
+                password += specialChars.Chars(randomSpecialIndex)
+                localCount += 1
+                Math.Floor(Rnd() * 29)
+            End While
+            localCount = 0
+        End If
     End Sub
 
     'Method to shuffle password after it is made
@@ -73,11 +113,17 @@ Public Class PasswordGen
 
         'Makes password using methods, if there were no errors
         If (lengthError = False) And (capitalError = False) And (numError = False) And (specialError = False) Then
-            makePassword(capitalReq, uppercaseChars) 'Uppercase
-            makePassword(numReq, nums) 'Numbers
-            makePassword(specialReq, specialChars) 'Special characters
-            makePassword(length - Len(password), lowercaseChars) 'Lowercase
+            makePassword(capitalReq, "upper") 'Uppercase
+            makePassword(numReq, "nums") 'Numbers
+            makePassword(specialReq, "special") 'Special characters
+            makePassword(length - Len(password), "lower") 'Lowercase
         End If
 
+        lblResult.Text = "Password: " + password
+    End Sub
+
+    'Form load
+    Private Sub PasswordGen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Randomize()
     End Sub
 End Class

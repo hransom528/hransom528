@@ -5,10 +5,13 @@ Imports System 'Imports the system module (for the math methods)
 
 Public Class VB_Pong
 #Region "Declaration Statements"
+    'Sound
+    Private Declare Auto Function PlaySound Lib "winmm.dll" (ByVal lpszSoundName As String, ByVal hModule As Integer, ByVal dwFlags As Integer) As Integer
+
     'Initiates rectangles
     Dim player1 As Rectangle 'Initiates player1 paddle
     Dim player2 As Rectangle 'Initiates player2 paddle
-    Dim ball As Rectangle 'Initiates ball  
+    Dim ball As Rectangle 'Initiates ball 
     Dim topWall As Rectangle 'Initiates top boundry
     Dim bottomWall As Rectangle 'Initiates bottom boundry
     Dim leftWall As Rectangle 'Initates the left side boundry (left goal)
@@ -55,7 +58,7 @@ Public Class VB_Pong
     Dim disableMovement2 As Boolean = False 'For disabling player 2's movement only
     Dim paused As Boolean = False 'For setting pause/unpaused 
 
-    ''''SIDE NOTE''' Booleans are used because glitches or limitations that happen if they are not used (for moving both players at once, scoring, collision). 
+    ''''SIDE NOTE''' Booleans are used because glitches or limitations happen if they are not used (for moving both players at once, scoring, collision, etc). 
     ''''This is just a heads up if you see a boolean where there doesn't seem to be a need for one. 
 
 
@@ -98,11 +101,13 @@ Public Class VB_Pong
         'Detects if player 1 hits the ball
         If (player1.IntersectsWith(ball)) Then
             oneWithBall = True
+            PlaySound("Blip.wav", 0, 1)
         End If
 
         'Detects if player 2 hits the ball
         If (player2.IntersectsWith(ball)) Then
             twoWithBall = True
+            PlaySound("Blip.wav", 0, 1)
         End If
 
         'Does the collision for when the ball hits player1
@@ -157,11 +162,15 @@ Public Class VB_Pong
 
         'If player 2 scores
         If (ball.IntersectsWith(leftWall)) Then
+            PlaySound("Score.wav", 0, 1)
+            Me.Refresh()
             player2Score = True
         End If
 
         'If player 1 scores
         If (ball.IntersectsWith(rightWall)) Then
+            PlaySound("Score.wav", 0, 1)
+            Me.Refresh()
             player1Score = True
         End If
 

@@ -33,7 +33,14 @@ Public Class Form1
     End Sub
 
     'Takes you to the password generator
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPasswordGen.Click
+    Private Sub btnPasswordGen_Click(sender As Object, e As EventArgs) Handles btnPasswordGen.Click
+        PasswordGen.Show()
+        Me.Hide()
+    End Sub
 
+    'Takes you to the text editor
+    Private Sub btnTextEditor_Click(sender As Object, e As EventArgs) Handles btnTextEditor.Click
+        TextEditor.Show()
+        Me.Hide()
     End Sub
 End Class

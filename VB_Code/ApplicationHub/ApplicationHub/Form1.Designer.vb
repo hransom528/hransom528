@@ -33,9 +33,9 @@ Partial Class Form1
         Me.btnFactorCalc = New System.Windows.Forms.Button()
         Me.lblMisc = New System.Windows.Forms.Label()
         Me.btnPasswordGen = New System.Windows.Forms.Button()
-        Me.btnLander = New System.Windows.Forms.Button()
         Me.btnTextAdventure = New System.Windows.Forms.Button()
         Me.btnSpaceInvaders = New System.Windows.Forms.Button()
+        Me.btnTextEditor = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -171,26 +171,13 @@ Partial Class Form1
         Me.btnPasswordGen.Text = "Password Generator"
         Me.btnPasswordGen.UseVisualStyleBackColor = False
         '
-        'btnLander
-        '
-        Me.btnLander.BackColor = System.Drawing.SystemColors.Desktop
-        Me.btnLander.CausesValidation = False
-        Me.btnLander.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLander.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnLander.Location = New System.Drawing.Point(282, 258)
-        Me.btnLander.Name = "btnLander"
-        Me.btnLander.Size = New System.Drawing.Size(99, 50)
-        Me.btnLander.TabIndex = 16
-        Me.btnLander.Text = "Lunar Lander"
-        Me.btnLander.UseVisualStyleBackColor = False
-        '
         'btnTextAdventure
         '
         Me.btnTextAdventure.BackColor = System.Drawing.SystemColors.Desktop
         Me.btnTextAdventure.CausesValidation = False
         Me.btnTextAdventure.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTextAdventure.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnTextAdventure.Location = New System.Drawing.Point(282, 314)
+        Me.btnTextAdventure.Location = New System.Drawing.Point(282, 258)
         Me.btnTextAdventure.Name = "btnTextAdventure"
         Me.btnTextAdventure.Size = New System.Drawing.Size(99, 50)
         Me.btnTextAdventure.TabIndex = 17
@@ -210,15 +197,28 @@ Partial Class Form1
         Me.btnSpaceInvaders.Text = "Space Invaders"
         Me.btnSpaceInvaders.UseVisualStyleBackColor = False
         '
+        'btnTextEditor
+        '
+        Me.btnTextEditor.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnTextEditor.CausesValidation = False
+        Me.btnTextEditor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTextEditor.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnTextEditor.Location = New System.Drawing.Point(478, 204)
+        Me.btnTextEditor.Name = "btnTextEditor"
+        Me.btnTextEditor.Size = New System.Drawing.Size(99, 50)
+        Me.btnTextEditor.TabIndex = 19
+        Me.btnTextEditor.Text = "Text Editor"
+        Me.btnTextEditor.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(784, 434)
+        Me.Controls.Add(Me.btnTextEditor)
         Me.Controls.Add(Me.btnSpaceInvaders)
         Me.Controls.Add(Me.btnTextAdventure)
-        Me.Controls.Add(Me.btnLander)
         Me.Controls.Add(Me.btnPasswordGen)
         Me.Controls.Add(Me.lblMisc)
         Me.Controls.Add(Me.btnFactorCalc)
@@ -250,7 +250,7 @@ Partial Class Form1
     Friend WithEvents btnFactorCalc As Button
     Friend WithEvents lblMisc As Label
     Friend WithEvents btnPasswordGen As Button
-    Friend WithEvents btnLander As Button
     Friend WithEvents btnTextAdventure As Button
     Friend WithEvents btnSpaceInvaders As Button
+    Friend WithEvents btnTextEditor As Button
 End Class

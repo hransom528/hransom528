@@ -47,10 +47,16 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -130,6 +136,12 @@
     <Compile Include="QuadForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TextEditor.Designer.vb">
+      <DependentUpon>TextEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TextEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VB_Pong.designer.vb">
       <DependentUpon>VB_Pong.vb</DependentUpon>
     </Compile>
@@ -165,6 +177,9 @@
     <EmbeddedResource Include="QuadForm.resx">
       <DependentUpon>QuadForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextEditor.resx">
+      <DependentUpon>TextEditor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VB_Pong.resx">
       <DependentUpon>VB_Pong.vb</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +195,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Blip.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Score.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
