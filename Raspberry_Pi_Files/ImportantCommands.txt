@@ -26,6 +26,7 @@ sudo iwlist wlan0 scan
 
 Update Pi Software:
 sudo apt-get update 
+sudo apt-get upgrade
 sudo apt-get dist-upgrade 
 
 Install Packages:
@@ -42,4 +43,7 @@ wget
 
 Kill Suspended Processes:
 kill %process_number
+
+Remove a non-empty directory:
+rm -r
 
