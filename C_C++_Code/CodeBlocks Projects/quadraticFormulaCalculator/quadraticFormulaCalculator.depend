@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1552693495 source:c:\users\hrans\documents\github\commanderhr1.github.io\c_c++_code\codeblocks projects\quadraticformulacalculator\main.cpp
+	<iostream>
+	<cmath>
+
