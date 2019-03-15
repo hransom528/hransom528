@@ -12,5 +12,6 @@ program main
   read b
   write(*,*) "Please input the c constant."
   read c
+  result1 = -(b)
   re_i = system("pause")
 end
