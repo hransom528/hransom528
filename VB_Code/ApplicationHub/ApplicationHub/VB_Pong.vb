@@ -294,7 +294,7 @@ Public Class VB_Pong
         'Exiting to main menu
         If (e.KeyCode = Keys.Escape) Then
             Me.Hide()
-            Form1.Show()
+            ApplicationHub.Show()
         End If
     End Sub
 

@@ -1,7 +1,26 @@
 ﻿'Harris Ransom
 'Created 1/15/19
 
-Public Class Form1
+Public Class ApplicationHub
+#Region "Setup Code"
+    'GetDateTime method
+    Public Sub getDateTime()
+        Dim dt As Date = Microsoft.VisualBasic.DateAndTime.Now() 'Gets date
+        lblDateTime.Text = dt
+    End Sub
+
+    'Load Method
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        getDateTime()
+    End Sub
+
+    'Timer Tick event
+    Private Sub tmrTimer_Tick(sender As Object, e As EventArgs) Handles tmrTimer.Tick
+        getDateTime()
+        Me.Refresh()
+    End Sub
+#End Region
+
     'Takes you to pong
     Private Sub btnPong_Click(sender As Object, e As EventArgs) Handles btnPong.Click
         VB_Pong.Show()
@@ -35,12 +54,18 @@ Public Class Form1
     'Takes you to the password generator
     Private Sub btnPasswordGen_Click(sender As Object, e As EventArgs) Handles btnPasswordGen.Click
         PasswordGen.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     'Takes you to the text editor
     Private Sub btnTextEditor_Click(sender As Object, e As EventArgs) Handles btnTextEditor.Click
         TextEditor.Show()
+        Me.Hide()
+    End Sub
+
+    'Takes you to the mouse debugger
+    Private Sub btnMouseDebug_Click(sender As Object, e As EventArgs) Handles btnMouseDebug.Click
+        MouseDebugger.Show()
         Me.Hide()
     End Sub
 End Class

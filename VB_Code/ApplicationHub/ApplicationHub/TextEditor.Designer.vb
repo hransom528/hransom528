@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TextEditor
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class TextEditor
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TextEditor))
@@ -84,12 +84,10 @@ Partial Class TextEditor
         Me.openWork = New System.Windows.Forms.OpenFileDialog()
         Me.saveWork = New System.Windows.Forms.SaveFileDialog()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
-        Me.EventLog1 = New System.Diagnostics.EventLog()
         Me.mainMenu.SuspendLayout()
         Me.tools.SuspendLayout()
         Me.rcMenu.SuspendLayout()
         Me.status.SuspendLayout()
-        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'mainMenu
@@ -114,7 +112,7 @@ Partial Class TextEditor
         Me.mMNew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.mMNew.Name = "mMNew"
         Me.mMNew.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.mMNew.Size = New System.Drawing.Size(180, 22)
+        Me.mMNew.Size = New System.Drawing.Size(146, 22)
         Me.mMNew.Text = "&New"
         '
         'mMOpen
@@ -162,20 +160,20 @@ Partial Class TextEditor
         '
         Me.mMUndo.Name = "mMUndo"
         Me.mMUndo.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.mMUndo.Size = New System.Drawing.Size(180, 22)
+        Me.mMUndo.Size = New System.Drawing.Size(144, 22)
         Me.mMUndo.Text = "&Undo"
         '
         'mMRedo
         '
         Me.mMRedo.Name = "mMRedo"
         Me.mMRedo.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.mMRedo.Size = New System.Drawing.Size(180, 22)
+        Me.mMRedo.Size = New System.Drawing.Size(144, 22)
         Me.mMRedo.Text = "&Redo"
         '
         'toolStripSeparator3
         '
         Me.toolStripSeparator3.Name = "toolStripSeparator3"
-        Me.toolStripSeparator3.Size = New System.Drawing.Size(177, 6)
+        Me.toolStripSeparator3.Size = New System.Drawing.Size(141, 6)
         '
         'mMCut
         '
@@ -183,7 +181,7 @@ Partial Class TextEditor
         Me.mMCut.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.mMCut.Name = "mMCut"
         Me.mMCut.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mMCut.Size = New System.Drawing.Size(180, 22)
+        Me.mMCut.Size = New System.Drawing.Size(144, 22)
         Me.mMCut.Text = "Cu&t"
         '
         'mMCopy
@@ -192,7 +190,7 @@ Partial Class TextEditor
         Me.mMCopy.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.mMCopy.Name = "mMCopy"
         Me.mMCopy.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.mMCopy.Size = New System.Drawing.Size(180, 22)
+        Me.mMCopy.Size = New System.Drawing.Size(144, 22)
         Me.mMCopy.Text = "&Copy"
         '
         'mMPaste
@@ -201,24 +199,24 @@ Partial Class TextEditor
         Me.mMPaste.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.mMPaste.Name = "mMPaste"
         Me.mMPaste.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.mMPaste.Size = New System.Drawing.Size(180, 22)
+        Me.mMPaste.Size = New System.Drawing.Size(144, 22)
         Me.mMPaste.Text = "&Paste"
         '
         'toolStripSeparator4
         '
         Me.toolStripSeparator4.Name = "toolStripSeparator4"
-        Me.toolStripSeparator4.Size = New System.Drawing.Size(177, 6)
+        Me.toolStripSeparator4.Size = New System.Drawing.Size(141, 6)
         '
         'mMSelectAll
         '
         Me.mMSelectAll.Name = "mMSelectAll"
-        Me.mMSelectAll.Size = New System.Drawing.Size(180, 22)
+        Me.mMSelectAll.Size = New System.Drawing.Size(144, 22)
         Me.mMSelectAll.Text = "Select &All"
         '
         'mMDeselectAll
         '
         Me.mMDeselectAll.Name = "mMDeselectAll"
-        Me.mMDeselectAll.Size = New System.Drawing.Size(180, 22)
+        Me.mMDeselectAll.Size = New System.Drawing.Size(144, 22)
         Me.mMDeselectAll.Text = "Deselect All"
         '
         'ToolsToolStripMenuItem
@@ -508,7 +506,7 @@ Partial Class TextEditor
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(712, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(681, 17)
         Me.ToolStripStatusLabel2.Spring = True
         '
         'lblZoom
@@ -532,10 +530,6 @@ Partial Class TextEditor
         Me.Timer.Enabled = True
         Me.Timer.Interval = 1
         '
-        'EventLog1
-        '
-        Me.EventLog1.SynchronizingObject = Me
-        '
         'TextEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -558,7 +552,6 @@ Partial Class TextEditor
         Me.rcMenu.ResumeLayout(False)
         Me.status.ResumeLayout(False)
         Me.status.PerformLayout()
-        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -624,5 +617,4 @@ Partial Class TextEditor
     Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
     Friend WithEvents rcSelectAll As ToolStripMenuItem
     Friend WithEvents rcDeselectAll As ToolStripMenuItem
-    Friend WithEvents EventLog1 As EventLog
 End Class

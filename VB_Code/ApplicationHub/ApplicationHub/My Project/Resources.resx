@@ -121,6 +121,9 @@
   <data name="Blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="python_password_generator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\python_password_generator.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Score" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Score.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

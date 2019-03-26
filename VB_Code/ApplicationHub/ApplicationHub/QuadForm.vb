@@ -41,6 +41,6 @@ Public Class QuadForm
     'Goes back to the application hub
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Hide()
-        Form1.Show()
+        ApplicationHub.Show()
     End Sub
 End Class

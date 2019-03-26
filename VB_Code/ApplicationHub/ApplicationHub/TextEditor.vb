@@ -26,7 +26,7 @@ Public Class TextEditor
 
     'Exit button
     Private Sub mMExit_Click(sender As Object, e As EventArgs) Handles mMExit.Click
-        Form1.Show()
+        ApplicationHub.Show()
         Me.Close()
     End Sub
 
@@ -229,7 +229,7 @@ Public Class TextEditor
     'Exit form
     Public Sub exitEditor()
         Me.Close()
-        Form1.Show()
+        ApplicationHub.Show()
     End Sub
 
     'Undo

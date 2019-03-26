@@ -9,6 +9,7 @@ Public Class PasswordGen
     Dim uppercaseChars As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     Dim nums As String = "1234567890"
     Dim specialChars As String = "`~!@#$%^&*()-_=+;:{}[]\|,.<>?/'"
+
     'Password requirements
     Dim length As Integer = 0 'Length requirement
     Dim capitalReq As Integer = 0 'Uppercase requirement
@@ -23,8 +24,8 @@ Public Class PasswordGen
     Dim numError As Boolean = False
     Dim specialError As Boolean = False
 
-    Dim randomLowerIndex As Integer = Math.Floor(Rnd() * 25)
-    Dim randomUpperIndex As Integer = Math.Floor(Rnd() * 25)
+    Dim randomLowerIndex As Integer = Math.Floor(Rnd() * 24)
+    Dim randomUpperIndex As Integer = Math.Floor(Rnd() * 24)
     Dim randomNumIndex As Integer = Math.Floor(Rnd() * 9)
     Dim randomSpecialIndex As Integer = Math.Floor(Rnd() * 29)
 

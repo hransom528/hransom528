@@ -49,6 +49,6 @@ Public Class Factorial
     'Takes user back to hub
     Private Sub btnHub_Click(sender As Object, e As EventArgs) Handles btnHub.Click
         Me.Hide()
-        Form1.Show()
+        ApplicationHub.Show()
     End Sub
 End Class

@@ -47,7 +47,6 @@ C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\Ap
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.Calculator.resources
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.FactorCalc.resources
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.Factorial.resources
-C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.Form1.resources
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.Resources.resources
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.PasswordGen.resources
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.QuadForm.resources
@@ -58,3 +57,6 @@ C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\Ap
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.exe
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.xml
 C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.pdb
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.MouseDebugger.resources
+C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.MouseDebugger.resources
+C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.ApplicationHub.resources

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class ApplicationHub
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnPong = New System.Windows.Forms.Button()
         Me.btnCalc = New System.Windows.Forms.Button()
@@ -36,6 +37,10 @@ Partial Class Form1
         Me.btnTextAdventure = New System.Windows.Forms.Button()
         Me.btnSpaceInvaders = New System.Windows.Forms.Button()
         Me.btnTextEditor = New System.Windows.Forms.Button()
+        Me.btnMouseDebug = New System.Windows.Forms.Button()
+        Me.lblDateTime = New System.Windows.Forms.Label()
+        Me.tmrTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.btnMusicPlayer = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -43,11 +48,11 @@ Partial Class Form1
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblTitle.Location = New System.Drawing.Point(250, 10)
+        Me.lblTitle.Location = New System.Drawing.Point(201, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(309, 37)
+        Me.lblTitle.Size = New System.Drawing.Size(258, 37)
         Me.lblTitle.TabIndex = 0
-        Me.lblTitle.Text = "Useful Applications"
+        Me.lblTitle.Text = "Application Hub"
         '
         'btnPong
         '
@@ -106,7 +111,7 @@ Partial Class Form1
         Me.lblDescription.AutoSize = True
         Me.lblDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDescription.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblDescription.Location = New System.Drawing.Point(184, 56)
+        Me.lblDescription.Location = New System.Drawing.Point(112, 55)
         Me.lblDescription.Name = "lblDescription"
         Me.lblDescription.Size = New System.Drawing.Size(421, 18)
         Me.lblDescription.TabIndex = 7
@@ -140,7 +145,7 @@ Partial Class Form1
         Me.btnFactorCalc.CausesValidation = False
         Me.btnFactorCalc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFactorCalc.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnFactorCalc.Location = New System.Drawing.Point(69, 316)
+        Me.btnFactorCalc.Location = New System.Drawing.Point(69, 314)
         Me.btnFactorCalc.Name = "btnFactorCalc"
         Me.btnFactorCalc.Size = New System.Drawing.Size(99, 50)
         Me.btnFactorCalc.TabIndex = 12
@@ -203,19 +208,63 @@ Partial Class Form1
         Me.btnTextEditor.CausesValidation = False
         Me.btnTextEditor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTextEditor.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnTextEditor.Location = New System.Drawing.Point(478, 204)
+        Me.btnTextEditor.Location = New System.Drawing.Point(478, 202)
         Me.btnTextEditor.Name = "btnTextEditor"
         Me.btnTextEditor.Size = New System.Drawing.Size(99, 50)
         Me.btnTextEditor.TabIndex = 19
         Me.btnTextEditor.Text = "Text Editor"
         Me.btnTextEditor.UseVisualStyleBackColor = False
         '
-        'Form1
+        'btnMouseDebug
+        '
+        Me.btnMouseDebug.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnMouseDebug.CausesValidation = False
+        Me.btnMouseDebug.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMouseDebug.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnMouseDebug.Location = New System.Drawing.Point(478, 258)
+        Me.btnMouseDebug.Name = "btnMouseDebug"
+        Me.btnMouseDebug.Size = New System.Drawing.Size(99, 50)
+        Me.btnMouseDebug.TabIndex = 20
+        Me.btnMouseDebug.Text = "Mouse Debugger"
+        Me.btnMouseDebug.UseVisualStyleBackColor = False
+        '
+        'lblDateTime
+        '
+        Me.lblDateTime.AutoSize = True
+        Me.lblDateTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDateTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblDateTime.Location = New System.Drawing.Point(452, 407)
+        Me.lblDateTime.Name = "lblDateTime"
+        Me.lblDateTime.Size = New System.Drawing.Size(179, 18)
+        Me.lblDateTime.TabIndex = 21
+        Me.lblDateTime.Text = "00/00/0000 0:00:00 AM"
+        '
+        'tmrTimer
+        '
+        Me.tmrTimer.Enabled = True
+        '
+        'btnMusicPlayer
+        '
+        Me.btnMusicPlayer.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnMusicPlayer.CausesValidation = False
+        Me.btnMusicPlayer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMusicPlayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnMusicPlayer.Location = New System.Drawing.Point(478, 314)
+        Me.btnMusicPlayer.Name = "btnMusicPlayer"
+        Me.btnMusicPlayer.Size = New System.Drawing.Size(99, 50)
+        Me.btnMusicPlayer.TabIndex = 22
+        Me.btnMusicPlayer.Text = "Music Player"
+        Me.btnMusicPlayer.UseVisualStyleBackColor = False
+        '
+        'ApplicationHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(784, 434)
+        Me.ClientSize = New System.Drawing.Size(666, 434)
+        Me.Controls.Add(Me.btnMusicPlayer)
+        Me.Controls.Add(Me.lblDateTime)
+        Me.Controls.Add(Me.btnMouseDebug)
         Me.Controls.Add(Me.btnTextEditor)
         Me.Controls.Add(Me.btnSpaceInvaders)
         Me.Controls.Add(Me.btnTextAdventure)
@@ -231,8 +280,8 @@ Partial Class Form1
         Me.Controls.Add(Me.btnPong)
         Me.Controls.Add(Me.lblTitle)
         Me.DoubleBuffered = True
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "ApplicationHub"
+        Me.Text = "Application Hub"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -253,4 +302,8 @@ Partial Class Form1
     Friend WithEvents btnTextAdventure As Button
     Friend WithEvents btnSpaceInvaders As Button
     Friend WithEvents btnTextEditor As Button
+    Friend WithEvents btnMouseDebug As Button
+    Friend WithEvents lblDateTime As Label
+    Friend WithEvents tmrTimer As Timer
+    Friend WithEvents btnMusicPlayer As Button
 End Class
