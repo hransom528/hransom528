@@ -39,8 +39,9 @@ Partial Class ApplicationHub
         Me.btnTextEditor = New System.Windows.Forms.Button()
         Me.btnMouseDebug = New System.Windows.Forms.Button()
         Me.lblDateTime = New System.Windows.Forms.Label()
-        Me.tmrTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrClock = New System.Windows.Forms.Timer(Me.components)
         Me.btnMusicPlayer = New System.Windows.Forms.Button()
+        Me.btnPerfectSquares = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -239,9 +240,9 @@ Partial Class ApplicationHub
         Me.lblDateTime.TabIndex = 21
         Me.lblDateTime.Text = "00/00/0000 0:00:00 AM"
         '
-        'tmrTimer
+        'tmrClock
         '
-        Me.tmrTimer.Enabled = True
+        Me.tmrClock.Enabled = True
         '
         'btnMusicPlayer
         '
@@ -256,12 +257,26 @@ Partial Class ApplicationHub
         Me.btnMusicPlayer.Text = "Music Player"
         Me.btnMusicPlayer.UseVisualStyleBackColor = False
         '
+        'btnPerfectSquares
+        '
+        Me.btnPerfectSquares.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnPerfectSquares.CausesValidation = False
+        Me.btnPerfectSquares.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPerfectSquares.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPerfectSquares.Location = New System.Drawing.Point(69, 370)
+        Me.btnPerfectSquares.Name = "btnPerfectSquares"
+        Me.btnPerfectSquares.Size = New System.Drawing.Size(99, 50)
+        Me.btnPerfectSquares.TabIndex = 23
+        Me.btnPerfectSquares.Text = "Perfect Squares"
+        Me.btnPerfectSquares.UseVisualStyleBackColor = False
+        '
         'ApplicationHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(666, 434)
+        Me.ClientSize = New System.Drawing.Size(666, 499)
+        Me.Controls.Add(Me.btnPerfectSquares)
         Me.Controls.Add(Me.btnMusicPlayer)
         Me.Controls.Add(Me.lblDateTime)
         Me.Controls.Add(Me.btnMouseDebug)
@@ -304,6 +319,7 @@ Partial Class ApplicationHub
     Friend WithEvents btnTextEditor As Button
     Friend WithEvents btnMouseDebug As Button
     Friend WithEvents lblDateTime As Label
-    Friend WithEvents tmrTimer As Timer
+    Friend WithEvents tmrClock As Timer
     Friend WithEvents btnMusicPlayer As Button
+    Friend WithEvents btnPerfectSquares As Button
 End Class

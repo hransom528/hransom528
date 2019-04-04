@@ -33,6 +33,7 @@ Partial Class PasswordGen
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnReset = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtCapital
@@ -126,11 +127,21 @@ Partial Class PasswordGen
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Special"
         '
+        'btnReset
+        '
+        Me.btnReset.Location = New System.Drawing.Point(348, 200)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.TabIndex = 11
+        Me.btnReset.Text = "Button1"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
         'PasswordGen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -160,4 +171,5 @@ Partial Class PasswordGen
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnReset As Button
 End Class

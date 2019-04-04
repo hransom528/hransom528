@@ -24,10 +24,10 @@ Public Class PasswordGen
     Dim numError As Boolean = False
     Dim specialError As Boolean = False
 
-    Dim randomLowerIndex As Integer = Math.Floor(Rnd() * 24)
-    Dim randomUpperIndex As Integer = Math.Floor(Rnd() * 24)
-    Dim randomNumIndex As Integer = Math.Floor(Rnd() * 9)
-    Dim randomSpecialIndex As Integer = Math.Floor(Rnd() * 29)
+    Dim randomLowerIndex As Integer = Math.Floor(Rnd() * 26)
+    Dim randomUpperIndex As Integer = Math.Floor(Rnd() * 26)
+    Dim randomNumIndex As Integer = Math.Floor(Rnd() * 10)
+    Dim randomSpecialIndex As Integer = Math.Floor(Rnd() * 31)
 
 #Region "Methods"
     'Method to determine if there was an error
@@ -57,11 +57,10 @@ Public Class PasswordGen
         'If the characterset is lowercase
         If (characterSet = "lower") And (Len(password) <= length) Then
             While (localCount < requiredCount)
-                password += lowercaseChars.Chars(randomLowerIndex)
+                password += lowercaseChars.Substring(randomLowerIndex, 1)
                 localCount += 1
-                randomLowerIndex = Math.Floor(Rnd() * 25)
+                randomLowerIndex = Math.Floor(Rnd() * 26)
             End While
-            localCount = 0
         End If
 
         'If the characterset is uppercase
@@ -69,7 +68,7 @@ Public Class PasswordGen
             While (localCount < requiredCount)
                 password += uppercaseChars.Chars(randomUpperIndex)
                 localCount += 1
-                randomUpperIndex = Math.Floor(Rnd() * 9)
+                randomUpperIndex = Math.Floor(Rnd() * 26)
             End While
             localCount = 0
         End If
@@ -79,7 +78,7 @@ Public Class PasswordGen
             While (localCount < requiredCount)
                 password += nums.Chars(randomNumIndex)
                 localCount += 1
-                Math.Floor(Rnd() * 9)
+                randomNumIndex = Math.Floor(Rnd() * 10)
             End While
             localCount = 0
         End If
@@ -89,7 +88,7 @@ Public Class PasswordGen
             While (localCount < requiredCount)
                 password += specialChars.Chars(randomSpecialIndex)
                 localCount += 1
-                Math.Floor(Rnd() * 29)
+                randomSpecialIndex = Math.Floor(Rnd() * 31)
             End While
             localCount = 0
         End If
@@ -126,5 +125,15 @@ Public Class PasswordGen
     'Form load
     Private Sub PasswordGen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        txtCapital.Text = ""
+        txtLength.Text = ""
+        txtNum.Text = ""
+        txtSpecial.Text = ""
+
+        lblResult.Text = ""
+        password = ""
     End Sub
 End Class
