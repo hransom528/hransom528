@@ -35,6 +35,10 @@ Partial Class PerfectSquares
         Me.mnuMenu = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lstFactorials = New System.Windows.Forms.ListBox()
+        Me.lblFactorials = New System.Windows.Forms.Label()
+        Me.txtFactorials = New System.Windows.Forms.TextBox()
+        Me.btnComputeFactorials = New System.Windows.Forms.Button()
         Me.mnuMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,7 +69,7 @@ Partial Class PerfectSquares
         Me.btnShowLists.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnShowLists.Enabled = False
         Me.btnShowLists.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShowLists.Location = New System.Drawing.Point(7, 173)
+        Me.btnShowLists.Location = New System.Drawing.Point(12, 222)
         Me.btnShowLists.Name = "btnShowLists"
         Me.btnShowLists.Size = New System.Drawing.Size(193, 89)
         Me.btnShowLists.TabIndex = 2
@@ -77,7 +81,7 @@ Partial Class PerfectSquares
         Me.btnClearLists.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnClearLists.Enabled = False
         Me.btnClearLists.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClearLists.Location = New System.Drawing.Point(7, 268)
+        Me.btnClearLists.Location = New System.Drawing.Point(12, 317)
         Me.btnClearLists.Name = "btnClearLists"
         Me.btnClearLists.Size = New System.Drawing.Size(193, 89)
         Me.btnClearLists.TabIndex = 3
@@ -89,7 +93,7 @@ Partial Class PerfectSquares
         Me.lstPerfectSquares.FormattingEnabled = True
         Me.lstPerfectSquares.Location = New System.Drawing.Point(226, 27)
         Me.lstPerfectSquares.Name = "lstPerfectSquares"
-        Me.lstPerfectSquares.Size = New System.Drawing.Size(228, 342)
+        Me.lstPerfectSquares.Size = New System.Drawing.Size(228, 381)
         Me.lstPerfectSquares.TabIndex = 4
         '
         'lstPrimeNumbers
@@ -97,7 +101,7 @@ Partial Class PerfectSquares
         Me.lstPrimeNumbers.FormattingEnabled = True
         Me.lstPrimeNumbers.Location = New System.Drawing.Point(460, 27)
         Me.lstPrimeNumbers.Name = "lstPrimeNumbers"
-        Me.lstPrimeNumbers.Size = New System.Drawing.Size(219, 342)
+        Me.lstPrimeNumbers.Size = New System.Drawing.Size(219, 381)
         Me.lstPrimeNumbers.TabIndex = 5
         '
         'txtPerfectSquares
@@ -144,7 +148,7 @@ Partial Class PerfectSquares
         Me.mnuMenu.Location = New System.Drawing.Point(0, 0)
         Me.mnuMenu.Name = "mnuMenu"
         Me.mnuMenu.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.mnuMenu.Size = New System.Drawing.Size(690, 24)
+        Me.mnuMenu.Size = New System.Drawing.Size(908, 24)
         Me.mnuMenu.TabIndex = 10
         Me.mnuMenu.Text = "MenuStrip1"
         '
@@ -161,12 +165,54 @@ Partial Class PerfectSquares
         Me.mnuFileExit.Size = New System.Drawing.Size(92, 22)
         Me.mnuFileExit.Text = "Exit"
         '
+        'lstFactorials
+        '
+        Me.lstFactorials.FormattingEnabled = True
+        Me.lstFactorials.Location = New System.Drawing.Point(683, 27)
+        Me.lstFactorials.Name = "lstFactorials"
+        Me.lstFactorials.Size = New System.Drawing.Size(219, 381)
+        Me.lstFactorials.TabIndex = 11
+        '
+        'lblFactorials
+        '
+        Me.lblFactorials.AutoSize = True
+        Me.lblFactorials.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFactorials.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblFactorials.Location = New System.Drawing.Point(126, 171)
+        Me.lblFactorials.Name = "lblFactorials"
+        Me.lblFactorials.Size = New System.Drawing.Size(93, 13)
+        Me.lblFactorials.TabIndex = 14
+        Me.lblFactorials.Text = "Factorials to... "
+        '
+        'txtFactorials
+        '
+        Me.txtFactorials.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFactorials.Location = New System.Drawing.Point(126, 190)
+        Me.txtFactorials.Name = "txtFactorials"
+        Me.txtFactorials.Size = New System.Drawing.Size(74, 26)
+        Me.txtFactorials.TabIndex = 13
+        '
+        'btnComputeFactorials
+        '
+        Me.btnComputeFactorials.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnComputeFactorials.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnComputeFactorials.Location = New System.Drawing.Point(7, 162)
+        Me.btnComputeFactorials.Name = "btnComputeFactorials"
+        Me.btnComputeFactorials.Size = New System.Drawing.Size(112, 54)
+        Me.btnComputeFactorials.TabIndex = 12
+        Me.btnComputeFactorials.Text = "Compute Factorials"
+        Me.btnComputeFactorials.UseVisualStyleBackColor = False
+        '
         'PerfectSquares
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(690, 374)
+        Me.ClientSize = New System.Drawing.Size(908, 416)
+        Me.Controls.Add(Me.lblFactorials)
+        Me.Controls.Add(Me.txtFactorials)
+        Me.Controls.Add(Me.btnComputeFactorials)
+        Me.Controls.Add(Me.lstFactorials)
         Me.Controls.Add(Me.lblOneTo)
         Me.Controls.Add(Me.lblHowMany)
         Me.Controls.Add(Me.txtPrimeNumbers)
@@ -203,4 +249,8 @@ Partial Class PerfectSquares
     Friend WithEvents mnuMenu As MenuStrip
     Friend WithEvents mnuFile As ToolStripMenuItem
     Friend WithEvents mnuFileExit As ToolStripMenuItem
+    Friend WithEvents lstFactorials As ListBox
+    Friend WithEvents lblFactorials As Label
+    Friend WithEvents txtFactorials As TextBox
+    Friend WithEvents btnComputeFactorials As Button
 End Class

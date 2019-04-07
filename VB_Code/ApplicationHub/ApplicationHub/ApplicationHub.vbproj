@@ -116,12 +116,6 @@
     <Compile Include="MouseDebugger.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MusicPlayer.Designer.vb">
-      <DependentUpon>MusicPlayer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MusicPlayer.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -187,9 +181,6 @@
     <EmbeddedResource Include="MouseDebugger.resx">
       <DependentUpon>MouseDebugger.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MusicPlayer.resx">
-      <DependentUpon>MusicPlayer.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -233,25 +224,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="python_password_generator.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

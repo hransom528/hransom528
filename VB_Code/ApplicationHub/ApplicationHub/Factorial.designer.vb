@@ -39,7 +39,7 @@ Partial Class Factorial
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(406, 24)
         Me.lblTitle.TabIndex = 0
-        Me.lblTitle.Text = "Enter A Number (0-12) To Find A Factorial"
+        Me.lblTitle.Text = "Enter A Number (0-20) To Find A Factorial"
         '
         'txtNumber
         '
@@ -104,7 +104,7 @@ Partial Class Factorial
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(442, 146)
+        Me.ClientSize = New System.Drawing.Size(436, 139)
         Me.Controls.Add(Me.btnHub)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.lblResult)

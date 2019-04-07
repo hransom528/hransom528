@@ -47,3 +47,5 @@ kill %process_number
 Remove a non-empty directory:
 rm -r
 
+Show Pin Layout:
+pinout

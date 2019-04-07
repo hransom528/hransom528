@@ -69,12 +69,6 @@ Public Class ApplicationHub
         Me.Hide()
     End Sub
 
-    'Takes you to the music player
-    Private Sub btnMusicPlayer_Click(sender As Object, e As EventArgs) Handles btnMusicPlayer.Click
-        MusicPlayer.Show()
-        Me.Hide()
-    End Sub
-
     'Takes you to the perfect squares/prime numbers calculator
     Private Sub btnPerfectSquares_Click(sender As Object, e As EventArgs) Handles btnPerfectSquares.Click
         PerfectSquares.Show()

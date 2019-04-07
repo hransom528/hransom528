@@ -132,7 +132,6 @@ Public Class PasswordGen
         txtLength.Text = ""
         txtNum.Text = ""
         txtSpecial.Text = ""
-
         lblResult.Text = ""
         password = ""
     End Sub

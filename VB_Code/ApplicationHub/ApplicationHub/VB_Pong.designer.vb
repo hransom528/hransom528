@@ -93,7 +93,7 @@ Partial Class VB_Pong
         Me.Controls.Add(Me.lblTitle)
         Me.DoubleBuffered = True
         Me.Name = "VB_Pong"
-        Me.Text = "Form1"
+        Me.Text = "Pong"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

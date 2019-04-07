@@ -40,7 +40,6 @@ Partial Class ApplicationHub
         Me.btnMouseDebug = New System.Windows.Forms.Button()
         Me.lblDateTime = New System.Windows.Forms.Label()
         Me.tmrClock = New System.Windows.Forms.Timer(Me.components)
-        Me.btnMusicPlayer = New System.Windows.Forms.Button()
         Me.btnPerfectSquares = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -234,7 +233,7 @@ Partial Class ApplicationHub
         Me.lblDateTime.AutoSize = True
         Me.lblDateTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDateTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblDateTime.Location = New System.Drawing.Point(452, 407)
+        Me.lblDateTime.Location = New System.Drawing.Point(461, 472)
         Me.lblDateTime.Name = "lblDateTime"
         Me.lblDateTime.Size = New System.Drawing.Size(179, 18)
         Me.lblDateTime.TabIndex = 21
@@ -243,19 +242,6 @@ Partial Class ApplicationHub
         'tmrClock
         '
         Me.tmrClock.Enabled = True
-        '
-        'btnMusicPlayer
-        '
-        Me.btnMusicPlayer.BackColor = System.Drawing.SystemColors.Desktop
-        Me.btnMusicPlayer.CausesValidation = False
-        Me.btnMusicPlayer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMusicPlayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnMusicPlayer.Location = New System.Drawing.Point(478, 314)
-        Me.btnMusicPlayer.Name = "btnMusicPlayer"
-        Me.btnMusicPlayer.Size = New System.Drawing.Size(99, 50)
-        Me.btnMusicPlayer.TabIndex = 22
-        Me.btnMusicPlayer.Text = "Music Player"
-        Me.btnMusicPlayer.UseVisualStyleBackColor = False
         '
         'btnPerfectSquares
         '
@@ -277,7 +263,6 @@ Partial Class ApplicationHub
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(666, 499)
         Me.Controls.Add(Me.btnPerfectSquares)
-        Me.Controls.Add(Me.btnMusicPlayer)
         Me.Controls.Add(Me.lblDateTime)
         Me.Controls.Add(Me.btnMouseDebug)
         Me.Controls.Add(Me.btnTextEditor)
@@ -320,6 +305,5 @@ Partial Class ApplicationHub
     Friend WithEvents btnMouseDebug As Button
     Friend WithEvents lblDateTime As Label
     Friend WithEvents tmrClock As Timer
-    Friend WithEvents btnMusicPlayer As Button
     Friend WithEvents btnPerfectSquares As Button
 End Class

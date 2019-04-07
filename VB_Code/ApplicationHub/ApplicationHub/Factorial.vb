@@ -4,15 +4,16 @@
 
 Public Class Factorial
     'Declares variable
-    Dim number As Integer = 0 'Number to calculate
-    Dim answer As Integer = 1 'The result of the factorial
+    Dim number As Int64 = 0 'Number to calculate
+    Dim answer As Int64 = 1 'The result of the factorial
+
     'Calculates and displays factorial
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         'Gets value of number
         number = Val(txtNumber.Text)
 
         'Calculates factorial or displays error if system overflow occurs
-        If (number > 12) Then
+        If (number > 20) Then
             lblResult.Text = "Error! System overflow!"
         Else
             'Calculates factorial

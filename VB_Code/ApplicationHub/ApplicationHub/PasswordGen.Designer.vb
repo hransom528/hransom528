@@ -154,7 +154,7 @@ Partial Class PasswordGen
         Me.Controls.Add(Me.txtNum)
         Me.Controls.Add(Me.txtCapital)
         Me.Name = "PasswordGen"
-        Me.Text = "PasswordGen"
+        Me.Text = "Password Generator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
