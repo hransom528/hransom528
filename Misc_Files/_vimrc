@@ -1,0 +1,32 @@
+
+"""""My VIM customizations 
+
+"Tab = 2 spaces
+:set tabstop=2
+
+"Line numbering 
+:set number
+
+"Autoindents 
+:set autoindent
+
+"Autosave
+:set autowrite
+
+"Shows matching brackets
+:set showmatch 
+
+"Enables mouse
+:set mouse=a
+
+"Syntax-specific highlighting enabled
+:syntax on
+
+"Sets the colorscheme to my favorite
+:colorscheme industry
+
+"Fixes any backspace errors
+:set backspace=indent,eol,start
+
+"Encoding
+:set encoding=utf-8
