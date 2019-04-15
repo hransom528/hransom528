@@ -1,8 +1,12 @@
 /*Stylesheet*/
-.title {
+.bigtitle {
   font: "Times New Roman";
   font-size: "30px";
   color: #ffffff;
+}
+
+.light_blue {
+  background-color: navy;
 }
 
 #date {
@@ -11,6 +15,9 @@
   color: #ffffff;
 }
 
-.light_blue {
-  background-color: navy;
+#games {
+  font : "Arial";
+  font-size: "14px";
+  color: #ffffff;
 }
+

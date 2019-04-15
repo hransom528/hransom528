@@ -19,6 +19,8 @@
 "Enables mouse
 :set mouse=a
 
+"Hides mouse after typing
+:set mousehide
 "Syntax-specific highlighting enabled
 :syntax on
 
