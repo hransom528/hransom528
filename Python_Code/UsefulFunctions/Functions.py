@@ -28,9 +28,19 @@ def getAverage():
     average = total/size
     return average
 
+#Sorts a list from least to greatest
+def sortList():
+	size = int(input("Size of dataset:\n"))
+	l = [None]*size 
+	sortedList = [None]*size
+	for i in range(size):
+		l[i] = float(input("Input item " + str(i+1) + ":\n"))	
+	l.sort()
+	return l
+
 print(shuffleString("test"))
 print(getDateTime())
-print(getAverage())
+print(sortList())
 input("Press ENTER to exit...")
 exit()
 
