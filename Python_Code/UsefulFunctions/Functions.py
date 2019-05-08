@@ -40,7 +40,6 @@ def sortList():
 
 print(shuffleString("test"))
 print(getDateTime())
-print(sortList())
 input("Press ENTER to exit...")
 exit()
 
