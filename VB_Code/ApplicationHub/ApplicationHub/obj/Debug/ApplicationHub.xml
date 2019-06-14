@@ -22,9 +22,59 @@ ApplicationHub
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ApplicationHub.My.Resources.Resources.aliens">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.back_alien">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.backgroundMusic">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
 <member name="P:ApplicationHub.My.Resources.Resources.Blip">
 <summary>
   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.bonus_alien">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.front_alien">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.gameOver">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.heavilyDamagedFort">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.lightlyDamagedFort">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.middle_alien">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.printIcon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ApplicationHub.My.Resources.Resources.python_password_generator">
@@ -33,6 +83,26 @@ ApplicationHub
 </summary>
 </member>
 <member name="P:ApplicationHub.My.Resources.Resources.Score">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.ship">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.Starship">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.undamagedFort">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ApplicationHub.My.Resources.Resources.victorySFX">
 <summary>
   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
 </summary>

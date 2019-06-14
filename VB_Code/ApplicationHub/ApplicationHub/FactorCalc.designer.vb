@@ -144,7 +144,7 @@ Partial Class FactorCalc
         Me.Controls.Add(Me.txtNumberToFactor)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "FactorCalc"
-        Me.Text = "Form1"
+        Me.Text = "Factor Calculator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

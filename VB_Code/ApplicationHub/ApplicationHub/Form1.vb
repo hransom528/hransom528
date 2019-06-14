@@ -1,11 +1,13 @@
 ﻿'Harris Ransom
 'Created 1/15/19
+'Completed on 
 
 Public Class ApplicationHub
 #Region "Setup Code"
+
     'GetDateTime method
     Public Sub getDateTime()
-        Dim dt As Date = Microsoft.VisualBasic.DateAndTime.Now() 'Gets date
+        Dim dt As Date = Microsoft.VisualBasic.DateAndTime.Now() 'Gets datetime
         lblDateTime.Text = dt
     End Sub
 
@@ -16,11 +18,25 @@ Public Class ApplicationHub
 
     'Timer Tick event
     Private Sub tmrTimer_Tick(sender As Object, e As EventArgs) Handles tmrClock.Tick
+        'Gets the date/time for clock
         getDateTime()
         Me.Refresh()
+
+        'Checks to see if the form is closed
+        If (Me.IsDisposed) Then
+            Application.Exit()
+        End If
+    End Sub
+
+    'KeyDown event
+    Private Sub ApplicationHub_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If (e.KeyCode = Keys.Escape) Then
+            Application.Exit()
+        End If
     End Sub
 #End Region
 
+#Region "Buttons"
     'Takes you to pong
     Private Sub btnPong_Click(sender As Object, e As EventArgs) Handles btnPong.Click
         VB_Pong.Show()
@@ -69,9 +85,33 @@ Public Class ApplicationHub
         Me.Hide()
     End Sub
 
+    'Takes you to the music player
+    Private Sub btnMusicPlayer_Click(sender As Object, e As EventArgs) Handles btnMusicPlayer.Click
+        MusicPlayer.Show()
+        Me.Hide()
+    End Sub
+
     'Takes you to the perfect squares/prime numbers calculator
     Private Sub btnPerfectSquares_Click(sender As Object, e As EventArgs) Handles btnPerfectSquares.Click
         PerfectSquares.Show()
         Me.Hide()
     End Sub
+
+    'Takes you to the Starship Fighter game
+    Private Sub btnStarshipFighter_Click(sender As Object, e As EventArgs) Handles btnStarshipFighter.Click
+        StarshipFighter.Show()
+        Me.Hide()
+    End Sub
+
+    'Takes you to Space Invaders
+    Private Sub btnSpaceInvaders_Click(sender As Object, e As EventArgs) Handles btnSpaceInvaders.Click
+        VB_SpaceInvaders.Show()
+        Me.Hide()
+    End Sub
+
+    'Exits the application
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
+    End Sub
+#End Region
 End Class

@@ -172,7 +172,7 @@ Partial Class QuadForm
         Me.Controls.Add(Me.txtA)
         Me.Controls.Add(Me.lblInstructions)
         Me.Name = "QuadForm"
-        Me.Text = "Form1"
+        Me.Text = "Quadratic Formula Calculator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

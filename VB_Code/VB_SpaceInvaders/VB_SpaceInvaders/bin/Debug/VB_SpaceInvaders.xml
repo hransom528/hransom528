@@ -27,12 +27,32 @@ VB_SpaceInvaders
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:VB_SpaceInvaders.My.Resources.Resources.backgroundMusic">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
 <member name="P:VB_SpaceInvaders.My.Resources.Resources.bonus_alien">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:VB_SpaceInvaders.My.Resources.Resources.front_alien">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB_SpaceInvaders.My.Resources.Resources.gameOver">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:VB_SpaceInvaders.My.Resources.Resources.heavilyDamagedFort">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB_SpaceInvaders.My.Resources.Resources.lightlyDamagedFort">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -45,6 +65,16 @@ VB_SpaceInvaders
 <member name="P:VB_SpaceInvaders.My.Resources.Resources.ship">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB_SpaceInvaders.My.Resources.Resources.undamagedFort">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB_SpaceInvaders.My.Resources.Resources.victorySFX">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
 </summary>
 </member>
 </members>

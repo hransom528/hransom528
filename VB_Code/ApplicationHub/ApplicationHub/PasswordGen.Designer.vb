@@ -29,37 +29,40 @@ Partial Class PasswordGen
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnGetPass = New System.Windows.Forms.Button()
         Me.lblResult = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblLength = New System.Windows.Forms.Label()
+        Me.lblCapital = New System.Windows.Forms.Label()
+        Me.lblNums = New System.Windows.Forms.Label()
+        Me.lblSpecial = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.lblRequirements = New System.Windows.Forms.Label()
+        Me.btnCopy = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtCapital
         '
-        Me.txtCapital.Location = New System.Drawing.Point(80, 99)
+        Me.txtCapital.Location = New System.Drawing.Point(50, 111)
         Me.txtCapital.Name = "txtCapital"
         Me.txtCapital.Size = New System.Drawing.Size(100, 20)
         Me.txtCapital.TabIndex = 0
         '
         'txtNum
         '
-        Me.txtNum.Location = New System.Drawing.Point(80, 125)
+        Me.txtNum.Location = New System.Drawing.Point(50, 137)
         Me.txtNum.Name = "txtNum"
         Me.txtNum.Size = New System.Drawing.Size(100, 20)
         Me.txtNum.TabIndex = 1
         '
         'txtSpecial
         '
-        Me.txtSpecial.Location = New System.Drawing.Point(80, 151)
+        Me.txtSpecial.Location = New System.Drawing.Point(50, 163)
         Me.txtSpecial.Name = "txtSpecial"
         Me.txtSpecial.Size = New System.Drawing.Size(100, 20)
         Me.txtSpecial.TabIndex = 2
         '
         'txtLength
         '
-        Me.txtLength.Location = New System.Drawing.Point(80, 73)
+        Me.txtLength.Location = New System.Drawing.Point(50, 85)
         Me.txtLength.Name = "txtLength"
         Me.txtLength.Size = New System.Drawing.Size(100, 20)
         Me.txtLength.TabIndex = 3
@@ -67,85 +70,150 @@ Partial Class PasswordGen
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Location = New System.Drawing.Point(260, 13)
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblTitle.Location = New System.Drawing.Point(35, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(103, 13)
+        Me.lblTitle.Size = New System.Drawing.Size(300, 33)
         Me.lblTitle.TabIndex = 4
         Me.lblTitle.Text = "Password Generator"
         '
         'btnGetPass
         '
-        Me.btnGetPass.Location = New System.Drawing.Point(245, 200)
+        Me.btnGetPass.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnGetPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGetPass.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnGetPass.Location = New System.Drawing.Point(51, 196)
         Me.btnGetPass.Name = "btnGetPass"
-        Me.btnGetPass.Size = New System.Drawing.Size(75, 23)
+        Me.btnGetPass.Size = New System.Drawing.Size(113, 43)
         Me.btnGetPass.TabIndex = 5
-        Me.btnGetPass.Text = "Button1"
-        Me.btnGetPass.UseVisualStyleBackColor = True
+        Me.btnGetPass.Text = "Get Random Password"
+        Me.btnGetPass.UseVisualStyleBackColor = False
         '
         'lblResult
         '
         Me.lblResult.AutoSize = True
-        Me.lblResult.Location = New System.Drawing.Point(245, 248)
+        Me.lblResult.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblResult.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblResult.Location = New System.Drawing.Point(109, 261)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(39, 13)
+        Me.lblResult.Size = New System.Drawing.Size(80, 16)
         Me.lblResult.TabIndex = 6
-        Me.lblResult.Text = "Label1"
+        Me.lblResult.Text = "Password:"
         '
-        'Label1
+        'lblLength
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(186, 76)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Length"
+        Me.lblLength.AutoSize = True
+        Me.lblLength.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblLength.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLength.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblLength.Location = New System.Drawing.Point(156, 89)
+        Me.lblLength.Name = "lblLength"
+        Me.lblLength.Size = New System.Drawing.Size(54, 16)
+        Me.lblLength.TabIndex = 7
+        Me.lblLength.Text = "Length"
         '
-        'Label2
+        'lblCapital
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(186, 99)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Capital"
+        Me.lblCapital.AutoSize = True
+        Me.lblCapital.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblCapital.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCapital.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblCapital.Location = New System.Drawing.Point(156, 115)
+        Me.lblCapital.Name = "lblCapital"
+        Me.lblCapital.Size = New System.Drawing.Size(57, 16)
+        Me.lblCapital.TabIndex = 8
+        Me.lblCapital.Text = "Capital"
         '
-        'Label3
+        'lblNums
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(186, 128)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 13)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Nums"
+        Me.lblNums.AutoSize = True
+        Me.lblNums.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblNums.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNums.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblNums.Location = New System.Drawing.Point(156, 141)
+        Me.lblNums.Name = "lblNums"
+        Me.lblNums.Size = New System.Drawing.Size(47, 16)
+        Me.lblNums.TabIndex = 9
+        Me.lblNums.Text = "Nums"
         '
-        'Label4
+        'lblSpecial
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(186, 158)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Special"
+        Me.lblSpecial.AutoSize = True
+        Me.lblSpecial.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblSpecial.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSpecial.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblSpecial.Location = New System.Drawing.Point(156, 164)
+        Me.lblSpecial.Name = "lblSpecial"
+        Me.lblSpecial.Size = New System.Drawing.Size(61, 16)
+        Me.lblSpecial.TabIndex = 10
+        Me.lblSpecial.Text = "Special"
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(348, 200)
+        Me.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnReset.Enabled = False
+        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnReset.Location = New System.Drawing.Point(170, 196)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.Size = New System.Drawing.Size(109, 43)
         Me.btnReset.TabIndex = 11
-        Me.btnReset.Text = "Button1"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = False
+        '
+        'lblRequirements
+        '
+        Me.lblRequirements.AutoSize = True
+        Me.lblRequirements.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequirements.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblRequirements.Location = New System.Drawing.Point(48, 57)
+        Me.lblRequirements.Name = "lblRequirements"
+        Me.lblRequirements.Size = New System.Drawing.Size(108, 16)
+        Me.lblRequirements.TabIndex = 12
+        Me.lblRequirements.Text = "Requirements:"
+        '
+        'btnCopy
+        '
+        Me.btnCopy.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnCopy.Enabled = False
+        Me.btnCopy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCopy.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnCopy.Location = New System.Drawing.Point(94, 290)
+        Me.btnCopy.Name = "btnCopy"
+        Me.btnCopy.Size = New System.Drawing.Size(109, 43)
+        Me.btnCopy.TabIndex = 13
+        Me.btnCopy.Text = "Copy To Clipboard"
+        Me.btnCopy.UseVisualStyleBackColor = False
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnExit.CausesValidation = False
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Red
+        Me.btnExit.Location = New System.Drawing.Point(273, 314)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(62, 29)
+        Me.btnExit.TabIndex = 25
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'PasswordGen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(347, 355)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnCopy)
+        Me.Controls.Add(Me.lblRequirements)
         Me.Controls.Add(Me.btnReset)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblSpecial)
+        Me.Controls.Add(Me.lblNums)
+        Me.Controls.Add(Me.lblCapital)
+        Me.Controls.Add(Me.lblLength)
         Me.Controls.Add(Me.lblResult)
         Me.Controls.Add(Me.btnGetPass)
         Me.Controls.Add(Me.lblTitle)
@@ -153,6 +221,7 @@ Partial Class PasswordGen
         Me.Controls.Add(Me.txtSpecial)
         Me.Controls.Add(Me.txtNum)
         Me.Controls.Add(Me.txtCapital)
+        Me.DoubleBuffered = True
         Me.Name = "PasswordGen"
         Me.Text = "Password Generator"
         Me.ResumeLayout(False)
@@ -167,9 +236,12 @@ Partial Class PasswordGen
     Friend WithEvents lblTitle As Label
     Friend WithEvents btnGetPass As Button
     Friend WithEvents lblResult As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblLength As Label
+    Friend WithEvents lblCapital As Label
+    Friend WithEvents lblNums As Label
+    Friend WithEvents lblSpecial As Label
     Friend WithEvents btnReset As Button
+    Friend WithEvents lblRequirements As Label
+    Friend WithEvents btnCopy As Button
+    Friend WithEvents btnExit As Button
 End Class

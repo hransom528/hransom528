@@ -2,12 +2,15 @@
 'Text Editor v1.0
 Imports System.Drawing.Text
 Imports System.IO
+Imports System.Drawing.Printing
+Imports System.Windows.Forms
 
 Public Class TextEditor
 #Region "Main Editor and Timer"
     'Timer
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
         lblCharCount.Text = "Characters in the current document: " & Document.TextLength.ToString()
+        ToolStripStatusLabel1.Text = "Words in the current document: " & getWordCount()
         lblZoom.Text = Document.ZoomFactor.ToString()
     End Sub
 #End Region
@@ -33,6 +36,18 @@ Public Class TextEditor
     'New button
     Private Sub mMNew_Click(sender As Object, e As EventArgs) Handles mMNew.Click
         NewDocument()
+    End Sub
+
+    'Opens the print dialog
+    Private Sub mnuFilePrint_Click(sender As Object, e As EventArgs) Handles mnuFilePrint.Click
+        Dim printDlg As New PrintDialog()
+        printDoc.DocumentName = "Print Document"
+        printDlg.Document = printDoc
+        printDlg.AllowSelection = True
+        printDlg.AllowSomePages = True
+        If (printDlg.ShowDialog() = DialogResult.OK) Then
+            printDoc.Print()
+        End If
     End Sub
 #End Region
 
@@ -112,54 +127,6 @@ Public Class TextEditor
         paste()
     End Sub
 
-    'Bold
-    Private Sub tbBold_Click(sender As Object, e As EventArgs) Handles tbBold.Click
-        Dim bfont As New Font(Document.Font, FontStyle.Bold)
-        Dim rfont As New Font(Document.Font, FontStyle.Regular)
-        If Document.SelectedText.Length = 0 Then Exit Sub
-        If Document.SelectionFont.Bold Then
-            Document.SelectionFont = rfont
-        Else
-            Document.SelectionFont = bfont
-        End If
-    End Sub
-
-    'Italic
-    Private Sub tbItalic_Click(sender As Object, e As EventArgs) Handles tbItalic.Click
-        Dim ifont As New Font(Document.Font, FontStyle.Italic)
-        Dim rfont As New Font(Document.Font, FontStyle.Regular)
-        If Document.SelectedText.Length = 0 Then Exit Sub
-        If Document.SelectionFont.Bold Then
-            Document.SelectionFont = rfont
-        Else
-            Document.SelectionFont = ifont
-        End If
-    End Sub
-
-    'Underline
-    Private Sub tbUnderline_Click(sender As Object, e As EventArgs) Handles tbUnderline.Click
-        Dim ufont As New Font(Document.Font, FontStyle.Underline)
-        Dim rfont As New Font(Document.Font, FontStyle.Regular)
-        If Document.SelectedText.Length = 0 Then Exit Sub
-        If Document.SelectionFont.Bold Then
-            Document.SelectionFont = rfont
-        Else
-            Document.SelectionFont = ufont
-        End If
-    End Sub
-
-    'Strikethrough
-    Private Sub tbStrike_Click(sender As Object, e As EventArgs) Handles tbStrike.Click
-        Dim sfont As New Font(Document.Font, FontStyle.Strikeout)
-        Dim rfont As New Font(Document.Font, FontStyle.Regular)
-        If Document.SelectedText.Length = 0 Then Exit Sub
-        If Document.SelectionFont.Bold Then
-            Document.SelectionFont = rfont
-        Else
-            Document.SelectionFont = sfont
-        End If
-    End Sub
-
     'Align left
     Private Sub tbAlignLeft_Click(sender As Object, e As EventArgs) Handles tbAlignLeft.Click
         Document.SelectionAlignment = HorizontalAlignment.Left
@@ -193,12 +160,11 @@ Public Class TextEditor
         End If
     End Sub
 
-    'Font selector
-    Private Sub tbSelectFont_Click(sender As Object, e As EventArgs) Handles tbSelectFont.Click
-        Dim fonts As New InstalledFontCollection()
-        For fntFamily As Integer = 0 To fonts.Families.Length - 1
-            tbSelectFont.Items.Add(fonts.Families(fntFamily).Name)
-        Next
+    'Changes the text editor font
+    Private Sub btnChangeFont_Click(sender As Object, e As EventArgs) Handles btnChangeFont.Click
+        If openFonts.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Document.Font = openFonts.Font()
+        End If
     End Sub
 #End Region
 
@@ -280,6 +246,20 @@ Public Class TextEditor
             status.BackColor = colorPicker.Color
         End If
     End Sub
+
+    'Gets word count in document
+    Public Function getWordCount()
+        Dim text As String = Document.Text
+        Dim wordCount As Integer = 0
+
+        For i = 0 To text.Length() - 1
+            If (text(i) = " ") Or (text(i) = vbCr) Or (text(i) = vbCrLf) Then
+                wordCount += 1
+            End If
+        Next
+
+        Return wordCount
+    End Function
 #End Region
 
 #Region "Right Click Context Menu"
@@ -322,32 +302,21 @@ Public Class TextEditor
 #Region "Events"
     'Load method
     Private Sub TextEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Size selector
-        For fontSize = 10 To 75
-            tbSelectSize.Items.Add(fontSize)
-        Next
-
-        'Adds text to features
-        tbSelectFont.Text = "Fonts:"
-        tbSelectSize.Text = "Size:"
+        'Resets character and word count
         lblCharCount.Text = "Characters in the current document: 0"
+        ToolStripStatusLabel1.Text = "Words in the current document: 0"
     End Sub
 
-    'SelectedIndexChange event for the SelectFont drop-down
-    Private Sub tbSelectFont_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tbSelectFont.SelectedIndexChanged
-        Dim ComboFonts As System.Drawing.Font
-        Try
-            ComboFonts = Document.SelectionFont
-            Document.SelectionFont = New System.Drawing.Font(tbSelectFont.Text,
-            Document.SelectionFont.Size, Document.SelectionFont.Style)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+    'PrintDoc method
+    Private Sub printDoc_PrintPage(sender As Object, e As PrintPageEventArgs) Handles printDoc.PrintPage
+        e.Graphics.DrawString(Document.Text, Document.Font, Brushes.Black, 0, 0)
     End Sub
 
-    'SelectedIndexChange event for the SelectSize drop-down
-    Private Sub tbSelectSize_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tbSelectSize.SelectedIndexChanged
-        Document.SelectionFont = New Font(tbSelectSize.SelectedItem.ToString, CInt(tbSelectSize.SelectedItem.ToString), Document.SelectionFont.Style)
+    'Resize method
+    Private Sub TextEditor_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Document.Width = Me.Width
+        Document.Height = Me.Height - 30
     End Sub
 #End Region
+
 End Class

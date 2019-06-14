@@ -104,7 +104,7 @@ Partial Class Factorial
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(436, 139)
+        Me.ClientSize = New System.Drawing.Size(442, 146)
         Me.Controls.Add(Me.btnHub)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.lblResult)
@@ -112,7 +112,7 @@ Partial Class Factorial
         Me.Controls.Add(Me.txtNumber)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "Factorial"
-        Me.Text = "Form1"
+        Me.Text = "Factorial Calculator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

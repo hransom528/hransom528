@@ -34,13 +34,15 @@ Partial Class ApplicationHub
         Me.btnFactorCalc = New System.Windows.Forms.Button()
         Me.lblMisc = New System.Windows.Forms.Label()
         Me.btnPasswordGen = New System.Windows.Forms.Button()
-        Me.btnTextAdventure = New System.Windows.Forms.Button()
+        Me.btnStarshipFighter = New System.Windows.Forms.Button()
         Me.btnSpaceInvaders = New System.Windows.Forms.Button()
         Me.btnTextEditor = New System.Windows.Forms.Button()
         Me.btnMouseDebug = New System.Windows.Forms.Button()
         Me.lblDateTime = New System.Windows.Forms.Label()
         Me.tmrClock = New System.Windows.Forms.Timer(Me.components)
+        Me.btnMusicPlayer = New System.Windows.Forms.Button()
         Me.btnPerfectSquares = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -73,7 +75,7 @@ Partial Class ApplicationHub
         Me.btnCalc.CausesValidation = False
         Me.btnCalc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCalc.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCalc.Location = New System.Drawing.Point(69, 146)
+        Me.btnCalc.Location = New System.Drawing.Point(66, 146)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(99, 50)
         Me.btnCalc.TabIndex = 3
@@ -86,7 +88,7 @@ Partial Class ApplicationHub
         Me.btnQuadForm.CausesValidation = False
         Me.btnQuadForm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuadForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnQuadForm.Location = New System.Drawing.Point(69, 202)
+        Me.btnQuadForm.Location = New System.Drawing.Point(66, 202)
         Me.btnQuadForm.Name = "btnQuadForm"
         Me.btnQuadForm.Size = New System.Drawing.Size(99, 50)
         Me.btnQuadForm.TabIndex = 8
@@ -99,7 +101,7 @@ Partial Class ApplicationHub
         Me.btnFactorial.CausesValidation = False
         Me.btnFactorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFactorial.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnFactorial.Location = New System.Drawing.Point(69, 258)
+        Me.btnFactorial.Location = New System.Drawing.Point(66, 258)
         Me.btnFactorial.Name = "btnFactorial"
         Me.btnFactorial.Size = New System.Drawing.Size(99, 50)
         Me.btnFactorial.TabIndex = 9
@@ -145,7 +147,7 @@ Partial Class ApplicationHub
         Me.btnFactorCalc.CausesValidation = False
         Me.btnFactorCalc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFactorCalc.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnFactorCalc.Location = New System.Drawing.Point(69, 314)
+        Me.btnFactorCalc.Location = New System.Drawing.Point(66, 314)
         Me.btnFactorCalc.Name = "btnFactorCalc"
         Me.btnFactorCalc.Size = New System.Drawing.Size(99, 50)
         Me.btnFactorCalc.TabIndex = 12
@@ -176,18 +178,18 @@ Partial Class ApplicationHub
         Me.btnPasswordGen.Text = "Password Generator"
         Me.btnPasswordGen.UseVisualStyleBackColor = False
         '
-        'btnTextAdventure
+        'btnStarshipFighter
         '
-        Me.btnTextAdventure.BackColor = System.Drawing.SystemColors.Desktop
-        Me.btnTextAdventure.CausesValidation = False
-        Me.btnTextAdventure.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTextAdventure.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnTextAdventure.Location = New System.Drawing.Point(282, 258)
-        Me.btnTextAdventure.Name = "btnTextAdventure"
-        Me.btnTextAdventure.Size = New System.Drawing.Size(99, 50)
-        Me.btnTextAdventure.TabIndex = 17
-        Me.btnTextAdventure.Text = "Text Adventure"
-        Me.btnTextAdventure.UseVisualStyleBackColor = False
+        Me.btnStarshipFighter.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnStarshipFighter.CausesValidation = False
+        Me.btnStarshipFighter.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStarshipFighter.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnStarshipFighter.Location = New System.Drawing.Point(282, 258)
+        Me.btnStarshipFighter.Name = "btnStarshipFighter"
+        Me.btnStarshipFighter.Size = New System.Drawing.Size(99, 50)
+        Me.btnStarshipFighter.TabIndex = 17
+        Me.btnStarshipFighter.Text = "Starship Fighter"
+        Me.btnStarshipFighter.UseVisualStyleBackColor = False
         '
         'btnSpaceInvaders
         '
@@ -243,18 +245,44 @@ Partial Class ApplicationHub
         '
         Me.tmrClock.Enabled = True
         '
+        'btnMusicPlayer
+        '
+        Me.btnMusicPlayer.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnMusicPlayer.CausesValidation = False
+        Me.btnMusicPlayer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMusicPlayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnMusicPlayer.Location = New System.Drawing.Point(478, 314)
+        Me.btnMusicPlayer.Name = "btnMusicPlayer"
+        Me.btnMusicPlayer.Size = New System.Drawing.Size(99, 50)
+        Me.btnMusicPlayer.TabIndex = 22
+        Me.btnMusicPlayer.Text = "Music Player"
+        Me.btnMusicPlayer.UseVisualStyleBackColor = False
+        '
         'btnPerfectSquares
         '
         Me.btnPerfectSquares.BackColor = System.Drawing.SystemColors.Desktop
         Me.btnPerfectSquares.CausesValidation = False
         Me.btnPerfectSquares.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPerfectSquares.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPerfectSquares.Location = New System.Drawing.Point(69, 370)
+        Me.btnPerfectSquares.Location = New System.Drawing.Point(66, 370)
         Me.btnPerfectSquares.Name = "btnPerfectSquares"
         Me.btnPerfectSquares.Size = New System.Drawing.Size(99, 50)
         Me.btnPerfectSquares.TabIndex = 23
         Me.btnPerfectSquares.Text = "Perfect Squares"
         Me.btnPerfectSquares.UseVisualStyleBackColor = False
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnExit.CausesValidation = False
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Red
+        Me.btnExit.Location = New System.Drawing.Point(12, 461)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(62, 29)
+        Me.btnExit.TabIndex = 24
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'ApplicationHub
         '
@@ -262,12 +290,14 @@ Partial Class ApplicationHub
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(666, 499)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnPerfectSquares)
+        Me.Controls.Add(Me.btnMusicPlayer)
         Me.Controls.Add(Me.lblDateTime)
         Me.Controls.Add(Me.btnMouseDebug)
         Me.Controls.Add(Me.btnTextEditor)
         Me.Controls.Add(Me.btnSpaceInvaders)
-        Me.Controls.Add(Me.btnTextAdventure)
+        Me.Controls.Add(Me.btnStarshipFighter)
         Me.Controls.Add(Me.btnPasswordGen)
         Me.Controls.Add(Me.lblMisc)
         Me.Controls.Add(Me.btnFactorCalc)
@@ -299,11 +329,13 @@ Partial Class ApplicationHub
     Friend WithEvents btnFactorCalc As Button
     Friend WithEvents lblMisc As Label
     Friend WithEvents btnPasswordGen As Button
-    Friend WithEvents btnTextAdventure As Button
+    Friend WithEvents btnStarshipFighter As Button
     Friend WithEvents btnSpaceInvaders As Button
     Friend WithEvents btnTextEditor As Button
     Friend WithEvents btnMouseDebug As Button
     Friend WithEvents lblDateTime As Label
     Friend WithEvents tmrClock As Timer
+    Friend WithEvents btnMusicPlayer As Button
     Friend WithEvents btnPerfectSquares As Button
+    Friend WithEvents btnExit As Button
 End Class

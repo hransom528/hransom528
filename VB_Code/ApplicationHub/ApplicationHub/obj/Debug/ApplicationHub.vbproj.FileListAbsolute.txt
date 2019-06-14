@@ -66,5 +66,7 @@ H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\AxInterop.WMPLib.dll
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.vbproj.ResolveComReference.cache
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.vbprojAssemblyReference.cache
+C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.vbproj.ResolveComReference.cache
 H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.PerfectSquares.resources
-C:\Users\hrans\Documents\GitHub\commanderHR1.github.io\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.PerfectSquares.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.StarshipFighter.resources
+H:\Misc\Code\commanderHR1.github.io-master\VB_Code\ApplicationHub\ApplicationHub\obj\Debug\ApplicationHub.VB_SpaceInvaders.resources

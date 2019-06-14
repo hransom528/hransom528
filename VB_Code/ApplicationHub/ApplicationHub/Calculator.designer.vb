@@ -27,8 +27,6 @@ Partial Class Calculator
         Me.btnAddition = New System.Windows.Forms.Button()
         Me.btnSubtraction = New System.Windows.Forms.Button()
         Me.btnCompute = New System.Windows.Forms.Button()
-        Me.btnExponent = New System.Windows.Forms.Button()
-        Me.btnModulo = New System.Windows.Forms.Button()
         Me.txtNumber1 = New System.Windows.Forms.TextBox()
         Me.txtNumber2 = New System.Windows.Forms.TextBox()
         Me.lblOperator = New System.Windows.Forms.Label()
@@ -39,7 +37,6 @@ Partial Class Calculator
         Me.lblOperatios = New System.Windows.Forms.Label()
         Me.lblNum1 = New System.Windows.Forms.Label()
         Me.lblNumber2 = New System.Windows.Forms.Label()
-        Me.btnSquareRoot = New System.Windows.Forms.Button()
         Me.lblInstructions = New System.Windows.Forms.Label()
         Me.btnForm2 = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
@@ -49,7 +46,7 @@ Partial Class Calculator
         '
         Me.btnDivision.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnDivision.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnDivision.Location = New System.Drawing.Point(40, 133)
+        Me.btnDivision.Location = New System.Drawing.Point(22, 133)
         Me.btnDivision.Name = "btnDivision"
         Me.btnDivision.Size = New System.Drawing.Size(75, 23)
         Me.btnDivision.TabIndex = 13
@@ -60,7 +57,7 @@ Partial Class Calculator
         '
         Me.btnMultiplication.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnMultiplication.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnMultiplication.Location = New System.Drawing.Point(40, 162)
+        Me.btnMultiplication.Location = New System.Drawing.Point(22, 162)
         Me.btnMultiplication.Name = "btnMultiplication"
         Me.btnMultiplication.Size = New System.Drawing.Size(75, 23)
         Me.btnMultiplication.TabIndex = 14
@@ -71,7 +68,7 @@ Partial Class Calculator
         '
         Me.btnAddition.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAddition.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAddition.Location = New System.Drawing.Point(40, 220)
+        Me.btnAddition.Location = New System.Drawing.Point(22, 220)
         Me.btnAddition.Name = "btnAddition"
         Me.btnAddition.Size = New System.Drawing.Size(75, 23)
         Me.btnAddition.TabIndex = 16
@@ -82,7 +79,7 @@ Partial Class Calculator
         '
         Me.btnSubtraction.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSubtraction.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSubtraction.Location = New System.Drawing.Point(40, 191)
+        Me.btnSubtraction.Location = New System.Drawing.Point(22, 191)
         Me.btnSubtraction.Name = "btnSubtraction"
         Me.btnSubtraction.Size = New System.Drawing.Size(75, 23)
         Me.btnSubtraction.TabIndex = 15
@@ -94,45 +91,23 @@ Partial Class Calculator
         Me.btnCompute.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCompute.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCompute.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCompute.Location = New System.Drawing.Point(236, 263)
+        Me.btnCompute.Location = New System.Drawing.Point(191, 266)
         Me.btnCompute.Name = "btnCompute"
         Me.btnCompute.Size = New System.Drawing.Size(158, 29)
         Me.btnCompute.TabIndex = 17
         Me.btnCompute.Text = "Compute"
         Me.btnCompute.UseVisualStyleBackColor = False
         '
-        'btnExponent
-        '
-        Me.btnExponent.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnExponent.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExponent.Location = New System.Drawing.Point(40, 249)
-        Me.btnExponent.Name = "btnExponent"
-        Me.btnExponent.Size = New System.Drawing.Size(75, 23)
-        Me.btnExponent.TabIndex = 18
-        Me.btnExponent.Text = "^"
-        Me.btnExponent.UseVisualStyleBackColor = False
-        '
-        'btnModulo
-        '
-        Me.btnModulo.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnModulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnModulo.Location = New System.Drawing.Point(40, 279)
-        Me.btnModulo.Name = "btnModulo"
-        Me.btnModulo.Size = New System.Drawing.Size(75, 23)
-        Me.btnModulo.TabIndex = 19
-        Me.btnModulo.Text = "Mod"
-        Me.btnModulo.UseVisualStyleBackColor = False
-        '
         'txtNumber1
         '
-        Me.txtNumber1.Location = New System.Drawing.Point(294, 119)
+        Me.txtNumber1.Location = New System.Drawing.Point(249, 122)
         Me.txtNumber1.Name = "txtNumber1"
         Me.txtNumber1.Size = New System.Drawing.Size(81, 20)
         Me.txtNumber1.TabIndex = 20
         '
         'txtNumber2
         '
-        Me.txtNumber2.Location = New System.Drawing.Point(299, 219)
+        Me.txtNumber2.Location = New System.Drawing.Point(254, 222)
         Me.txtNumber2.Name = "txtNumber2"
         Me.txtNumber2.Size = New System.Drawing.Size(76, 20)
         Me.txtNumber2.TabIndex = 21
@@ -143,7 +118,7 @@ Partial Class Calculator
         Me.lblOperator.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblOperator.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOperator.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblOperator.Location = New System.Drawing.Point(212, 167)
+        Me.lblOperator.Location = New System.Drawing.Point(167, 170)
         Me.lblOperator.Name = "lblOperator"
         Me.lblOperator.Size = New System.Drawing.Size(71, 18)
         Me.lblOperator.TabIndex = 22
@@ -155,7 +130,7 @@ Partial Class Calculator
         Me.lblResult.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblResult.Location = New System.Drawing.Point(232, 308)
+        Me.lblResult.Location = New System.Drawing.Point(187, 311)
         Me.lblResult.Name = "lblResult"
         Me.lblResult.Size = New System.Drawing.Size(74, 24)
         Me.lblResult.TabIndex = 23
@@ -191,7 +166,7 @@ Partial Class Calculator
         Me.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblTitle.Location = New System.Drawing.Point(108, 10)
+        Me.lblTitle.Location = New System.Drawing.Point(97, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(208, 31)
         Me.lblTitle.TabIndex = 26
@@ -203,7 +178,7 @@ Partial Class Calculator
         Me.lblOperatios.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblOperatios.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOperatios.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblOperatios.Location = New System.Drawing.Point(30, 104)
+        Me.lblOperatios.Location = New System.Drawing.Point(12, 104)
         Me.lblOperatios.Name = "lblOperatios"
         Me.lblOperatios.Size = New System.Drawing.Size(85, 18)
         Me.lblOperatios.TabIndex = 27
@@ -215,7 +190,7 @@ Partial Class Calculator
         Me.lblNum1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblNum1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNum1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblNum1.Location = New System.Drawing.Point(186, 117)
+        Me.lblNum1.Location = New System.Drawing.Point(141, 120)
         Me.lblNum1.Name = "lblNum1"
         Me.lblNum1.Size = New System.Drawing.Size(102, 18)
         Me.lblNum1.TabIndex = 28
@@ -227,22 +202,11 @@ Partial Class Calculator
         Me.lblNumber2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblNumber2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNumber2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblNumber2.Location = New System.Drawing.Point(168, 219)
+        Me.lblNumber2.Location = New System.Drawing.Point(123, 222)
         Me.lblNumber2.Name = "lblNumber2"
         Me.lblNumber2.Size = New System.Drawing.Size(124, 18)
         Me.lblNumber2.TabIndex = 29
         Me.lblNumber2.Text = "Second Operand:"
-        '
-        'btnSquareRoot
-        '
-        Me.btnSquareRoot.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnSquareRoot.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSquareRoot.Location = New System.Drawing.Point(40, 308)
-        Me.btnSquareRoot.Name = "btnSquareRoot"
-        Me.btnSquareRoot.Size = New System.Drawing.Size(75, 23)
-        Me.btnSquareRoot.TabIndex = 30
-        Me.btnSquareRoot.Text = "√"
-        Me.btnSquareRoot.UseVisualStyleBackColor = False
         '
         'lblInstructions
         '
@@ -273,9 +237,9 @@ Partial Class Calculator
         Me.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnBack.Location = New System.Drawing.Point(242, 415)
+        Me.btnBack.Location = New System.Drawing.Point(40, 371)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(74, 47)
+        Me.btnBack.Size = New System.Drawing.Size(118, 38)
         Me.btnBack.TabIndex = 33
         Me.btnBack.Text = "Back To Hub"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -285,11 +249,10 @@ Partial Class Calculator
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(439, 463)
+        Me.ClientSize = New System.Drawing.Size(430, 433)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnForm2)
         Me.Controls.Add(Me.lblInstructions)
-        Me.Controls.Add(Me.btnSquareRoot)
         Me.Controls.Add(Me.lblNumber2)
         Me.Controls.Add(Me.lblNum1)
         Me.Controls.Add(Me.lblOperatios)
@@ -300,15 +263,13 @@ Partial Class Calculator
         Me.Controls.Add(Me.lblOperator)
         Me.Controls.Add(Me.txtNumber2)
         Me.Controls.Add(Me.txtNumber1)
-        Me.Controls.Add(Me.btnModulo)
-        Me.Controls.Add(Me.btnExponent)
         Me.Controls.Add(Me.btnCompute)
         Me.Controls.Add(Me.btnAddition)
         Me.Controls.Add(Me.btnSubtraction)
         Me.Controls.Add(Me.btnMultiplication)
         Me.Controls.Add(Me.btnDivision)
         Me.Name = "Calculator"
-        Me.Text = "Form1"
+        Me.Text = "Calculator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -318,8 +279,6 @@ Partial Class Calculator
     Friend WithEvents btnAddition As Button
     Friend WithEvents btnSubtraction As Button
     Friend WithEvents btnCompute As Button
-    Friend WithEvents btnExponent As Button
-    Friend WithEvents btnModulo As Button
     Friend WithEvents txtNumber1 As TextBox
     Friend WithEvents txtNumber2 As TextBox
     Friend WithEvents lblOperator As Label
@@ -330,7 +289,6 @@ Partial Class Calculator
     Friend WithEvents lblOperatios As Label
     Friend WithEvents lblNum1 As Label
     Friend WithEvents lblNumber2 As Label
-    Friend WithEvents btnSquareRoot As Button
     Friend WithEvents lblInstructions As Label
     Friend WithEvents btnForm2 As Button
     Friend WithEvents btnBack As Button

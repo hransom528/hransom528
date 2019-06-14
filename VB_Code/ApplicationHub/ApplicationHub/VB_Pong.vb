@@ -1,11 +1,11 @@
 ﻿'VB_Pong v1.0
 'By: Harris Ransom
 
-Imports System 'Imports the system module (for the math methods)
+Imports System.Math 'Imports the system module for the math methods
 
 Public Class VB_Pong
 #Region "Declaration Statements"
-    'Sound
+    'Sound DLL call
     Private Declare Auto Function PlaySound Lib "winmm.dll" (ByVal lpszSoundName As String, ByVal hModule As Integer, ByVal dwFlags As Integer) As Integer
 
     'Initiates rectangles
@@ -32,6 +32,8 @@ Public Class VB_Pong
     Const BALLSPEED = 10 'Speed of ball, used for resuming after pause as well as speed checks
     Dim ballMoveX As Integer = BALLSPEED 'Ball X movement speed, used for speed checks
     Dim ballMoveY As Integer = BALLSPEED 'Ball Y movement speed, used for speed checks
+    Dim tempBallMoveX As Integer = 0 'Temporary ball move var for setting the ball's X speed for unpausing
+    Dim tempBallMoveY As Integer = 0 'Temporary ball move var for setting the ball's Y speed for unpausing
     Dim ballStartingX = 395 'X value of the ball at the start, for reseting it's position
     Dim ballStartingY = 225 'Y value of the ball at the start, for reseting it's position
 
@@ -54,32 +56,37 @@ Public Class VB_Pong
     Dim player2KeyPressUp As Boolean = False 'Detects if player 2 is pressing w
     Dim player2KeyPressDown As Boolean = False 'Detects if player2 is pressing s
     Dim disableMovement As Boolean = False 'For pausing, used to disable player movement
-    Dim disableMovement1 As Boolean = False 'For disabling player 1's movement only
-    Dim disableMovement2 As Boolean = False 'For disabling player 2's movement only
     Dim paused As Boolean = False 'For setting pause/unpaused 
+    Dim ballDirection As Integer = 0
 
     ''''SIDE NOTE''' Booleans are used because glitches or limitations happen if they are not used (for moving both players at once, scoring, collision, etc). 
     ''''This is just a heads up if you see a boolean where there doesn't seem to be a need for one. 
-
-
 #End Region
 
 #Region "Movement"
     'Moves player1 (left paddle) up
     Public Sub player1moveUp()
-        player1Y += PLAYERMOVEUP
+        If (paused = False) Then
+            player1Y += PLAYERMOVEUP
+        End If
     End Sub
     'Moves player1 (left paddle) down
     Public Sub player1moveDown()
-        player1Y += PLAYERMOVEDOWN
+        If (paused = False) Then
+            player1Y += PLAYERMOVEDOWN
+        End If
     End Sub
     'Moves player2 (right paddle) up
     Public Sub player2moveUp()
-        player2Y += PLAYERMOVEUP
+        If (paused = False) Then
+            player2Y += PLAYERMOVEUP
+        End If
     End Sub
     'Moves player2 (right paddle) down
     Public Sub player2moveDown()
-        player2Y += PLAYERMOVEDOWN
+        If (paused = False) Then
+            player2Y += PLAYERMOVEDOWN
+        End If
     End Sub
 
     'Stops player 1
@@ -92,8 +99,8 @@ Public Class VB_Pong
     End Sub
     'Stops ball movement
     Public Sub stopMovementBall()
-        ballMoveX = stopMove
-        ballMoveY = stopMove
+        ballMoveX = 0
+        ballMoveY = 0
     End Sub
 
     'Handles collision 
@@ -111,18 +118,18 @@ Public Class VB_Pong
         End If
 
         'Does the collision for when the ball hits player1
-        If (oneWithBall = True) Then
-            ballMoveX = -(ballMoveX + 5)
-            ballMoveY = -(ballMoveY + 5)
+        If (oneWithBall) And (paused = False) And (disableMovement = False) Then
+            ballMoveX = -(ballMoveX + getRandom(10, -5))
+            ballMoveY = -(ballMoveY + getRandom(10, -5))
             ballX += ballMoveX
             ballY += ballMoveY
             oneWithBall = False
         End If
 
         'Does the collision for when the ball hits player2
-        If (twoWithBall = True) Then
-            ballMoveX = -(ballMoveX + 5)
-            ballMoveY = -(ballMoveY + 5)
+        If (twoWithBall) And (paused = False) And (disableMovement = False) Then
+            ballMoveX = -(ballMoveX + getRandom(10, -5))
+            ballMoveY = -(ballMoveY + getRandom(10, -5))
             ballX += ballMoveX
             ballY += ballMoveY
             twoWithBall = False
@@ -160,18 +167,18 @@ Public Class VB_Pong
             player2Y = 375
         End If
 
-        'If player 2 scores
+        'If player 1 scores
         If (ball.IntersectsWith(leftWall)) Then
             PlaySound("Score.wav", 0, 1)
             Me.Refresh()
-            player2Score = True
+            player1Score = True
         End If
 
-        'If player 1 scores
+        'If player 2 scores
         If (ball.IntersectsWith(rightWall)) Then
             PlaySound("Score.wav", 0, 1)
             Me.Refresh()
-            player1Score = True
+            player2Score = True
         End If
 
         'Controls the ball's speed to keep the game playable
@@ -181,6 +188,7 @@ Public Class VB_Pong
         If (ballMoveY > 15) Then
             ballMoveY = 14
         End If
+
         'Refreshes everything after collision is done
         Me.Refresh()
     End Sub
@@ -189,14 +197,15 @@ Public Class VB_Pong
 #Region "Pause/Reset"
     'Pause method
     Public Sub pause()
-        If (paused = True) Then
+        If (paused) Then
+            tempBallMoveX = ballMoveX
+            tempBallMoveY = ballMoveY
             stopMovementPlayer2()
             stopMovementPlayer1()
             stopMovementBall()
             lblPause.Visible = True
             disableMovement = True
         Else
-            disableMovement = False
             lblPause.Visible = False
         End If
     End Sub
@@ -204,10 +213,12 @@ Public Class VB_Pong
     'Unpause method
     Public Sub unpause()
         lblPause.Visible = False
-        ballMoveX = BALLSPEED
-        ballMoveY = BALLSPEED
+        ballMoveX = tempBallMoveX
+        ballMoveY = tempBallMoveY
         disableMovement = False
         paused = False
+        tempBallMoveX = 0
+        tempBallMoveY = 0
     End Sub
 
     'Reset method
@@ -216,13 +227,32 @@ Public Class VB_Pong
         score2 = 0
         ballX = ballStartingX
         ballY = ballStartingY
-        ballMoveX = BALLSPEED
-        ballMoveY = BALLSPEED
         player1Y = P1YSTART
         player2Y = P2YSTART
         paused = False
         disableMovement = False
         lblPause.Visible = False
+        tempBallMoveX = 0
+        tempBallMoveY = 0
+
+        'Determines what direction the ball starts after a reset
+        If (ballDirection = 0) Then
+            ballMoveX = BALLSPEED
+            ballMoveY = BALLSPEED
+            ballDirection += 1
+        ElseIf (ballDirection = 1) Then
+            ballMoveX = BALLSPEED
+            ballMoveY = (-1) * BALLSPEED
+            ballDirection += 1
+        ElseIf (ballDirection = 2) Then
+            ballMoveX = (-1) * BALLSPEED
+            ballMoveY = (-1) * BALLSPEED
+            ballDirection += 1
+        ElseIf (ballDirection = 3) Then
+            ballMoveX = (-1) * BALLSPEED
+            ballMoveY = BALLSPEED
+            ballDirection = 0
+        End If
     End Sub
 #End Region
 
@@ -231,9 +261,7 @@ Public Class VB_Pong
     Public Sub goal1()
         score1 += 1
         ballMoveX = BALLSPEED
-        ballMoveY = BALLSPEED
-        ballMoveX = -ballMoveX
-        ballMoveY = -ballMoveY
+        ballMoveY = -(BALLSPEED)
         ballX = ballStartingX
         ballY = ballStartingY
     End Sub
@@ -241,11 +269,8 @@ Public Class VB_Pong
     'Player 2 score method
     Public Sub goal2()
         score2 += 1
-        ballMoveX = -ballMoveX
-        ballMoveX = BALLSPEED
-        ballMoveY = BALLSPEED
-        ballMoveX = ballMoveX
-        ballMoveY = ballMoveY
+        ballMoveX = -(BALLSPEED)
+        ballMoveY = -(BALLSPEED)
         ballX = ballStartingX
         ballY = ballStartingY
     End Sub
@@ -269,22 +294,22 @@ Public Class VB_Pong
         End If
 
         'Moves player 1
-        If (player1KeyPressDown = True) And (disableMovement = False) And (disableMovement1 = False) Then
+        If (player1KeyPressDown = True) And (disableMovement = False) Then
             player1moveDown()
             collision()
             Me.Refresh()
-        ElseIf (player1KeyPressUp = True) And (disableMovement = False) And (disableMovement1 = False) Then
+        ElseIf (player1KeyPressUp = True) And (disableMovement = False) Then
             player1moveUp()
             collision()
             Me.Refresh()
         End If
 
         'Moves player 2
-        If (player2KeyPressDown = True) And (disableMovement = False) And (disableMovement2 = False) Then
+        If (player2KeyPressDown = True) And (disableMovement = False) Then
             player2moveDown()
             collision()
             Me.Refresh()
-        ElseIf (player2KeyPressUp = True) And (disableMovement = False) And (disableMovement2 = False) Then
+        ElseIf (player2KeyPressUp = True) And (disableMovement = False) Then
             player2moveUp()
             collision()
             Me.Refresh()
@@ -293,8 +318,8 @@ Public Class VB_Pong
 
         'Exiting to main menu
         If (e.KeyCode = Keys.Escape) Then
-            Me.Hide()
             ApplicationHub.Show()
+            Me.Close()
         End If
     End Sub
 
@@ -374,8 +399,14 @@ Public Class VB_Pong
 
     'Load event
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Resets form
+        reset()
+
         'Starts tmrTimer 
         tmrTimer.Start()
+
+        'Initializes randomization
+        Randomize()
     End Sub
 
     'Ticks every 25 ms
@@ -385,8 +416,24 @@ Public Class VB_Pong
         Me.Refresh()
 
         'Moves ball
-        ballX += ballMoveX
-        ballY += ballMoveY
+        If (Math.Abs(ballMoveX) >= 3) And (Math.Abs(ballMoveY) >= 3) And (paused = False) Then
+            ballX += ballMoveX
+            ballY += ballMoveY
+        ElseIf (Math.Abs(ballMoveX) < 3) And (Math.Abs(ballMoveY) < 3) And (paused = False) Then
+            ballMoveX = 3
+            ballMoveY = 3
+            ballX += ballMoveX
+            ballY += ballMoveY
+        ElseIf (Math.Abs(ballMoveX) < 3) And (Math.Abs(ballMoveY) >= 3) And (paused = False) Then
+            ballMoveX = 3
+            ballX += ballMoveX
+            ballY += ballMoveY
+        ElseIf (Math.Abs(ballMoveX) >= 3) And (Math.Abs(ballMoveY) < 3) And (paused = False) Then
+            ballMoveY = 3
+            ballX += ballMoveX
+            ballY += ballMoveY
+        End If
+
 
         'Evaluates score
         If (player1Score = True) Then
@@ -403,4 +450,10 @@ Public Class VB_Pong
         Me.Refresh()
     End Sub
 #End Region
+
+    'Gets a random number
+    Public Function getRandom(size As Integer, startNum As Integer)
+        Dim randNum As Integer = Math.Floor(Rnd() * size) + startNum
+        Return randNum
+    End Function
 End Class

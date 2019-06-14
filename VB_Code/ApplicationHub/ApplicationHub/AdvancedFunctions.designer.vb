@@ -262,7 +262,7 @@ Partial Class AdvancedFunctions
         Me.lblOperand2.TabIndex = 20
         Me.lblOperand2.Text = "Operand 2"
         '
-        'Form2
+        'AdvancedFunctions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -288,7 +288,8 @@ Partial Class AdvancedFunctions
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnForm1)
         Me.Controls.Add(Me.lblTitle)
-        Me.Name = "Form2"
+        Me.Name = "AdvancedFunctions"
+        Me.Text = "Advanced Functions Calculator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

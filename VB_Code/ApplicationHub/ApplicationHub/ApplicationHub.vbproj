@@ -103,6 +103,18 @@
     <Compile Include="Factorial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VB_SpaceInvaders.designer.vb">
+      <DependentUpon>VB_SpaceInvaders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VB_SpaceInvaders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StarshipFighter.designer.vb">
+      <DependentUpon>StarshipFighter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StarshipFighter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
       <DependentUpon>MouseDebugger.vb</DependentUpon>
     </Compile>
     <Compile Include="MouseDebugger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusicPlayer.Designer.vb">
+      <DependentUpon>MusicPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPlayer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -175,11 +193,20 @@
     <EmbeddedResource Include="Factorial.resx">
       <DependentUpon>Factorial.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VB_SpaceInvaders.resx">
+      <DependentUpon>VB_SpaceInvaders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StarshipFighter.resx">
+      <DependentUpon>StarshipFighter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MouseDebugger.resx">
       <DependentUpon>MouseDebugger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicPlayer.resx">
+      <DependentUpon>MusicPlayer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -224,6 +251,39 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="python_password_generator.py" />
+    <None Include="Resources\printIcon.png" />
+    <None Include="Resources\backgroundMusic.wav" />
+    <None Include="Resources\8-bit-victory-sound.wav" />
+    <None Include="Resources\8-bit-game-over-sound.wav" />
+    <None Include="Resources\undamagedFort.png" />
+    <None Include="Resources\ship.png" />
+    <None Include="Resources\middle_alien.png" />
+    <None Include="Resources\lightlyDamagedFort.png" />
+    <None Include="Resources\heavilyDamagedFort.png" />
+    <None Include="Resources\front_alien.png" />
+    <None Include="Resources\bonus_alien.png" />
+    <None Include="Resources\back_alien.png" />
+    <None Include="Resources\aliens.png" />
+    <None Include="Resources\Starship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

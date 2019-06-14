@@ -34,6 +34,12 @@ Public Class MouseDebugger
         lstLogger.Items.Add(text)
     End Sub
 
+    'Clears the logger
+    Private Sub btnClearLogger_Click(sender As Object, e As EventArgs) Handles btnClearLogger.Click
+        lstLogger.Items.Clear()
+        lstLogger.Items.Add("Logger Initialized...")
+    End Sub
+
     'MouseMove method
     Private Sub MouseDebugger_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         mouseX = e.X
@@ -127,5 +133,7 @@ Public Class MouseDebugger
             ApplicationHub.Show()
         End If
     End Sub
+
+
 #End Region
 End Class

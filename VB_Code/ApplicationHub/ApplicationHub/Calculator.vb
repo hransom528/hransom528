@@ -35,24 +35,6 @@ Public Class Calculator
 
     End Sub
 
-    'Adds exponent as the operator
-    Private Sub btnExponent_Click(sender As Object, e As EventArgs) Handles btnExponent.Click
-        op = "Exponent"
-        lblOperator.Text = "Operator: ^"
-    End Sub
-
-    'Adds modulo as the operator
-    Private Sub btnModulo_Click(sender As Object, e As EventArgs) Handles btnModulo.Click
-        op = "Mod"
-        lblOperator.Text = "Operator: Mod"
-    End Sub
-
-    'Adds square root as operator
-    Private Sub btnSquareRoot_Click(sender As Object, e As EventArgs) Handles btnSquareRoot.Click
-        op = "Square Root"
-        lblOperator.Text = "Operator: √"
-    End Sub
-
     'Computes for the calculator program
     Private Sub btnCompute_Click(sender As Object, e As EventArgs) Handles btnCompute.Click
         'Gets values
@@ -67,12 +49,6 @@ Public Class Calculator
             totalNumber = num1 * num2
         ElseIf op = "Division" Then
             totalNumber = num1 / num2
-        ElseIf op = "Exponent" Then
-            totalNumber = Math.Pow(num1, num2)
-        ElseIf op = "Mod" Then
-            totalNumber = num1 Mod num2
-        ElseIf op = "Square Root" Then
-            totalNumber = Math.Sqrt(num2)
         End If
 
         'Displays calculation

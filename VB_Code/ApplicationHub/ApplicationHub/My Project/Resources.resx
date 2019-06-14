@@ -127,4 +127,46 @@
   <data name="Score" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Score.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Starship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Starship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aliens" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aliens.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bonus_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bonus_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="front_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\front_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heavilyDamagedFort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heavilyDamagedFort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lightlyDamagedFort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightlyDamagedFort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="middle_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\middle_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undamagedFort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undamagedFort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8-bit-game-over-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="victorySFX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8-bit-victory-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="printIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

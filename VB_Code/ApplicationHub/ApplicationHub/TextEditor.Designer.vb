@@ -30,6 +30,7 @@ Partial Class TextEditor
         Me.mMOpen = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.mMSave = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFilePrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.mMExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,11 +53,6 @@ Partial Class TextEditor
         Me.tbCut = New System.Windows.Forms.ToolStripButton()
         Me.tbCopy = New System.Windows.Forms.ToolStripButton()
         Me.tbPaste = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tbBold = New System.Windows.Forms.ToolStripButton()
-        Me.tbItalic = New System.Windows.Forms.ToolStripButton()
-        Me.tbUnderline = New System.Windows.Forms.ToolStripButton()
-        Me.tbStrike = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.tbAlignLeft = New System.Windows.Forms.ToolStripButton()
         Me.tbAlignCenter = New System.Windows.Forms.ToolStripButton()
@@ -65,8 +61,7 @@ Partial Class TextEditor
         Me.tbZoom = New System.Windows.Forms.ToolStripButton()
         Me.tbZoomOut = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tbSelectFont = New System.Windows.Forms.ToolStripComboBox()
-        Me.tbSelectSize = New System.Windows.Forms.ToolStripComboBox()
+        Me.btnChangeFont = New System.Windows.Forms.ToolStripButton()
         Me.Document = New System.Windows.Forms.RichTextBox()
         Me.rcMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.rcUndo = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,11 +74,16 @@ Partial Class TextEditor
         Me.rcDeselectAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.status = New System.Windows.Forms.StatusStrip()
         Me.lblCharCount = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblWordCount = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblZoom = New System.Windows.Forms.ToolStripStatusLabel()
         Me.openWork = New System.Windows.Forms.OpenFileDialog()
         Me.saveWork = New System.Windows.Forms.SaveFileDialog()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.openFonts = New System.Windows.Forms.FontDialog()
+        Me.printDialog = New System.Windows.Forms.PrintDialog()
+        Me.printDoc = New System.Drawing.Printing.PrintDocument()
         Me.mainMenu.SuspendLayout()
         Me.tools.SuspendLayout()
         Me.rcMenu.SuspendLayout()
@@ -101,7 +101,7 @@ Partial Class TextEditor
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mMNew, Me.mMOpen, Me.toolStripSeparator, Me.mMSave, Me.toolStripSeparator2, Me.mMExit})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mMNew, Me.mMOpen, Me.toolStripSeparator, Me.mMSave, Me.mnuFilePrint, Me.toolStripSeparator2, Me.mMExit})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
@@ -137,6 +137,13 @@ Partial Class TextEditor
         Me.mMSave.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.mMSave.Size = New System.Drawing.Size(146, 22)
         Me.mMSave.Text = "&Save"
+        '
+        'mnuFilePrint
+        '
+        Me.mnuFilePrint.Image = Global.ApplicationHub.My.Resources.Resources.printIcon
+        Me.mnuFilePrint.Name = "mnuFilePrint"
+        Me.mnuFilePrint.Size = New System.Drawing.Size(146, 22)
+        Me.mnuFilePrint.Text = "Print"
         '
         'toolStripSeparator2
         '
@@ -234,7 +241,7 @@ Partial Class TextEditor
         '
         'tools
         '
-        Me.tools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tbNew, Me.tbOpen, Me.tbSave, Me.toolStripSeparator5, Me.tbCut, Me.tbCopy, Me.tbPaste, Me.toolStripSeparator6, Me.tbBold, Me.tbItalic, Me.tbUnderline, Me.tbStrike, Me.ToolStripSeparator7, Me.tbAlignLeft, Me.tbAlignCenter, Me.tbAlignRight, Me.ToolStripSeparator8, Me.tbZoom, Me.tbZoomOut, Me.ToolStripSeparator10, Me.tbSelectFont, Me.tbSelectSize})
+        Me.tools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tbNew, Me.tbOpen, Me.tbSave, Me.toolStripSeparator5, Me.tbCut, Me.tbCopy, Me.tbPaste, Me.ToolStripSeparator7, Me.tbAlignLeft, Me.tbAlignCenter, Me.tbAlignRight, Me.ToolStripSeparator8, Me.tbZoom, Me.tbZoomOut, Me.ToolStripSeparator10, Me.btnChangeFont})
         Me.tools.Location = New System.Drawing.Point(0, 24)
         Me.tools.Name = "tools"
         Me.tools.Size = New System.Drawing.Size(779, 25)
@@ -299,51 +306,6 @@ Partial Class TextEditor
         Me.tbPaste.Name = "tbPaste"
         Me.tbPaste.Size = New System.Drawing.Size(23, 22)
         Me.tbPaste.Text = "&Paste"
-        '
-        'toolStripSeparator6
-        '
-        Me.toolStripSeparator6.Name = "toolStripSeparator6"
-        Me.toolStripSeparator6.Size = New System.Drawing.Size(6, 25)
-        '
-        'tbBold
-        '
-        Me.tbBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.tbBold.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbBold.Image = CType(resources.GetObject("tbBold.Image"), System.Drawing.Image)
-        Me.tbBold.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tbBold.Name = "tbBold"
-        Me.tbBold.Size = New System.Drawing.Size(23, 22)
-        Me.tbBold.Text = "B"
-        '
-        'tbItalic
-        '
-        Me.tbItalic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.tbItalic.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbItalic.Image = CType(resources.GetObject("tbItalic.Image"), System.Drawing.Image)
-        Me.tbItalic.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tbItalic.Name = "tbItalic"
-        Me.tbItalic.Size = New System.Drawing.Size(23, 22)
-        Me.tbItalic.Text = "I"
-        '
-        'tbUnderline
-        '
-        Me.tbUnderline.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.tbUnderline.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbUnderline.Image = CType(resources.GetObject("tbUnderline.Image"), System.Drawing.Image)
-        Me.tbUnderline.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tbUnderline.Name = "tbUnderline"
-        Me.tbUnderline.Size = New System.Drawing.Size(23, 22)
-        Me.tbUnderline.Text = "U"
-        '
-        'tbStrike
-        '
-        Me.tbStrike.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.tbStrike.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Strikeout), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbStrike.Image = CType(resources.GetObject("tbStrike.Image"), System.Drawing.Image)
-        Me.tbStrike.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tbStrike.Name = "tbStrike"
-        Me.tbStrike.Size = New System.Drawing.Size(23, 22)
-        Me.tbStrike.Text = "S"
         '
         'ToolStripSeparator7
         '
@@ -410,26 +372,21 @@ Partial Class TextEditor
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 25)
         '
-        'tbSelectFont
+        'btnChangeFont
         '
-        Me.tbSelectFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.tbSelectFont.FlatStyle = System.Windows.Forms.FlatStyle.Standard
-        Me.tbSelectFont.Name = "tbSelectFont"
-        Me.tbSelectFont.Size = New System.Drawing.Size(180, 25)
-        '
-        'tbSelectSize
-        '
-        Me.tbSelectSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.tbSelectSize.FlatStyle = System.Windows.Forms.FlatStyle.Standard
-        Me.tbSelectSize.Name = "tbSelectSize"
-        Me.tbSelectSize.Size = New System.Drawing.Size(80, 25)
+        Me.btnChangeFont.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnChangeFont.Image = CType(resources.GetObject("btnChangeFont.Image"), System.Drawing.Image)
+        Me.btnChangeFont.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnChangeFont.Name = "btnChangeFont"
+        Me.btnChangeFont.Size = New System.Drawing.Size(79, 22)
+        Me.btnChangeFont.Text = "Change Font"
         '
         'Document
         '
         Me.Document.AcceptsTab = True
         Me.Document.ContextMenuStrip = Me.rcMenu
         Me.Document.EnableAutoDragDrop = True
-        Me.Document.Location = New System.Drawing.Point(0, 52)
+        Me.Document.Location = New System.Drawing.Point(0, 65)
         Me.Document.Name = "Document"
         Me.Document.Size = New System.Drawing.Size(779, 373)
         Me.Document.TabIndex = 2
@@ -490,7 +447,7 @@ Partial Class TextEditor
         '
         'status
         '
-        Me.status.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblCharCount, Me.ToolStripStatusLabel2, Me.lblZoom})
+        Me.status.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblCharCount, Me.ToolStripStatusLabel1, Me.lblWordCount, Me.ToolStripStatusLabel2, Me.lblZoom})
         Me.status.Location = New System.Drawing.Point(0, 428)
         Me.status.Name = "status"
         Me.status.Size = New System.Drawing.Size(779, 22)
@@ -503,10 +460,22 @@ Partial Class TextEditor
         Me.lblCharCount.Size = New System.Drawing.Size(13, 17)
         Me.lblCharCount.Text = "0"
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(349, 17)
+        Me.ToolStripStatusLabel1.Spring = True
+        '
+        'lblWordCount
+        '
+        Me.lblWordCount.Name = "lblWordCount"
+        Me.lblWordCount.Size = New System.Drawing.Size(13, 17)
+        Me.lblWordCount.Text = "0"
+        '
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(681, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(349, 17)
         Me.ToolStripStatusLabel2.Spring = True
         '
         'lblZoom
@@ -529,6 +498,14 @@ Partial Class TextEditor
         '
         Me.Timer.Enabled = True
         Me.Timer.Interval = 1
+        '
+        'printDialog
+        '
+        Me.printDialog.AllowSomePages = True
+        Me.printDialog.UseEXDialog = True
+        '
+        'printDoc
+        '
         '
         'TextEditor
         '
@@ -590,11 +567,6 @@ Partial Class TextEditor
     Friend WithEvents tbCut As ToolStripButton
     Friend WithEvents tbCopy As ToolStripButton
     Friend WithEvents tbPaste As ToolStripButton
-    Friend WithEvents toolStripSeparator6 As ToolStripSeparator
-    Friend WithEvents tbBold As ToolStripButton
-    Friend WithEvents tbItalic As ToolStripButton
-    Friend WithEvents tbUnderline As ToolStripButton
-    Friend WithEvents tbStrike As ToolStripButton
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents tbAlignLeft As ToolStripButton
     Friend WithEvents tbAlignCenter As ToolStripButton
@@ -603,10 +575,6 @@ Partial Class TextEditor
     Friend WithEvents tbZoom As ToolStripButton
     Friend WithEvents tbZoomOut As ToolStripButton
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
-    Friend WithEvents tbSelectFont As ToolStripComboBox
-    Friend WithEvents tbSelectSize As ToolStripComboBox
-    Friend WithEvents lblCharCount As ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
     Friend WithEvents lblZoom As ToolStripStatusLabel
     Friend WithEvents rcUndo As ToolStripMenuItem
     Friend WithEvents rcRedo As ToolStripMenuItem
@@ -617,4 +585,13 @@ Partial Class TextEditor
     Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
     Friend WithEvents rcSelectAll As ToolStripMenuItem
     Friend WithEvents rcDeselectAll As ToolStripMenuItem
+    Friend WithEvents btnChangeFont As ToolStripButton
+    Friend WithEvents openFonts As FontDialog
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents lblCharCount As ToolStripStatusLabel
+    Friend WithEvents lblWordCount As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
+    Friend WithEvents mnuFilePrint As ToolStripMenuItem
+    Friend WithEvents printDialog As PrintDialog
+    Friend WithEvents printDoc As Printing.PrintDocument
 End Class
