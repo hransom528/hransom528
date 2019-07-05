@@ -4,23 +4,19 @@ nums = [5,3,1,2,4]
 
 
 
-def bubbleSort(arr):
-    length = len(arr)
- 
+def maxSort(array):
     # Traverse through all array elements
-    for i in range(length):
- 
-        # Last i elements are already in place
-        for j in range(0, length-i-1):
- 
-            # traverse the array from 0 to n-i-1
-            # Swap if the element found is greater
-            # than the next element
-            if arr[j] > arr[j+1] :
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+    length = len(array)
+    maxNum = array[0]
 
-bubbleSort(nums)
+    for j in array:
+            for i in array:
+                if i > maxNum:
+                        maxNum = i
+                        array.append(array.pop(array.index(i)))
+                
+maxSort(nums)
 
-for i in (len(nums) - 1):
-    print(nums[i])
+for i in nums:
+    print(i)
 

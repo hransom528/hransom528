@@ -65,33 +65,32 @@ def menu():
             print("2.) Encrypt a message.")
             print("3.) Decrypt a message.")
             print("4.) Quit the program.")
-            choice = input("Please type 1,2,3,or 4 as your choice and press Enter:")
+            choice = input("Please type 1,2,3,or 4 as your choice and press Enter: ")
             if (choice == "1"):
                 try:
-                    sheets = int(input("How many sheets would you like to generate?"))
-                    length = int(input("What is your maximum message length?"))
+                    sheets = int(input("How many sheets would you like to generate? "))
+                    length = int(input("What is your maximum message length? "))
                     generate_otp(sheets,length)
                 except ValueError:
                     print("Error!")
             elif (choice == "2"):
                 try:
-                    filename = input("What is the name of the OTP you want to use?")
+                    filename = input("What is the name of the OTP you want to use? ")
                     sheet = load_sheet(filename)
                     plaintext = get_plain_text()
                     ciphertext = encrypt(plaintext, sheet)
-                    filename = input("What will the name be of the encrypted file?")
+                    filename = input("What will the name be of the encrypted file? ")
                     save_file(filename, ciphertext)
                 except IOError:
                     print("Error!")
             elif (choice == "3"):
                 try:
-                    filename = input('Type in the filename of the OTP you want to use ')
+                    filename = input('Type in the filename of the OTP you want to use: ')
                     sheet = load_sheet(filename)
-                    filename = input('Type in the name of the file to be decrypted ')
+                    filename = input('Type in the name of the file to be decrypted: ')
                     ciphertext = load_file(filename)
                     plaintext = decrypt(ciphertext, sheet)
                     print('The message reads:')
-                    print('')
                     print(plaintext)
                 except IOError:
                     print("Error!")
