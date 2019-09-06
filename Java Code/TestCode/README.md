@@ -1,1 +1,0 @@
-This folder stores all of my Java code. 
