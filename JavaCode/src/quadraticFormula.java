@@ -9,6 +9,7 @@ public class quadraticFormula {
 		double result = 0;
 		double squareRoot = 0;
 		
+		
 		squareRoot = Math.sqrt(Math.pow(b, 2) - (4*a*c));
 		
 		result = ((-1 * b) + squareRoot) / (2 * a);
@@ -50,15 +51,10 @@ public class quadraticFormula {
 		double negative = calcNegative(a,b,c); //Calculates the minus operation
 		System.out.println(positive + ", " + negative); //Displays results
 		
-		System.out.println("Enter E to exit.\n");
-		if ((scanObj.nextLine()) == "e"){
-			scanObj.close();
-			System.exit(0);
-		}
-		else if (((scanObj.nextLine()) == "E")) {
-			scanObj.close();
-			System.exit(0);
-		}
+		System.out.println("Enter any character to exit.\n");
+		scanObj.next();
+		scanObj.close();
+		System.exit(0);
 	}
 
 }
