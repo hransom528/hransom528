@@ -38,6 +38,11 @@ def sortList():
 	l.sort()
 	return l
 
+#Generates a string of random length
+def randomString(stringLength):
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(stringLength))
+
 print(shuffleString("test"))
 print(getDateTime())
 input("Press ENTER to exit...")
