@@ -5,7 +5,7 @@ import string
 import random
 
 #Gets input
-letters = string.ascii_letters + "_-"
+letters = string.ascii_letters
 parent = str(input("Path of directory to bulk rename (format with slash on end):"))
 items = os.listdir(parent)
 rndLength = int(input("Length of random name:"))
