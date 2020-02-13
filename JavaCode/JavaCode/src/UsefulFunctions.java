@@ -12,6 +12,15 @@ public class UsefulFunctions {
 		return min;
 	}
 
+	//Take sum of all ints in a 1D int array
+	public static int arraySum(int[] arr) {
+		int sum = 0;
+		for (int i=0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+		return sum;
+	}
+
 	//Method that returns greatest common divisor of two inputs
 	public static int findGCD(int aVal, int bVal) {
 		int numA;
