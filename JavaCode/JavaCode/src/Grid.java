@@ -2,31 +2,28 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * @author Harris Ransom 
-**/
-@SuppressWarnings("unchecked")
-
-public class Grid<T> implements Iterable<T> {
-	private static final long serialVersionUID = 1L;
+ * @author Harris Ransom
+ * @param <T>
+ */
+public class Grid<T> implements Iterable<T>{
 	private int xSize;
 	private int ySize;
 	private ArrayList<ArrayList<T>> grid;
-	
+
 	/**Grid Constructor
 	 * @param xSize
 	 * @param ySize
 	 */
-	
 	public Grid (int xSize, int ySize) {
 		this.xSize = xSize;
 		this.ySize = ySize;
 		this.grid = new ArrayList<ArrayList<T>>();
-		
+
 		//Fills grid with rows
 		for (int i = 0; i < ySize; i++) {
 			grid.add(new ArrayList<T>());
 		}
-		
+
 		//Fills grid with default objects
 		for (ArrayList<T> subArray : grid) {
 			for (int i = 0; i < this.xSize; i++) {
@@ -34,7 +31,7 @@ public class Grid<T> implements Iterable<T> {
 			}
 		}
 	}
-	
+
 	/**Returns array row size
 	 * @return
 	 */
@@ -48,38 +45,62 @@ public class Grid<T> implements Iterable<T> {
 	public int getySize() {
 		return this.ySize;
 	}
-	
-	/**Returns grid in String
-	 * @return
+
+	/**Returns grid in printableString form
+	 * @return String returnString
 	 */
 	public String getString() {
-		return grid.toString();
+		String returnString = "[";
+		for (int i = 0; i < this.getySize(); i++) {
+			for (int j = 0; j < this.getxSize(); j++) {
+				returnString += grid.get(i).get(j).toString();
+				if (j < this.getxSize() - 1) {
+					returnString += ", ";
+				}
+			}
+			if (i < this.getySize() - 1) {
+				returnString += "\n ";
+			}
+		}
+		return returnString + "]";
 	}
-	
+
 	/**Gets object at a specific coordinate
 	 * @param xCoord
 	 * @param yCoord
-	 * @return Object
+	 * @return returnObject
 	 */
-	public Object getValAtCoord(int xCoord, int yCoord) {
+	public Object getVal(int xCoord, int yCoord) {
+		Object returnObject = new Object();
 		try {
-			return grid.get(yCoord).get(xCoord);
+			returnObject = grid.get(yCoord).get(xCoord);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
+		return returnObject;
 	}
-	
+
+	/**Inserts new object at coordinate
+	 * @param xCoord
+	 * @param yCoord
+	 * @param obj
+	 */
+	public void addVal(int xCoord, int yCoord, Object obj) {
+		grid.get(yCoord).add(xCoord, (T) obj);
+		this.xSize = grid.get(yCoord).size();
+		this.ySize = grid.size();
+	}
+
 	/**Modifies object at specific coordinate
 	 * @param xCoord
 	 * @param yCoord
 	 */
-	public void setValAtCoord(int xCoord, int yCoord, Object obj) {
+	public void setVal(int xCoord, int yCoord, Object obj) {
 		grid.get(yCoord).set(xCoord, (T) obj);
 	}
 
 	@Override
 	public Iterator<T> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return (Iterator<T>) grid.iterator();
 	}
 }
