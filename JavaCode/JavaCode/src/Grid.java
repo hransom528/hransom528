@@ -2,102 +2,117 @@ import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Spliterator;
 
 /**
- * The {@code Grid} class is a {@code Collection} of Objects of type T arranged in a 2D {@code ArrayList} pattern.
- *</br>
- *</br>
- * Please see {@link java.util.Collection} and {@link java.util.ArrayList} for more info.
+ * The {@code Grid} class is a {@code Collection} of Objects of type T arranged
+ * in a 2D {@code ArrayList} pattern. </br>
+ * </br>
+ * Please see {@link java.util.Collection} and {@link java.util.ArrayList} for
+ * more info.
  *
  * @author Harris Ransom
  * @author Ben Guerrieri
  * @version 1.0
  * @param <T> any valid type
  */
-public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
+public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable {
 	private int xSize;
 	private int ySize;
 	private ArrayList<ArrayList<T>> grid;
 
-	/**Grid Constructor
+	/**
+	 * Grid Constructor
+	 * 
 	 * @param xSize
 	 * @param ySize
-	 * @throws InvalidParameterException If parameters are smaller than 0 or larger than {@code Integer.MAX_VALUE}
+	 * @throws InvalidParameterException If parameters are smaller than 0 or larger
+	 *                                   than {@code Integer.MAX_VALUE}
 	 */
 	@SuppressWarnings("unchecked")
-	public Grid (int xSize, int ySize) throws InvalidParameterException{
+	public Grid(int xSize, int ySize) throws InvalidParameterException {
 		super();
 		if ((xSize >= 0) && (ySize >= 0) && (xSize < Integer.MAX_VALUE) && (ySize < Integer.MAX_VALUE)) {
 			this.xSize = xSize;
 			this.ySize = ySize;
 			this.grid = new ArrayList<ArrayList<T>>();
-			
-			//Fills grid with rows
+
+			// Fills grid with rows
 			for (int i = 0; i < ySize; i++) {
 				grid.add(new ArrayList<T>());
 			}
 
-			//Fills grid with default objects
+			// Fills grid with default objects
 			for (ArrayList<T> subArray : grid) {
 				for (int i = 0; i < this.xSize; i++) {
 					subArray.add((T) new Object());
 				}
 			}
-		}
-		else {
+		} else {
 			this.xSize = 0;
 			this.ySize = 0;
-			throw new InvalidParameterException();	
+			throw new InvalidParameterException();
 		}
 	}
 
-	
-
-	/**Returns specific array row size
+	/**
+	 * Returns specific array row size
+	 * 
 	 * @return Current dimension for a specified row
 	 */
 	public int getXSize(int rowIndex) {
 		return this.grid.get(rowIndex).size();
 	}
 
-	/**Returns current column size
+	/**
+	 * Returns current column size
+	 * 
 	 * @return Current integer column dimension
 	 */
 	public int getYSize() {
 		return this.grid.size();
 	}
 
-	/**Returns the initial X dimension
+	/**
+	 * Returns the initial X dimension
+	 * 
 	 * @return Starting X integer dimension
 	 */
 	public int getStartXSize() {
 		return this.xSize;
 	}
 
-	/**Returns initial Y dimension
+	/**
+	 * Returns initial Y dimension
+	 * 
 	 * @return Starting Y integer dimension
 	 */
 	public int getStartYSize() {
 		return this.ySize;
 	}
 
-
-	/**Gets total size of grid
+	/**
+	 * Gets total size of grid
+	 * 
 	 * @see java.util.Collection#size()
 	 */
 	@Override
 	public int size() {
 		int size = 0;
-		for (int i = 0; i < this.grid.size(); i++) {
-			for (int j = 0; j < this.grid.get(i).size(); j++) {
-				size += 1;
+		if (!this.isEmpty()) {
+			for (int i = 0; i < this.grid.size(); i++) {
+				for (int j = 0; j < this.grid.get(i).size(); j++) {
+					size += 1;
+				}
 			}
 		}
 		return size;
 	}
 
-	/**Gets object at a specific coordinate in the grid
+	/**
+	 * Gets object at a specific coordinate in the grid
+	 * 
 	 * @param xCoord
 	 * @param yCoord
 	 * @return Object at (xCoord, yCoord) of type T
@@ -112,7 +127,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return returnObject;
 	}
 
-	/**Modifies object at specific coordinate
+	/**
+	 * Modifies object at specific coordinate
+	 * 
 	 * @param xCoord
 	 * @param yCoord
 	 */
@@ -121,7 +138,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		grid.get(yCoord).set(xCoord, (T) obj);
 	}
 
-	/**Inserts new object at coordinate
+	/**
+	 * Inserts new object at coordinate
+	 * 
 	 * @param xCoord
 	 * @param yCoord
 	 * @param obj
@@ -131,18 +150,19 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		grid.get(yCoord).add(xCoord, (T) obj);
 	}
 
-	/**Appends object to the end of the grid
+	/**
+	 * Appends object to the end of the grid
+	 * 
 	 * @see java.util.Collection#add(java.lang.Object)
 	 * @param e object to be added
 	 */
 	@Override
 	public boolean add(T e) {
 		try {
-			if (this.grid.get(this.grid.size() - 1).size() > this.getStartXSize()) {
+			if (this.grid.get(this.grid.size() - 1).size() >= this.getStartXSize()) {
 				this.grid.add(new ArrayList<T>());
-				this.add(this.grid.get(this.grid.size() - 1).size() - 1, this.grid.size() - 1, e);
-			}
-			else {
+				this.add(this.grid.get(this.grid.size() - 1).size(), this.grid.size() - 1, e);
+			} else {
 				this.add(this.grid.get(this.grid.size() - 1).size() - 1, this.grid.size() - 1, e);
 			}
 			return true;
@@ -150,32 +170,37 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 			e2.printStackTrace();
 			return false;
 		}
-		//TODO: Fix add
 	}
-	
-	/**Creates new row by appending ArrayList e
-	 * @param e 
+
+	/**
+	 * Creates new row by appending ArrayList e
+	 * 
+	 * @param e
 	 * @return {@code true}
 	 * @see java.util.ArrayList#add(java.lang.Object)
 	 */
-	public boolean add(ArrayList<T> e) {
+	public boolean addRow(ArrayList<T> e) {
 		this.grid.add(e);
 		return true;
 	}
-	
-	/**Adds all objects in collection c to grid
+
+	/**
+	 * Adds all objects in collection c to grid
+	 * 
 	 * @see java.util.Collection#addAll(java.util.Collection)
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean addAll(Collection<? extends T> c) {
-		for (Object item : c) {		
+		for (Object item : c) {
 			this.add((T) item);
 		}
 		return false;
 	}
 
-	/**Removes object o from grid
+	/**
+	 * Removes object o from grid
+	 * 
 	 * @see java.util.Collection#remove(java.lang.Object)
 	 */
 	@Override
@@ -196,7 +221,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return bool;
 	}
 
-	/**Removes object from specific coordinate
+	/**
+	 * Removes object from specific coordinate
+	 * 
 	 * @param xCoord
 	 * @param yCoord
 	 * @return Boolean if grid changed
@@ -212,7 +239,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return changed;
 	}
 
-	/**Removes all objects in collection c from grid
+	/**
+	 * Removes all objects in collection c from grid
+	 * 
 	 * @see java.util.Collection#removeAll(java.util.Collection)
 	 */
 	@Override
@@ -238,7 +267,18 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return bool;
 	}
 
-	/**Clears grid
+	/**
+	 * Removes row from grid
+	 * 
+	 * @param rowIndex
+	 */
+	public void removeRow(int rowIndex) {
+		this.grid.remove(rowIndex);
+	}
+
+	/**
+	 * Clears grid
+	 * 
 	 * @see java.util.Collection#clear()
 	 */
 	@Override
@@ -253,33 +293,38 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		}
 	}
 
-	/**Returns grid in printable String form
+	/**
+	 * Returns grid in printable String form
+	 * 
 	 * @return String returnString
-	 * @see java.util.Collection#toString() 
+	 * @see java.util.Collection#toString()
 	 */
 	@Override
 	public String toString() {
-		String returnString = "[";
+		StringBuilder returnString = new StringBuilder();
+		returnString.append("[");
+	
 		if (this.isEmpty()) {
-			return returnString + "]";
-		}
-		else {
+			return returnString.append("]").toString();
+		} else {
 			for (int i = 0; i < this.grid.size(); i++) {
 				for (int j = 0; j < this.grid.get(i).size(); j++) {
-					returnString += grid.get(i).get(j).toString();
+					returnString.append(grid.get(i).get(j).toString());
 					if (j < this.grid.get(i).size() - 1) {
-						returnString += ", ";
+						returnString.append(", ");
 					}
 				}
 				if (i < this.getYSize() - 1) {
-					returnString += "\n ";
+					returnString.append("\n ");
 				}
 			}
 		}
-		return returnString + "]";
+		return returnString.append("]").toString();
 	}
 
-	/**Returns grid in array form
+	/**
+	 * Returns grid in array form
+	 * 
 	 * @see java.util.Collection#toArray()
 	 */
 	@Override
@@ -288,16 +333,18 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		int index = 0;
 		for (int i = 0; i < this.grid.size(); i++) {
 			for (int j = 0; j < this.grid.get(i).size(); j++) {
-				objArr[index] = this.get(j, i); 
+				objArr[index] = this.get(j, i);
 				index++;
 			}
 		}
 		return objArr;
 	}
 
-	/**Returns grid in array form in parameter array a
+	/**
+	 * Returns grid in array form in parameter array a
+	 * 
 	 * @see java.util.Collection#toArray(java.lang.Object[])
-	 * @param a Array to store result in
+	 * @param a   Array to store result in
 	 * @param <T>
 	 */
 	@SuppressWarnings({ "hiding", "unchecked" })
@@ -308,16 +355,15 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 			T[] tArr = (T[]) new Object[this.size()];
 			for (int i = 0; i < this.grid.size(); i++) {
 				for (int j = 0; j < this.grid.get(i).size(); j++) {
-					tArr[index] = (T) this.get(j, i); 
+					tArr[index] = (T) this.get(j, i);
 					index++;
 				}
 			}
 			return tArr;
-		}
-		else {
+		} else {
 			for (int i = 0; i < this.grid.size(); i++) {
 				for (int j = 0; j < this.grid.get(i).size(); j++) {
-					a[index] = (T) this.get(j, i); 
+					a[index] = (T) this.get(j, i);
 					index++;
 				}
 			}
@@ -325,30 +371,54 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		}
 	}
 
-	/**Returns grid in ArrayList form
+	/**
+	 * Returns list of items between two indices
+	 * 
+	 * @param fromIndex
+	 * @param toIndex
+	 * @return List of items between fromIndex (inclusive) and toIndex (inclusive)
+	 * @see java.util.ArrayList#subList(int, int)
+	 */
+	@SuppressWarnings("unchecked")
+	public List<T> subList(int fromIndex, int toIndex) {
+		List<T> returnList = new ArrayList<T>();
+		T[] objs = (T[]) this.toArray();
+
+		for (int i = fromIndex; i <= toIndex; i++) {
+			returnList.add(objs[i]);
+		}
+		return returnList;
+	}
+
+	/**
+	 * Returns grid in ArrayList form
+	 * 
 	 * @return 2D ArrayList grid
 	 */
 	public ArrayList<ArrayList<T>> getGrid() {
 		return this.grid;
 	}
 
-	/**Creates clone of current grid
+	/**
+	 * Creates clone of current grid
+	 * 
 	 * @return Cloned {@code Grid} Object
 	 * @see java.util.ArrayList#clone()
 	 */
 	@Override
 	public Grid<T> clone() {
 		Grid<T> cloneGrid = new Grid<T>(getStartXSize(), getStartYSize());
-		cloneGrid.clear();
-		for (ArrayList<T> subList : this.grid) {
-			cloneGrid.add(subList); //TODO: Finish clone
+		for (int i = 0; i < cloneGrid.grid.size(); i++) {
+			for (int j = 0; j < cloneGrid.grid.get(i).size(); j++) {
+				cloneGrid.set(j, i, this.get(j, i));
+			}
 		}
 		return cloneGrid;
 	}
 
-
-
-	/**Returns iterator
+	/**
+	 * Returns iterator
+	 * 
 	 * @see java.lang.Iterable#iterator()
 	 */
 	@SuppressWarnings("unchecked")
@@ -357,16 +427,21 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return (Iterator<T>) grid.iterator();
 	}
 
-	/**Returns spliterator
+	/**
+	 * Returns spliterator
+	 * 
 	 * @return Spliterator
 	 * @see java.util.ArrayList#spliterator()
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public Spliterator<T> spliterator() {
 		return (Spliterator<T>) grid.spliterator();
 	}
 
-	/**Determines if grid contains object o
+	/**
+	 * Determines if grid contains object o
+	 * 
 	 * @see java.util.Collection#contains(java.lang.Object)
 	 */
 	@Override
@@ -382,7 +457,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return bool;
 	}
 
-	/**Determines if grid contains all objects in collection c
+	/**
+	 * Determines if grid contains all objects in collection c
+	 * 
 	 * @see java.util.Collection#containsAll(java.util.Collection)
 	 */
 	@Override
@@ -392,7 +469,7 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		Object[] objs = new Object[c.size()];
 		objs = c.toArray(objs);
 
-		for(int a = 0; a < objs.length; a++) {
+		for (int a = 0; a < objs.length; a++) {
 			for (int i = 0; i < this.getYSize(); i++) {
 				for (int j = 0; j < this.getXSize(i); j++) {
 					if (this.get(j, i).equals(objs[a])) {
@@ -410,7 +487,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return returnBool;
 	}
 
-	/**Determines if grid is empty
+	/**
+	 * Determines if grid is empty
+	 * 
 	 * @see java.util.Collection#isEmpty()
 	 */
 	@Override
@@ -424,7 +503,9 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		return isEmpty;
 	}
 
-	/**Removes all items not in collection c from grid
+	/**
+	 * Removes all items not in collection c from grid
+	 * 
 	 * @see java.util.Collection#retainAll(java.util.Collection)
 	 */
 	@Override
@@ -433,14 +514,16 @@ public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable{
 		Object[] objs = new Object[c.size()];
 		objs = c.toArray(objs);
 
-		for (int i = 0; i < this.getYSize(); i++) {
-			for (int j = 0; j < this.getXSize(i); j++) {
-				if (!c.contains(this.get(j, i))) {
-					try {
-						this.remove(j, i);
-						changed = true;
-					} catch (Exception e) {
-						e.printStackTrace();
+		for (int a = 0; a < 5; a++) {
+			for (int i = 0; i < this.getYSize(); i++) {
+				for (int j = 0; j < this.getXSize(i); j++) {
+					if (!c.contains(this.get(j, i))) {
+						try {
+							this.remove(j, i);
+							changed = true;
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
 					}
 				}
 			}
