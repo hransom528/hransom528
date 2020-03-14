@@ -1,10 +1,9 @@
 import java.lang.reflect.Array;
 import java.util.Collection;
-import java.util.List;
 
 /**The Table class is a 2D array of type T that has a fixed size
  * @author Harris Ransom
- * @param <T>
+ * @param <T> type
  * @version 1.0
  */
 public class Table<T> implements Cloneable  {
@@ -18,8 +17,8 @@ public class Table<T> implements Cloneable  {
 	 * @param ySize
 	 * @param T type (in class form)
 	 */
-	@SuppressWarnings("unchecked")
-	public Table(int xSize, int ySize, Class<? extends T> cls) {
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Table(int xSize, int ySize, Class cls) {
 		super();
 		this.cls = cls;
 		this.xSize = xSize;
@@ -57,7 +56,7 @@ public class Table<T> implements Cloneable  {
 	/**Gets class
 	 * @return Class type 
 	 */
-	public Class<? extends T> getCls() {
+	public Class<? extends T> getTableClass() {
 		return cls;
 	}
 
@@ -98,7 +97,7 @@ public class Table<T> implements Cloneable  {
 		}
 		return contains;
 	}
-	
+
 	/**
 	 * @param c
 	 * @return
@@ -109,7 +108,7 @@ public class Table<T> implements Cloneable  {
 		boolean[] bools = new boolean[c.size()];
 		Object[] objs = new Object[c.size()];
 		objs = c.toArray(objs);
-		
+
 		for (int a = 0; a < objs.length; a++) {
 			for (int i = 0; i < this.table.length; i++) {
 				for (int j = 0; j < this.table[0].length; j++) {
@@ -119,7 +118,7 @@ public class Table<T> implements Cloneable  {
 				}
 			}
 		}
-		
+
 		for (int i = 0; i < bools.length; i++) {
 			if (!bools[i]) {
 				containsAll = false;
@@ -133,9 +132,8 @@ public class Table<T> implements Cloneable  {
 	 * @param yCoord
 	 * @param o
 	 */
-	@SuppressWarnings("unchecked")
-	public void set(int xCoord, int yCoord, Object o) {
-		this.table[yCoord][xCoord] = (T) o;
+	public void set(int xCoord, int yCoord, T o) {
+		this.table[yCoord][xCoord] = o;
 	}
 
 	/**
@@ -146,7 +144,7 @@ public class Table<T> implements Cloneable  {
 	public T get(int xCoord, int yCoord) {
 		return this.table[yCoord][xCoord];
 	}
-	
+
 	/**Clears array by setting all elements to null
 	 */
 	public void clear() {
@@ -228,9 +226,10 @@ public class Table<T> implements Cloneable  {
 		}
 	}
 
+	
 	@Override
 	public Table<T> clone() {
-		Table<T> clone = new Table<T>(this.getxSize(), this.getySize(), this.getCls());
+		Table<T> clone = new Table<T>(this.getxSize(), this.getySize(), this.getTableClass());
 		for (int i = 0; i < table.length; i++) {
 			for (int j = 0; j < table[0].length; j++) {
 				clone.set(j, i, this.table[i][j]);
@@ -238,20 +237,16 @@ public class Table<T> implements Cloneable  {
 		}
 		return clone;
 	}
-	
-	/**Converts list to table
-	 * @param xDimension
-	 * @param yDimension
-	 * @param list
-	 * @return new Table object from list
+
+	/**Converts input 2D array to table
+	 * @param arr
+	 * @return Table with contents and type of arr
 	 */
-	public Table<T> toTable(int xDimension, int yDimension, List<T> list) {
-		Table<T> returnTable = new Table<T>(xDimension, yDimension, this.cls);
-		for (int i = 0; i < returnTable.getySize(); i++) {
-			for (int j = 0; j < returnTable.getxSize(); j++) {
-				for (int a = 0; a < list.size(); a++) {
-					returnTable.set(j, i, list.get(a));
-				}
+	public static <T> Table<T> toTable(T[][] arr) {
+		Table<T> returnTable = new Table<T>(arr[0].length, arr.length, arr[0][0].getClass());
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				returnTable.set(j, i, (T) arr[i][j]);
 			}
 		}
 		return returnTable;
