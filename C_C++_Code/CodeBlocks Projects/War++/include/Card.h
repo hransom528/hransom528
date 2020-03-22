@@ -1,63 +1,33 @@
 #ifndef CARD_H
 #define CARD_H
+
 #include <string>
+using namespace std;
 
 class Card {
-     private:
-        std::string suit; //!< Member variable "suit"
-        int rank; //!< Member variable "rank"
-
     public:
-        /**Constructor*/
-        Card(std::string newSuit, int newRank) {
-            this->suit = newSuit;
-            this->rank = newRank;
-        }
+        /** Default constructor */
+        Card(int nRank, string nSuit);
 
-        /** Access suit
-         * \return The current value of suit
+        /** Access cardRank
+         * \return The current value of cardRank
          */
-        std::string getSuit() { return suit; }
-
-        /** Access rank
-         * \return The current value of rank
+        int getRank() { return cardRank; }
+        /** Access cardSuit
+         * \return The current value of cardSuit
          */
-        int getRank() { return rank; }
+        string getSuit() { return cardSuit; }
 
-        /**
-        * equals : Tests to see if a Card object is the same as another Card
-        * \param otherCard : Card object of another card
-        * \return true if the cards are the same, false otherwise.
-        */
         bool equals(Card otherCard);
 
-        /**
-        * compareTo : Finds the difference between this Card's rank and
-        * 				another Card's rank
-        * @param otherCard : Card object of another card
-        * @return the int difference between the rank of this Card
-        */
         int compareTo(Card otherCard);
 
-        /**
-        * rankToString : Returns a String for the rank.
-        * 		14 = "Ace"
-        * 		13 = "King"
-        * 		12 = "Queen"
-        * 		11 = "Jack"
-        * @return String of the rank
-        */
-        std::string rankToString();
+        string rankToString();
 
-        /**
-        * toString : Returns a string that describes the card by rank and suit.
-        * 				Should call the rankToString method.
-        * 		Examples:
-        * 			"Ace of spades"
-        * 			"Jack of hearts"
-        * 			"5 of clubs"
-        */
-        std::string toString();
+        string toString();
+
+    private:
+        int cardRank; //!< Member variable "cardRank"
+        string cardSuit; //!< Member variable "cardSuit"
 };
-
 #endif // CARD_H

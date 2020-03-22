@@ -34,8 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Card.h" />
+		<Unit filename="include/Deck.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Card.cpp" />
+		<Unit filename="src/Deck.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
