@@ -19,6 +19,7 @@ public class gridDriver {
 		System.out.println(newGrid.toString());
 		newGrid.add(3);
 		System.out.println(newGrid.toString());
+		System.out.println(newGrid.spliterator());
 		
 		//System.out.println(newGrid.getStartXSize() + ", " + newGrid.getStartYSize());
 		//System.out.println(newGrid.size());

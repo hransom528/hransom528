@@ -17,9 +17,9 @@ import java.util.Spliterator;
  * @version 1.0
  * @param <T> any valid type
  */
-public class Grid<T> implements Iterable<T>, Collection<T>, Cloneable {
-	private int xSize;
-	private int ySize;
+public class Grid<T> implements Collection<T>, Cloneable {
+	private int xSize; //Starting x size
+	private int ySize; //Starting y size
 	private ArrayList<ArrayList<T>> grid;
 
 	/**
