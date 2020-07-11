@@ -3,10 +3,8 @@
 
 //Default constructor
 Card::Card() {
-    this->cardRank = 0;
-    this->cardSuit = "None";
+    this->
 }
-
 // Parameterized constructor
 Card::Card(int nRank, string nSuit) {
     this->cardRank = nRank;

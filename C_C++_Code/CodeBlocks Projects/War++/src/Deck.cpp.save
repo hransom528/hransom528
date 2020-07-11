@@ -34,7 +34,7 @@ int Deck::getSize() {
 }
 
 Card Deck::deal() {
-    Card returnCard;
+    Card returnCard = nullptr;
     if (!this->isEmpty()) {
         returnCard = this->cards.back();
         cards.pop_back();
@@ -42,6 +42,7 @@ Card Deck::deal() {
     }
     else {
         cout << "Error, empty deck!" << endl;
+        returnCard = nullptr;
         return returnCard;
     }
 }

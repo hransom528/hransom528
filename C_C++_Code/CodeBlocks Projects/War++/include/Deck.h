@@ -27,7 +27,7 @@ class Deck {
         string toString();
 
     private:
-        static const int MAX_SIZE = 32; //!< Member variable "MAX_SIZE"
+        static const int MAX_SIZE = 52; //!< Member variable "MAX_SIZE"
         vector<Card> cards;
 };
 #endif // DECK_H

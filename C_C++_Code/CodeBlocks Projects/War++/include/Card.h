@@ -6,13 +6,17 @@ using namespace std;
 
 class Card {
     public:
-        /** Default constructor */
+        /** Default constructor **/
+        Card();
+
+        /** Parameterized constructor **/
         Card(int nRank, string nSuit);
 
         /** Access cardRank
          * \return The current value of cardRank
          */
         int getRank() { return cardRank; }
+
         /** Access cardSuit
          * \return The current value of cardSuit
          */

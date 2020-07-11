@@ -83,16 +83,16 @@ int main() {
                 player1.erase(player1.begin());
                 if (player2.size() > 0) {
                     player1.push_back(player2.at(0));
-                    player2.erase(player2.begin());
+                    player2.erase(player2.at(0));
                 }
             }
             else if (player1.at(0).compareTo(player2.at(0)) < 0) {
                 cout << "Player 2 wins" << endl;
                 player2.push_back(player2.at(0));
-                player2.erase(player2.begin());
+                player2.erase(player2.begin);
                 if (player1.size() > 0) {
                     player2.push_back(player1.at(0));
-                    player1.erase(player1.begin());
+                    player1.erase(player1.at(0));
                 }
             }
             else {
