@@ -3,7 +3,7 @@
 ## I'm a student programmer, aspiring computer engineer, and a technology enthusiast
 
 ### Some of my Projects:
-* [libjava2d](): Java 2D data structure implementation
+* [libjava2d](https://github.com/commanderHR1/libjava2d): Java 2D data structure implementation
 * [python-password-generator](https://github.com/commanderHR1/python-password-generator): Random password generator with parameters, written in Python
 * [java-battleship](https://github.com/commanderHR1/java-battleship): Terminal implementation of the classic game *Battleship*, written in Java using my 2D data structures
 * [APCS](https://github.com/commanderHR1/APCS): Sophomore year Computer Science code
