@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Harris Ransom
 ## Welcome to my profile!
 ## Student programmer/computer engineer and technology enthusiast
@@ -39,7 +38,3 @@
 * Email: <hransom528@protonmail.com>
 * Website: <https://commanderhr1.github.io>
 * GitHub: <https://github.com/commanderHR1>
-=======
-# commanderHR1.github.io
-Personal website
->>>>>>> 285f986d978500b54629e9b340b14b531f0fa81b
