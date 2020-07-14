@@ -1,6 +1,6 @@
 # Harris Ransom
 ## Welcome to my profile!
-## Student programmer/computer engineer and technology enthusiast
+## I'm a student programmer, aspiring computer engineer, and a technology enthusiast
 
 ### Some of my Projects:
 * [libjava2d](): Java 2D data structure implementation
