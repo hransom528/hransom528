@@ -15,9 +15,9 @@
 * Java
 * Visual Basic and .NET
 * Arduino, MicroPython, Electronics, and Embedded Systems
-* Networking
-* Linux
-* Git/GitHub
+* Networking and networking architecture
+* Linux and system administration
+* Git/GitHub/VCS
 
 ### Technologies I'm Learning:
 * C
