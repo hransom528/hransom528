@@ -15,6 +15,7 @@
 * Java
 * Visual Basic and .NET
 * Arduino, MicroPython, Electronics, and Embedded Systems
+* Computer architecture
 * Networking and networking architecture
 * Linux and system administration
 * Git/GitHub/VCS
