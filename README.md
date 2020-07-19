@@ -36,6 +36,7 @@
 * C#
 * Cloud Architecture
 * SQL and Databases
+* Django Python Library
 * Anything else I find interesting!
 
 ### How to Reach Me
