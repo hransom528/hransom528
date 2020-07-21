@@ -37,6 +37,8 @@
 * Cloud Architecture
 * SQL and Databases
 * Django Python Library
+* Data science with NumPy/SciPy, R, and Python
+* AI/Machine Learning and Tensorflow
 * Anything else I find interesting!
 
 ### How to Reach Me
