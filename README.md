@@ -8,6 +8,7 @@
 * [java-battleship](https://github.com/commanderHR1/java-battleship): Terminal implementation of the classic game *Battleship*, written in Java using my 2D data structures
 * [WarPlusPlus](https://github.com/commanderHR1/WarPlusPlus): Simulation of the classic card game War using C++ 
 * [algorithms](https://github.com/commanderHR1/algorithms): Implementations of common algorithms and data structures, used as an educational tool.
+* [rng](https://github.com/commanderHR1/rng): Simple Random Number Generator (RNG) Android app
 * [APCS](https://github.com/commanderHR1/APCS): Sophomore year Computer Science code
 * [mcp9808-dataScience](https://github.com/commanderHR1/mcp9808-dataScience): Analyses MCP9808 temperature data with RPI and Python
 * [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay): Contributed to email handling and error checking
