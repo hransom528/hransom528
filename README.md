@@ -42,6 +42,10 @@
 * AI/Machine Learning and Tensorflow
 * Anything else I find interesting!
 
+### Certifications and Training
+* [Google Developer Profile](https://google.dev/u/102612366029103373674)
+* [Codecademy Profile](https://www.codecademy.com/profiles/commanderHR)
+
 ### How to Reach Me
 * Email: <hransom528@protonmail.com>
 * Website: <https://commanderhr1.github.io>
