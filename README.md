@@ -45,6 +45,7 @@
 ### Certifications and Training
 * [Google Developer Profile](https://google.dev/u/102612366029103373674)
 * [Codecademy Profile](https://www.codecademy.com/profiles/commanderHR)
+* [Elements of AI Certificate, University of Helsinki](https://certificates.mooc.fi/validate/dlxm1ow4vng)
 
 ### How to Reach Me
 * Email: <hransom528@protonmail.com>
