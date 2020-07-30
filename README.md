@@ -40,7 +40,6 @@
 * SQL and Databases
 * Django Python Library
 * Data science with NumPy/SciPy, R, and Python
-* 
 * Anything else I find interesting!
 
 ### Certifications and Training
