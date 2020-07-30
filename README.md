@@ -27,7 +27,8 @@
 * C
 * C++
 * Kotlin and Android development
-* Algorithms and their implementations
+* Common algorithms and their implementations
+* AI/Machine Learning basics w/Tensorflow
 * Qiskit and quantum computing
 * Open source and project managment
 
@@ -39,7 +40,7 @@
 * SQL and Databases
 * Django Python Library
 * Data science with NumPy/SciPy, R, and Python
-* AI/Machine Learning and Tensorflow
+* 
 * Anything else I find interesting!
 
 ### Certifications and Training
