@@ -44,7 +44,6 @@
 
 ### Certifications and Training
 * Formal High School AP CSA course
-* [Google Developer Profile](https://google.dev/u/102612366029103373674)
 * [Codecademy Profile](https://www.codecademy.com/profiles/commanderHR)
 * [Elements of AI Certificate, University of Helsinki](https://certificates.mooc.fi/validate/dlxm1ow4vng)
 
