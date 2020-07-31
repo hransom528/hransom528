@@ -45,6 +45,7 @@
 ### Certifications and Training
 * Formal High School AP CSA course
 * [Codecademy Profile](https://www.codecademy.com/profiles/commanderHR)
+* [freeCodeCamp Profile](https://www.freecodecamp.org/commanderhr1)
 * [Elements of AI Certificate, University of Helsinki](https://certificates.mooc.fi/validate/dlxm1ow4vng)
 
 ### How to Reach Me
