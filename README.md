@@ -1,13 +1,16 @@
-<<<<<<< HEAD
 # Harris Ransom
 ## Welcome to my profile!
-## Student programmer/computer engineer and technology enthusiast
+## I'm a student programmer, aspiring computer engineer, and a technology enthusiast
 
 ### Some of my Projects:
-* [libjava2d](): Java 2D data structure implementation
-* [python-password-generator](https://github.com/commanderHR1/python-password-generator): Random password generator with parameters, written in Python
+* [libjava2d](https://github.com/commanderHR1/libjava2d): Java 2D data structure implementation
+* [passwordGen](https://github.com/commanderHR1/passwordGen): Random password generator with parameters, written in Python
 * [java-battleship](https://github.com/commanderHR1/java-battleship): Terminal implementation of the classic game *Battleship*, written in Java using my 2D data structures
+* [WarPlusPlus](https://github.com/commanderHR1/WarPlusPlus): Simulation of the classic card game War using C++ 
+* [algorithms](https://github.com/commanderHR1/algorithms): Implementations of common algorithms and data structures, used as an educational tool.
+* [rng](https://github.com/commanderHR1/rng): Simple Random Number Generator (RNG) Android app
 * [APCS](https://github.com/commanderHR1/APCS): Sophomore year Computer Science code
+* [mcp9808-dataScience](https://github.com/commanderHR1/mcp9808-dataScience): Analyses MCP9808 temperature data with RPI and Python
 * [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay): Contributed to email handling and error checking
 
 ### Technologies I know:
@@ -15,15 +18,17 @@
 * Java
 * Visual Basic and .NET
 * Arduino, MicroPython, Electronics, and Embedded Systems
-* Networking
-* Linux
-* Git/GitHub
+* Computer architecture
+* Networking and networking architecture
+* Linux and system administration
+* Git/GitHub/VCS
 
 ### Technologies I'm Learning:
 * C
 * C++
 * Kotlin and Android development
-* Algorithms and their implementations
+* Common algorithms and their implementations
+* AI/Machine Learning basics w/Tensorflow
 * Qiskit and quantum computing
 * Open source and project managment
 
@@ -33,13 +38,17 @@
 * C#
 * Cloud Architecture
 * SQL and Databases
+* Django Python Library
+* Data science with NumPy/SciPy, R, and Python
 * Anything else I find interesting!
+
+### Certifications and Training
+* Formal High School AP CSA course
+* [Codecademy Profile](https://www.codecademy.com/profiles/commanderHR)
+* [freeCodeCamp Profile](https://www.freecodecamp.org/commanderhr1)
+* [Elements of AI Certificate, University of Helsinki](https://certificates.mooc.fi/validate/dlxm1ow4vng)
 
 ### How to Reach Me
 * Email: <hransom528@protonmail.com>
 * Website: <https://commanderhr1.github.io>
 * GitHub: <https://github.com/commanderHR1>
-=======
-# commanderHR1.github.io
-Personal website
->>>>>>> 285f986d978500b54629e9b340b14b531f0fa81b
