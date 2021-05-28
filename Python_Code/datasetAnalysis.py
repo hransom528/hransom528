@@ -7,7 +7,10 @@ medianVal = median(numbers)
 modeVal = mode(numbers)
 stdDev = pstdev(numbers)
 
-print("Dataset: " + numbers)
+print("Dataset: ")
+print(numbers)
+print("\n")
+
 print("Mean: " + meanVal)
 print("Median: " + medianVal)
 print("Mode: " + modeVal)
