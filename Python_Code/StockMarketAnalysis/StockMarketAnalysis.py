@@ -1,4 +1,5 @@
-#import numpy as np
+# Imports
+import numpy as np
 import pandas as pd
 from pandas_datareader import data as web
 import matplotlib.pyplot as plt
@@ -81,23 +82,21 @@ def merge_df_by_column(col, syear, smonth, sday, eyear, emonth, eday, *tickers):
         mult_df[ticker] = web.DataReader(ticker, "yahoo", start, end)[col]
     return mult_df
 
-
+# Plots multiple stocks over time
 def plot_return_mult_stocks(investment, stock_df):
     (stock_df / stock_df.iloc[0] * investment).plot(figsize = (15, 6))
-
 
 # Gets stats like mean and standard deviation of stocks
 def get_stock_stats(stock_df, ticker):
     return stock_df[ticker].mean(), stock_df[ticker].std()
 
+# outputs statistics for multiple stocks
 def get_mult_stock_stats(stock_df):
     for stock in stock_df:
         mean, sd = get_stock_stats(stock_df, stock)
         cov = sd / mean # Calculates coefficient of variation (CoV)
         print("Stock: {:4} Mean: {:7.2f} Standard Deviation: {:2.2f}".format(stock, mean, sd))
         print("Coefficient of Variation: {}\n".format(cov))
-        
-    
 
 # Calls functions
 #save_csv_from_yahoo("AMD", 2020, 1, 1, 2021, 1, 1)
