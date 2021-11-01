@@ -14,6 +14,7 @@ from os import listdir
 from os.path import infile, join
 
 CSV_PATH = "/home/harris/Documents/Github/commanderHR1/Python_Code/StockMarketAnalysis/"
+MULTI_CSV = "Wilshire-5000-Stocks.csv"
 STOCK_TICKERS = ["FB", "AMZN", "AAPL", "NFLX", "GOOG"]
 
 # Start date defaults
@@ -102,6 +103,17 @@ def get_return_defined_time(df, syear, smonth, sday, eyear, emonth, eday):
     days = df2.shape[0]
     return (days * daily_ret)
 
+# Returns Return on Investment (RoI) over time
+def get_roi_between_dates(df, sdate, edate):
+    try:
+        start_val = df.loc[sdate, 'Adj Close']
+        end_val = df.loc[edate, 'Adj Close']
+        roi = ((end_val - start_val) / (start_val))
+    except Exception:
+        print("Data corrupted")
+    else:
+        return roi
+
 # Plots stock data using mplfinance
 def mplfinance_plot(ticker, chart_type, syear, smonth, sday, eyear, emonth, eday):
     start = "{}-{}-{}".format(syear, smonth, sday)
@@ -162,11 +174,12 @@ def get_mult_stock_stats(stock_df):
 #print(AMD)
 #tot_ret = get_return_defined_time(AMD, 2020, 1, 1, 2021, 1, 1)
 #print("Total Return: {}%".format(tot_ret * 100))
-
 #mplfinance_plot(STOCK_TICKER, 'ohlc', 2020, 1, 1, 2021, 1, 1)
-download_multiple_stocks(2020, 1, 1, 2021, 1, 1, STOCK_TICKERS)
-mult_df = merge_df_by_column("Adj Close", 2020, 1, 1, 2021, 1, 1, STOCK_TICKERS)
-plot_return_mult_stocks(100, mult_df)
+#download_multiple_stocks(2020, 1, 1, 2021, 1, 1, STOCK_TICKERS)
+#mult_df = merge_df_by_column("Adj Close", 2020, 1, 1, 2021, 1, 1, STOCK_TICKERS)
+#plot_return_mult_stocks(100, mult_df)
+#get_mult_stock_stats(mult_df)
 
-get_mult_stock_stats(mult_df)
+tickers = get_col_from_csv(CSV_PATH + MULTI_CSV, "Ticker")
+print(tickers)
 input("Press ENTER to exit: ")
