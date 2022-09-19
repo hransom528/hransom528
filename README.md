@@ -1,6 +1,6 @@
 # Harris Ransom
 ## Welcome to my profile!
-## I'm a student programmer, aspiring computer engineer, and a technology enthusiast
+## I'm a student programmer, computer engineer, and a technology enthusiast
 
 ### Some of my Projects:
 * [libjava2d](https://github.com/commanderHR1/libjava2d): Java 2D data structure implementation
@@ -14,20 +14,21 @@
 * [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay): Contributed to email handling and error checking
 
 ### Technologies I know:
+* Arduino, Electronics, and Embedded Systems
 * Python
 * Java
-* Visual Basic and .NET
-* Arduino, MicroPython, Electronics, and Embedded Systems
-* Computer architecture
-* Networking and networking architecture
-* Linux and system administration
-* Git/GitHub/VCS
-
-### Technologies I'm Learning:
 * C
 * C++
+* Linux and System Administration
+* Git/GitHub/VCS
+* Computer architecture
+* Networking and networking architecture
+* Visual Basic and .NET
+
+### Technologies I'm Learning:
 * Kotlin and Android development
 * Common algorithms and their implementations
+* MATLAB
 * AI/Machine Learning basics w/Tensorflow
 * Qiskit and quantum computing
 * Open source and project managment
