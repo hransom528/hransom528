@@ -4,13 +4,14 @@
 
 ### Some of my Projects:
 * [6502](https://github.com/hransom528/6502): Ben Eater-inspired 6502 microcomputer
-* [libjava2d](https://github.com/commanderHR1/libjava2d): Java 2D data structure implementation
-* [passwordGen](https://github.com/commanderHR1/passwordGen): Random password generator with parameters, written in Python
-* [java-battleship](https://github.com/commanderHR1/java-battleship): Terminal implementation of the classic game *Battleship*, written in Java using my 2D data structures
-* [WarPlusPlus](https://github.com/commanderHR1/WarPlusPlus): Simulation of the classic card game War using C++ 
-* [algorithms](https://github.com/commanderHR1/algorithms): Implementations of common algorithms and data structures, used as an educational tool.
-* [rng](https://github.com/commanderHR1/rng): Simple Random Number Generator (RNG) Android app
-* [mcp9808-dataScience](https://github.com/commanderHR1/mcp9808-dataScience): Analyses MCP9808 temperature data with RPI and Python
+* [EDDTumblerComposter](https://github.com/hransom528/EDDTumblerComposter): Senior Year PLTW Capstone Project
+* [libjava2d](https://github.com/hransom528/libjava2d): Java 2D data structure implementation
+* [passwordGen](https://github.com/hransom528/passwordGen): Random password generator with parameters, written in Python
+* [java-battleship](https://github.com/hransom528/java-battleship): Terminal implementation of the classic game *Battleship*, written in Java using my 2D data structures
+* [WarPlusPlus](https://github.com/hransom528/WarPlusPlus): Simulation of the classic card game War using C++ 
+* [algorithms](https://github.com/hransom528/algorithms): Implementations of common algorithms and data structures, used as an educational tool.
+* [rng](https://github.com/hransom528/rng): Simple Random Number Generator (RNG) Android app
+* [mcp9808-dataScience](https://github.com/hransom528/mcp9808-dataScience): Analyses MCP9808 temperature data with RPI and Python
 * [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay): Contributed to email handling and error checking
 
 ### Technologies I know:
@@ -49,5 +50,5 @@
 
 ### How to Reach Me
 * Email: <hransom528@protonmail.com>
-* Website: <https://commanderhr1.github.io>
-* GitHub: <https://github.com/commanderHR1>
+* Website: <https://hransom528.github.io>
+* GitHub: <https://github.com/hransom528>
