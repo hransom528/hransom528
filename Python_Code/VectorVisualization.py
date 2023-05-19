@@ -1,7 +1,11 @@
 # Imports
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
+
+matplotlib.use('TkAgg')
+matplotlib.pyplot.show()
 
 # Welcome text
 print("Vector Visualization Program")
