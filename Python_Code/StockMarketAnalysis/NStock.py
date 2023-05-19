@@ -1,6 +1,6 @@
 # N-Stock v1.0
 # CAC 2021
-# By: Harris
+# By: Harris Ransom, Tharun Iyer, Akhil Gogineni, and Boyang Zhao
 
 # Imports
 import numpy as np
@@ -12,6 +12,11 @@ import datetime as dt
 import mplfinance as mpf
 import time
 import os
+import sys
+import tkinter as tk
+from tkinter import *
+
+plt.style.use('dark_background')
 
 # Container variables for stocks and folder path inputs
 STOCK_TICKERS = []
@@ -32,12 +37,8 @@ E_DATE_STR = "2021-08-19"
 E_DATE_DATETIME = dt.datetime(E_YEAR, E_MONTH, E_DAY)
 
 # Holds stocks not downloaded
-#stocks_not_downloaded = []
-#missing_stocks = []
-
-# Tkinter GUI
-#window = Tk()
-#window.title("Stock Market Analysis")
+stocks_not_downloaded = []
+missing_stocks = []
 
 # Grabs stocks from Yahoo finance and saves them to CSV file
 def save_csv_from_yahoo(folder, ticker, syear, smonth, sday, eyear, emonth, eday):
@@ -49,7 +50,7 @@ def save_csv_from_yahoo(folder, ticker, syear, smonth, sday, eyear, emonth, eday
     try:
         print("Getting data for:", ticker)
         df = web.DataReader(ticker, "yahoo", start, end)['Adj Close']
-        time.sleep(3)
+        time.sleep(0.5)
         df.to_csv(folder + ticker + ".csv")
     except Exception as ex:
         stocks_not_downloaded.append(ticker)
@@ -156,7 +157,7 @@ def merge_df_by_column(col, syear, smonth, sday, eyear, emonth, eday, *tickers):
 
 # Plots multiple stocks
 def plot_return_mult_stocks(investment, stock_df):
-    (stock_df / stock_df.iloc[0] * investment).plot(figsize = (15, 6))
+    (stock_df / stock_df.iloc[0] * investment).plot(figsize = (15, 6), title="Investment Values Over Time")
 
 # Gets stats like mean and standard deviation of stocks
 def get_stock_stats(stock_df, ticker):
@@ -169,19 +170,44 @@ def get_mult_stock_stats(stock_df):
         cov = sd / mean # Calculates coefficient of variation (CoV)
         print("Stock: {:4} \n\tMean: {:7.2f} \n\tStandard Deviation: {:2.2f}".format(stock, mean, sd))
         print("\tCoefficient of Variation: {}\n".format(cov))
-
         
+# Asks for CSV path when btnPath is clicked
+def btnPathClick():
+    window.withdraw()
+    CSV_PATH = filedialog.askdirectory()
+    GUI_COMPLETE = True
+    window.quit()
+
+# Actions if main window is closed
+def onClosing():
+    window.quit()
+    sys.exit("Main window closed prematurely!")
+
 # Program start
 print("N-Stock v1.0")
 print("By: Harris Ransom, Tharun Iyer, Akhil Gogineni, and Boyang Zhao")
+time.sleep(2)
+
+window = Tk()
+window.geometry("350x100")
+window.configure(background="black")
+window.title("N-Stock v1.0")
+window.protocol("WM_DELETE_WINDOW", onClosing)
+
+lblTitle = tk.Label(window, text="N-Stock v1.0", font=50)
+lblTitle.pack()
+
+btnPath = Button(window, text="Select folder for stock CSV downloads ", command=btnPathClick)
+btnPath.pack() 
+window.mainloop()
 
 # Gets path to CSV
-CSV_PATH = input("\nPlease input the path to the folder to download stock CSVs: ")
-while (not os.path.exists(CSV_PATH)):
-    CSV_PATH = input("Please input a valid path: ")
+#CSV_PATH = input("\nPlease input the path to the folder to download stock CSVs: ")
+#while (not os.path.exists(CSV_PATH)):
+#    CSV_PATH = input("Please input a valid path: ")
 
 # Gets number of stocks
-num_stocks = input("Please input the number of stocks you wish to analyze: "))
+num_stocks = int(input("Please input the number of stocks you wish to analyze: "))
 
 # Gets ticker input
 for i in range(num_stocks):

@@ -10,6 +10,7 @@ import mplfinance as mpf
 CSV_PATH = "/home/harris/Documents/Github/commanderHR1/Python_Code/StockMarketAnalysis/"
 STOCK_TICKERS = ["FB", "AMZN", "AAPL", "NFLX", "GOOG"]
 
+
 # Grabs stocks from Yahoo finance and saves them to CSV file
 def save_csv_from_yahoo(ticker, syear, smonth, sday, eyear, emonth, eday):
     # Defines start and end datetime objects
@@ -93,6 +94,7 @@ def get_stock_stats(stock_df, ticker):
 # outputs statistics for multiple stocks
 def get_mult_stock_stats(stock_df):
     for stock in stock_df:
+        print(stock)
         mean, sd = get_stock_stats(stock_df, stock)
         cov = sd / mean # Calculates coefficient of variation (CoV)
         print("Stock: {:4} Mean: {:7.2f} Standard Deviation: {:2.2f}".format(stock, mean, sd))
