@@ -5,6 +5,7 @@
 ### Some of my Projects:
 * [6502](https://github.com/hransom528/6502): Ben Eater-inspired 6502 microcomputer
 * [EDDTumblerComposter](https://github.com/hransom528/EDDTumblerComposter): Senior Year PLTW Capstone Project
+* [GoogleCyberCert](https://github.com/hransom528/GoogleCyberCert): Portfolio items from the Google Cybersecurity Certification course
 * [libjava2d](https://github.com/hransom528/libjava2d): Java 2D data structure implementation
 * [passwordGen](https://github.com/hransom528/passwordGen): Random password generator with parameters, written in Python
 * [java-battleship](https://github.com/hransom528/java-battleship): Terminal implementation of the classic game *Battleship*, written in Java using my 2D data structures
@@ -24,6 +25,7 @@
 * Git/GitHub/VCS
 * Computer architecture
 * Networking and networking architecture
+* Cybersecurity/Pentesting
 * Visual Basic and .NET
 
 ### Technologies I'm Learning:
@@ -32,7 +34,6 @@
 * AI/Machine Learning basics w/Tensorflow
 * Qiskit and quantum computing
 * Open source and project managment
-* Cybersecurity/Pentesting
 
 ### Technologies I Want to Learn:
 * Web development
