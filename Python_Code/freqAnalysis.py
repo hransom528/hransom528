@@ -63,15 +63,21 @@ def freqAnalysis(text):
     print("\nRelative Frequencies:")
     frequencies = []
     for letter in freqDict:
-        letterFrequency = freqDict[letter] / float(total)
+        letterFrequency = (freqDict[letter] / float(total))
         frequencies.append(letterFrequency)
         print(f"{letter}: {letterFrequency:.2f}")
 
     # Plot the relative frequencies
-    fig = plt.figure()
-    plt.bar(range(len(freqDict)), list(freqDict.values()), align='center')
-    plt.xticks(range(len(freqDict)), list(freqDict.keys()))
-    plt.title("Letter Frequencies")
+    fig, (ax1, ax2) = plt.subplots(2)
+
+    ax1.bar(range(len(freqDict)), frequencies, align='center')
+    ax1.set_xticks(range(len(freqDict)), list(freqDict.keys()))
+    ax1.set_title("Text Letter Frequencies")
+
+    ax2.bar(range(len(englishFrequencies)), list(englishFrequencies.values()), align='center')
+    ax2.set_xticks(range(len(englishFrequencies)), list(englishFrequencies.keys()))
+    ax2.set_title("English Letter Frequencies")
+    plt.show()
 
 # Main
 def main():
